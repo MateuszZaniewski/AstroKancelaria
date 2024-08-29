@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import "./Background.css"; // Import the CSS file
+import "../ui/background.css"; // Import the CSS file
 
 export const Background = () => {
   const [imageLoaded, setImageLoaded] = useState(false);
