@@ -1,0 +1,51 @@
+---
+import { Image } from "astro:assets";
+import photo from "../../../public/persona.svg";
+---
+
+<section class="bg-[#0E1F2A] text-[#B58C67] pt-20 pb-10 lg:pb-32 md:px-[9.3vw]">
+  <h2 class="text-3xl font-cinzel pb-7 pl-[9.4vw] lg:pl-0 sm:pl-10 lg:text-5xl">
+    O MNIE
+  </h2>
+  <div class="flex flex-col-reverse lg:flex-row lg:gap-12 gap-7 sm:gap-10">
+    <div
+      class="max-w-[596px] sm:max-w-[800px] sm:mx-auto sm:px-[10vw] px-[5vw] lg:px-0 lg:pt-14"
+    >
+      <h3 class="lg:text-2xl text-normal sm:text-xl pb-5 lg:pb-10">
+        Nazywam się Paulina Komenda, jestem adwokatem w Izbie Adwokackiej w
+        Białymstoku.
+      </h3>
+      <div class="flex flex-col gap-5 text-normal sm:text-lg">
+        <p>
+          W 2018 roku ukończyłam Wydział Prawa na Uniwersytecie w Białymstoku. W
+          latach 2019 - 2021 odbyłam aplikację adwokacką w Białostockiej Izbie
+          Adwokackiej, w 2022 roku zdałam egzamin zawodowy i zostałam wpisana na
+          listę adwokatów Izby Adwokackiej w Białymstoku.
+        </p>
+        <p>
+          Specjalizuję się w prowadzeniu spraw z zakresu prawa rodzinnego,
+          cywilnego, spadkowego i karnego. Posiadam doświadczenie w prowadzeniu
+          spraw w trybie konwencji haskiej dotyczących cywilnych aspektów
+          uprowadzenia dziecka za granicę.
+        </p>
+        <p>
+          Do każdej sprawy podchodzę indywidualnie. Celem kancelarii jest
+          zapewnienie kompleksowej pomocy prawnej wszystkim, którzy jej
+          potrzebują, w formie i zakresie dostosowanym do sytuacji Klienta.
+        </p>
+      </div>
+    </div>
+    <div class="pl-[9.4vw] sm:flex sm:justify-center sm:pl-0">
+      <div
+        class="border-l-2 border-[#B58C67] pl-3 md:pl-5 lg:pl-[3.3vw] lg:h-fit lg:border-l-4"
+      >
+        <Image
+          loading="lazy"
+          src={photo}
+          alt="Paulina Komenda"
+          class="w-[77vw] max-w-[313px] sm:max-w-[350px] min-w-[250px] md:w-[50vw] md:max-w-[500px] md:max-h-[640px]"
+        />
+      </div>
+    </div>
+  </div>
+</section>

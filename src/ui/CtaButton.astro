@@ -1,0 +1,10 @@
+---
+const { text, variant } = Astro.props;
+---
+
+<div>
+  <button
+    class=`${variant === "contain" ? "py-2 px-6 bg-[#B58C67] h-fit whitespace-nowrap" : "border-b-2 border-black"}`
+    >{text}</button
+  >
+</div>

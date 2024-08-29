@@ -1,0 +1,202 @@
+---
+import CtaButton from "../ui/CtaButton.astro";
+import logo from "../../public/logoKomenda.svg";
+import { Image } from "astro:assets";
+---
+
+<nav class="absolute w-full">
+  <div class="max-w-[1600px] mx-auto px-5 sm:px-10">
+    <div class="flex justify-between">
+      <div class="flex justify-end items-center">
+        <Image
+          src={logo}
+          alt="logoKancelariaPaulinaKomenda"
+          class="h-full max-h-[83px] w-[64vw] max-w-[298px] min-w-[230px] pt-[2.3vh] cursor-pointer"
+          loading="eager"
+        />
+      </div>
+      <div
+        class="hidden lg:flex gap-12 2xl:gap-16 font-normal font-sans pt-2 items-center"
+      >
+        <span class="h-fit whitespace-nowrap font-semibold">USŁUGI PRAWNE</span>
+        <span class="h-fit whitespace-nowrap font-semibold">O MNIE</span>
+        <span class="h-fit whitespace-nowrap font-semibold">BLOG</span>
+        <CtaButton text="KONTAKT" variant="contain" />
+      </div>
+      <div class="lg:hidden flex items-center">
+        <button class="outline-none mobile-menu-button">
+          <svg
+            class="w-6 h-6 hamburger-icon"
+            fill="none"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            stroke-width="2"
+            viewBox="0 0 24 24"
+            stroke="currentColor"
+          >
+            <path d="M4 6h16M4 12h16M4 18h16"></path>
+          </svg>
+          <svg
+            class="w-6 h-6 hidden close-icon"
+            fill="none"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            stroke-width="2"
+            viewBox="0 0 24 24"
+            stroke="currentColor"
+          >
+            <path d="M6 18L18 6M6 6l12 12"></path>
+          </svg>
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Mobile hamburger menu -->
+  <div
+    class="hidden mobile-menu fixed overflow-hidden overscroll-contain top-0 left-0 w-full h-screen z-40 animation-menu-slide-out"
+  >
+    <div class="min-h-screen bg-[#EEE5DA] px-5 scroll-y-none">
+      <div class="flex justify-between">
+        <div class="flex justify-end items-center">
+          <Image
+            src={logo}
+            alt="logoKancelariaPaulinaKomenda"
+            class="h-full max-h-[83px] w-[64vw] max-w-[298px] min-w-[230px] pt-[2.3vh] cursor-pointer"
+            loading="eager"
+          />
+        </div>
+        <div class="lg:hidden flex items-center">
+          <button class="outline-none mobile-menu-close">
+            <svg
+              class="w-6 h-6 hidden hamburger-icon"
+              fill="none"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              viewBox="0 0 24 24"
+              stroke="currentColor"
+            >
+              <path d="M4 6h16M4 12h16M4 18h16"></path>
+            </svg>
+            <svg
+              class="w-6 h-6 close-icon"
+              fill="none"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              viewBox="0 0 24 24"
+              stroke="currentColor"
+            >
+              <path d="M6 18L18 6M6 6l12 12"></path>
+            </svg>
+          </button>
+        </div>
+      </div>
+      <div
+        class="pt-[7.5vh] sm:pt-[9vh] text-3xl sm:text-4xl sm:gap-[3.5vh] flex flex-col gap-[2.3vh] font-cinzel"
+      >
+        <span>ZAKRES USŁUG <br class="sm:hidden" /> PRAWNYCH</span>
+        <span>O MNIE</span>
+        <span>OPINIE</span>
+        <span>BLOG</span>
+      </div>
+      <div class="pt-[6.6vh]">
+        <h3 class="text-3xl text-center font-cinzel sm:text-4xl sm:gap-[3.5vh]">
+          KONTAKT
+        </h3>
+        <div
+          class="sm:max-w-[360px] sm:mx-auto flex flex-col gap-[2.3vh] pt-[1.8vh] sm:pt-[2.3vh]"
+        >
+          <div class="flex gap-1">
+            <img loading="lazy" src="IconLocation.svg" alt="Location Icon" />
+            <span class="text-lg">ul. Ogrodowa 4/20, 15-011 Białystok</span>
+          </div>
+          <div class="flex gap-1">
+            <img loading="lazy" src="IconPhone.svg" alt="Phone Icon" />
+            <span class="text-lg">698 741 258</span>
+          </div>
+          <div class="flex gap-1">
+            <img loading="lazy" src="IconEmail.svg" alt="Email Icon" />
+            <span class="text-lg">kontakt@adwkomenda.pl</span>
+          </div>
+        </div>
+      </div>
+      <div class="pt-[7.7vh] sm:pt-[9vh]">
+        <div class="flex justify-center gap-9 items-center">
+          <img
+            loading="lazy"
+            src="/facebook.svg"
+            alt="Facebook Icon"
+            class="h-8 w-8 sm:h-9 sm:w-9 cursor-pointer"
+          />
+          <img
+            loading="lazy"
+            src="/instagram.svg"
+            alt="Instagram Icon"
+            class="h-8 w-8 sm:h-9 sm:w-9 cursor-pointer"
+          />
+          <img
+            loading="lazy"
+            src="/linkedin.svg"
+            alt="Linkedin Icon"
+            class="h-8 w-8 sm:h-9 sm:w-9 cursor-pointer"
+          />
+        </div>
+      </div>
+    </div>
+  </div>
+</nav>
+
+<style>
+  @keyframes slide-down {
+    0% {
+      transform: translateY(-100%);
+    }
+    100% {
+      transform: translateY(0);
+    }
+  }
+
+  @keyframes slide-up {
+    0% {
+      transform: translateY(0);
+    }
+    100% {
+      transform: translateY(-100%);
+    }
+  }
+
+  .animation-menu-slide-in {
+    animation: slide-down 0.7s forwards;
+  }
+
+  .animation-menu-slide-out {
+    animation: slide-up 0.7s forwards;
+  }
+</style>
+
+<script>
+  const btn = document.querySelector(".mobile-menu-button");
+  const menu = document.querySelector(".mobile-menu");
+  const hamburgerIcon = document.querySelector(".hamburger-icon");
+  const closeIcon = document.querySelector(".close-icon");
+  const close = document.querySelector(".mobile-menu-close");
+
+  btn.addEventListener("click", () => {
+    menu.classList.remove("hidden", "animation-menu-slide-out");
+    menu.classList.add("animation-menu-slide-in");
+    hamburgerIcon.classList.add("hidden");
+    closeIcon.classList.remove("hidden");
+  });
+
+  close.addEventListener("click", () => {
+    menu.classList.remove("animation-menu-slide-in");
+    menu.classList.add("animation-menu-slide-out");
+    setTimeout(() => {
+      menu.classList.add("hidden");
+    }, 700); // Match the duration of the slide-up animation
+    hamburgerIcon.classList.remove("hidden");
+    closeIcon.classList.add("hidden");
+  });
+</script>

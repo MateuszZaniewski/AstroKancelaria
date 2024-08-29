@@ -1,0 +1,75 @@
+---
+import { Image } from "astro:assets";
+import logo from "../../public/logoKomenda.svg";
+---
+
+<div class="min-h-screen bg-[#EEE5DA] px-5 absolute top-0 right-0 w-full">
+  <div class="flex justify-between">
+    <div class="flex justify-end items-center">
+      <Image
+        src={logo}
+        alt="logoKancelariaPaulinaKomenda"
+        class="h-full max-h-[83px] w-[64vw] max-w-[298px] min-w-[230px] pt-[2.3vh] cursor-pointer"
+        loading="eager"
+      />
+    </div>
+    <div class="lg:hidden flex items-center">
+      <button class="outline-none mobile-menu-button">
+        <svg
+          class="w-6 h-6"
+          fill="none"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          stroke-width="2"
+          viewBox="0 0 24 24"
+          stroke="currentColor"
+        >
+          <path d="M6 18L18 6M6 6l12 12"></path>
+        </svg>
+      </button>
+    </div>
+  </div>
+  <div class="pt-[7.5vh] flex flex-col gap-5 font-cinzel">
+    <span class="text-2xl">ZAKRES USŁUG <br /> PRAWNYCH</span>
+    <span>O MNIE</span>
+    <span>OPINIE</span>
+    <span>BLOG</span>
+  </div>
+  <div class="pt-[6.6vh] flex flex-col gap-5">
+    <h3 class="text-3xl text-center font-cinzel">KONTAKT</h3>
+    <div class="flex gap-1">
+      <img loading="lazy" src="IconLocation.svg" alt="Location Icon" />
+      <span class="text-lg">ul. Ogrodowa 4/20, 15-011 Białystok</span>
+    </div>
+    <div class="flex gap-1">
+      <img loading="lazy" src="IconPhone.svg" alt="Phone Icon" />
+      <span class="text-lg">698 741 258</span>
+    </div>
+    <div class="flex gap-1">
+      <img loading="lazy" src="IconEmail.svg" alt="Email Icon" />
+      <span class="text-lg">kontakt@adwkomenda.pl</span>
+    </div>
+  </div>
+  <div class="pt-[7.7vh]">
+    <div class="flex justify-center gap-9 items-center">
+      <img
+        loading="lazy"
+        src="/facebook.svg"
+        alt="Facebook Icon"
+        class="h-8 w-8 lg:h-9 lg:w-9 cursor-pointer"
+      />
+      <img
+        loading="lazy"
+        src="/instagram.svg"
+        alt="Instagram Icon"
+        class="h-8 w-8 lg:h-9 lg:w-9 cursor-pointer"
+      />
+      <img
+        loading="lazy"
+        src="/linkedin.svg"
+        alt="Linkedin Icon"
+        class="h-8 w-8 lg:h-9 lg:w-9 cursor-pointer"
+      />
+    </div>
+  </div>
+</div>

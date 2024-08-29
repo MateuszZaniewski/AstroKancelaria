@@ -1,0 +1,134 @@
+[
+  {
+    "name": "PRAWO RODZINNE",
+    "source": "/family-law.png",
+    "introduction": "Kancelaria prawna specjalizuje się w prowadzeniu spraw z zakresu prawa rodzinnego, obejmując szeroki wachlarz usług i wsparcia prawnego dla klientów w trudnych sytuacjach życiowych. Do głównych obszarów działalności kancelarii należą:",
+    "services": [
+      {
+        "description": "Rozwód - Prowadzenie spraw rozwodowych, w tym przygotowanie dokumentacji, reprezentacja klientów przed sądem oraz doradztwo prawne w kwestiach związanych z podziałem majątku i ustaleniem opieki nad dziećmi."
+      },
+      {
+        "description": "Separacja - Pomoc prawna w sprawach dotyczących separacji małżeńskiej, w tym przygotowanie i złożenie wniosków oraz reprezentacja przed sądem."
+      },
+      {
+        "description": "Rozdzielność majątkowa - Doradztwo i prowadzenie spraw związanych z ustanowieniem rozdzielności majątkowej między małżonkami, co może obejmować sporządzanie odpowiednich umów i wniosków sądowych."
+      },
+      {
+        "description": "Podział majątku - Reprezentacja klientów w sprawach dotyczących podziału majątku wspólnego po rozwodzie lub separacji, w tym negocjacje i postępowania sądowe mające na celu sprawiedliwy podział aktywów i zobowiązań."
+      },
+      {
+        "description": "Alimenty - Pomoc prawna w dochodzeniu alimentów na rzecz dzieci lub współmałżonka, obejmująca zarówno ustalanie wysokości alimentów, jak i egzekwowanie ich płatności."
+      },
+      {
+        "description": "Ustalenie kontaktów - Doradztwo i reprezentacja w sprawach dotyczących ustalenia zasad kontaktów rodzica z dzieckiem, w tym mediacje i postępowania sądowe mające na celu zapewnienie regularnych i odpowiednich kontaktów."
+      },
+      {
+        "description": "Ograniczenie i pozbawienie władzy rodzicielskiej - Pomoc prawna w sprawach dotyczących ograniczenia lub pozbawienia władzy rodzicielskiej, w tym przygotowanie wniosków, reprezentacja przed sądem oraz wsparcie w procesie dowodowym."
+      },
+      {
+        "description": "Ustalenie miejsca pobytu dziecka - Doradztwo i reprezentacja w sprawach dotyczących ustalenia miejsca pobytu dziecka, zarówno w kontekście sporów między rodzicami, jak i w sytuacjach wymagających interwencji sądowej."
+      }
+    ],
+    "summary": "Kancelaria dokłada wszelkich starań, aby zapewnić swoim klientom profesjonalną obsługę, wsparcie oraz skuteczne rozwiązania prawne w każdej z wymienionych dziedzin prawa rodzinnego."
+  },
+  {
+    "name": "KONWENCJA HASKA",
+    "source": "/haski.png",
+    "introduction": "Kancelaria oferuje wszechstronną pomoc prawną w sprawach prowadzonych w trybie Konwencji Haskiej dotyczącej cywilnych aspektów uprowadzenia dziecka za granicę. Nasze usługi obejmują:",
+    "services": [
+      {
+        "description": "Przygotowanie dokumentów - Pomagamy klientom w sporządzeniu wszystkich niezbędnych dokumentów.",
+        "subservices": [
+          {
+            "description": "Wniosek o nakazanie powrotu dziecka - Wniosek skierowany do odpowiednich organów w celu nakazania powrotu dziecka do kraju stałego pobytu."
+          },
+          {
+            "description": "Odpowiedź na wniosek - Pomoc w przygotowaniu odpowiedzi na wniosek złożony przez drugą stronę, w której można zawrzeć argumenty i dowody wspierające stanowisko klienta."
+          },
+          {
+            "description": "Wnioski dowodowe - Przygotowanie i składanie wniosków dowodowych, które mogą być niezbędne w procesie sądowym, takich jak dowody z zeznań świadków, dokumenty, opinie biegłych itp."
+          }
+        ]
+      },
+      {
+        "description": "Reprezentacja w postępowaniu - Oferujemy reprezentację klientów na każdym etapie postępowania sądowego, zarówno przed sądami krajowymi, jak i międzynarodowymi, zapewniając profesjonalne wsparcie prawne i obronę interesów klienta."
+      }
+    ],
+    "summary": "Nasza kancelaria dokłada wszelkich starań, aby proces związany z uprowadzeniem dziecka za granicę przebiegał sprawnie i skutecznie, dążąc do jak najszybszego i najbardziej korzystnego rozwiązania dla klienta."
+  },
+  {
+    "name": "PRAWO SPADKOWE",
+    "source": "/spadkowe.png",
+    "introduction": "Kancelaria oferuje kompleksowe usługi prawne związane z reprezentacją klientów w różnych rodzajach postępowań spadkowych. Nasze wsparcie obejmuje:",
+    "services": [
+      {
+        "description": "Stwierdzenie nabycia praw do spadku - Reprezentujemy klientów w postępowaniach sądowych mających na celu uzyskanie stwierdzenia, że dany klient jest spadkobiercą, co jest niezbędne do dalszego zarządzania odziedziczonym majątkiem."
+      },
+      {
+        "description": "Dział spadku - Pomagamy w sprawach dotyczących podziału spadku między spadkobierców. Nasze usługi obejmują negocjacje między stronami, przygotowanie odpowiednich dokumentów oraz reprezentację w sądzie, aby zapewnić sprawiedliwy podział majątku spadkowego."
+      },
+      {
+        "description": "Zachowek - Oferujemy pomoc prawną w sprawach dotyczących zachowku, czyli części spadku, która przysługuje najbliższym członkom rodziny, nawet jeśli zostali pominięci w testamencie. Reprezentujemy klientów zarówno w dochodzeniu roszczeń o zachowek, jak i w obronie przed takimi roszczeniami."
+      },
+      {
+        "description": "Sporządzanie pism procesowych - Zapewniamy wsparcie w przygotowywaniu wszelkich niezbędnych pism procesowych, takich jak wnioski, pozwy, odpowiedzi na pozwy, apelacje i inne dokumenty potrzebne w toku postępowania sądowego."
+      }
+    ],
+    "summary": "Kancelaria dba, aby każda sprawa spadkowa była prowadzona z najwyższą starannością i dbałością o interesy klienta, oferując profesjonalne doradztwo i skuteczną reprezentację na każdym etapie postępowania."
+  },
+  {
+    "name": "PRAWO KARNE",
+    "source": "/criminal.png",
+    "introduction": "Kancelaria oferuje kompleksową obronę prawną w postępowaniach karnych oraz wykroczeniowych na każdym etapie postępowania. Nasze usługi obejmują:",
+    "services": [
+      {
+        "description": "Obrona w postępowaniach karnych - Reprezentujemy klientów od momentu zatrzymania, przez cały proces sądowy, aż do zakończenia postępowania. Oferujemy doradztwo prawne, przygotowanie strategii obrony oraz reprezentację przed organami ścigania i sądami."
+      },
+      {
+        "description": "Postępowania wykroczeniowe - Zapewniamy obronę w sprawach dotyczących wykroczeń, pomagając klientom zrozumieć ich prawa, przygotować niezbędne dokumenty oraz reprezentując ich w postępowaniach przed sądami i organami administracji."
+      },
+      {
+        "description": "Dozór elektroniczny - Pomagamy klientom ubiegać się o możliwość odbywania kary w systemie dozoru elektronicznego, co pozwala na odbycie kary poza zakładem karnym, pod warunkiem spełnienia określonych warunków."
+      },
+      {
+        "description": "Warunkowe przedterminowe zwolnienie - Wspieramy klientów w staraniach o wcześniejsze zwolnienie z zakładu karnego, przygotowując wnioski i reprezentując ich przed sądami penitencjarnymi."
+      },
+      {
+        "description": "Przerwa w wykonywaniu kary - Pomagamy w uzyskaniu przerwy w wykonywaniu kary pozbawienia wolności z powodów zdrowotnych lub rodzinnych, przygotowując odpowiednie dokumenty i wnioski oraz reprezentując klientów przed sądem."
+      },
+      {
+        "description": "Odroczenie wykonania kary - Oferujemy pomoc w sprawach dotyczących odroczenia wykonania kary pozbawienia wolności, w tym sporządzanie wniosków i reprezentację przed sądem, aby umożliwić klientom czasowe odsunięcie momentu odbycia kary."
+      },
+      {
+        "description": "Reprezentacja pokrzywdzonego przestępstwem - Reprezentujemy osoby, które padły ofiarą przestępstwa, pomagając im dochodzić swoich praw, składaniu zawiadomień o popełnieniu przestępstwa oraz reprezentując je w postępowaniu karnym."
+      },
+      {
+        "description": "Sprawy nieletnich - Występujemy w sprawach prowadzonych w trybie ustawy o wspieraniu i resocjalizacji nieletnich, oferując pomoc prawną nieletnim oraz ich rodzinom w postępowaniach dotyczących czynów karalnych i środków wychowawczych."
+      }
+    ],
+    "summary": "Kancelaria zapewnia profesjonalne wsparcie na każdym etapie postępowania, dążąc do ochrony praw i interesów swoich klientów oraz zapewnienia im jak najkorzystniejszego wyniku sprawy."
+  },
+  {
+    "name": "PRAWO CYWILNE",
+    "source": "/civil.png",
+    "introduction": "Kancelaria świadczy kompleksowe usługi prawne, obejmujące reprezentację klientów przed sądami na każdym etapie postępowania w różnych rodzajach spraw. Nasze specjalizacje obejmują:",
+    "services": [
+      {
+        "description": "Zasiedzenie - Pomagamy klientom w sprawach dotyczących zasiedzenia nieruchomości, co obejmuje przygotowanie wniosków, gromadzenie dowodów oraz reprezentację przed sądem w celu uzyskania praw własności poprzez zasiedzenie."
+      },
+      {
+        "description": "Zniesienie współwłasności - Oferujemy wsparcie w postępowaniach mających na celu zniesienie współwłasności nieruchomości lub innych dóbr, w tym przygotowanie dokumentacji, negocjacje między współwłaścicielami oraz reprezentację sądową, aby doprowadzić do sprawiedliwego podziału majątku."
+      },
+      {
+        "description": "Sprawy o zapłatę - Reprezentujemy klientów w sprawach o zapłatę, zarówno po stronie wierzycieli, którzy dochodzą swoich należności, jak i po stronie dłużników. Nasze usługi obejmują sporządzanie pozwów, odpowiedzi na pozwy, negocjacje ugodowe oraz reprezentację przed sądem w celu uzyskania należnych kwot."
+      },
+      {
+        "description": "Odszkodowanie i zadośćuczynienie - Pomagamy klientom w dochodzeniu odszkodowań i zadośćuczynień za poniesione szkody materialne oraz niematerialne, takie jak urazy ciała, straty finansowe, ból i cierpienie. Przygotowujemy niezbędne dokumenty, zbieramy dowody oraz reprezentujemy klientów przed sądami w celu uzyskania sprawiedliwego wynagrodzenia za poniesione straty."
+      },
+      {
+        "description": "Sporządzanie pism procesowych - Zapewniamy pomoc w sporządzaniu wszelkich niezbędnych pism procesowych, takich jak pozwy, wnioski, apelacje, odpowiedzi na pozwy oraz inne dokumenty wymagane w toku postępowania sądowego. Dbamy o to, aby wszystkie pisma były precyzyjne, zgodne z obowiązującymi przepisami i skutecznie wspierały interesy naszych klientów."
+      }
+    ],
+    "summary": "Kancelaria dokłada wszelkich starań, aby każda sprawa była prowadzona z najwyższą starannością i profesjonalizmem, oferując klientom pełne wsparcie prawne oraz dążąc do osiągnięcia jak najlepszych wyników w każdej z wymienionych dziedzin."
+  }
+]

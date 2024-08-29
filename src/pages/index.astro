@@ -1,0 +1,23 @@
+---
+import Hero from "../features/hero/hero.astro";
+import Menu from "../components/Menu.astro";
+import About from "../features/about/about.astro";
+import { Services } from "../features/services/Services";
+import Layout from "../layouts/Layout.astro";
+import { Background } from "../ui/Background";
+import { Reviews } from "../features/reviews/Reviews";
+import { Blog } from "../features/blog/Blog";
+import Contact from "../features/contact/contact.astro";
+---
+
+<Layout title="Paulina Komenda Kancelaria Adwokacka">
+  <div>
+    <Hero />
+    <Services client:only="react" />
+    <About />
+    <Background client:idle />
+    <Reviews client:only="react" />
+    <Blog client:only="react" />
+    <Contact />
+  </div>
+</Layout>
