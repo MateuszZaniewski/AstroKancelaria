@@ -17,14 +17,14 @@ export const Blog = () => {
 
   const handlersTablet = useSwipeable({
     onSwipedLeft: () =>
-      setCount((prev) => (prev < posts.length - 1 ? prev + 2 : prev)),
-    onSwipedRight: () => setCount((prev) => (prev > 0 ? prev - 2 : prev)),
+      setCount((prev) => (prev + 2 < posts.length ? prev + 2 : prev)),
+    onSwipedRight: () => setCount((prev) => (prev > 1 ? prev - 2 : 0)),
     preventScrollOnSwipe: true,
     trackMouse: true, // enables swiping with mouse as well
   });
 
   return (
-    <section className="bg-[#EEE5DA] pb-24 pt-20">
+    <section className="bg-[#EEE5DA] pb-24 pt-20" id="blog">
       <div className="flex items-center justify-between px-[5vw] lg:px-[9.4vw]">
         <h2 className="font-cinzel text-3xl lg:text-5xl">BLOG</h2>
         <span className="text-normal cursor-pointer underline">
@@ -54,16 +54,15 @@ export const Blog = () => {
           {...handlersTablet}
           className="hidden min-h-[500px] md:flex md:justify-center md:px-[2vw]"
         >
-          <div className="flex gap-5 pb-20">
+          <div className="flex pb-20">
             {posts.slice(count, count + 2).map((post, index) => (
               <div key={index}>
-                <div>
+                <div className="flex">
                   <Post post={post} client:load />
+                  <div
+                    className={`${index % 2 === 0 ? "mx-5 h-auto w-[2px] border-r-2 border-[#B58C67]" : ""}`}
+                  />
                 </div>
-
-                {index === 0 && count < posts.length - 1 && (
-                  <div className="mx-5 h-auto w-[2px] bg-[#B58C67]" />
-                )}
               </div>
             ))}
           </div>
@@ -82,12 +81,12 @@ export const Blog = () => {
 
       {/* Desktop version without pagination */}
       <div className="hidden h-full flex-1 px-[9.3vw] pt-16 lg:flex 2xl:justify-center">
-        {posts.map((post, index) => (
+        {posts.slice(0, 3).map((post, index) => (
           <div className="flex" key={index}>
             <div>
               <Post post={post} />
             </div>
-            {posts.length - 1 !== index && (
+            {index < 2 && (
               <div className="mx-5 h-auto w-[2px] bg-[#B58C67] 2xl:mx-16" />
             )}
           </div>

@@ -25,12 +25,10 @@ export const Services = () => {
         }
       }, 50);
     }
-
-    console.log(activeTab);
   };
 
   return (
-    <section className="bg-[#EEE5DA] pb-10 lg:min-h-[100vh]">
+    <section className="bg-[#EEE5DA] pb-10 lg:min-h-[100vh]" id="services">
       <h2
         id="tgt"
         className="pl-5 pt-10 font-cinzel text-3xl sm:pl-10 sm:text-4xl md:pl-[9.3vw] lg:pb-14 lg:pt-20 lg:text-5xl"
@@ -44,6 +42,7 @@ export const Services = () => {
               <div
                 ref={(el) => (descriptionRefs.current[index] = el)}
                 key={disc.name}
+                className="pb-2"
               >
                 <Category
                   text={disc.name}

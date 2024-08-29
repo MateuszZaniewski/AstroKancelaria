@@ -1,6 +1,5 @@
 ---
 import Hero from "../features/hero/hero.astro";
-import Menu from "../components/Menu.astro";
 import About from "../features/about/about.astro";
 import { Services } from "../features/services/Services";
 import Layout from "../layouts/Layout.astro";
@@ -11,13 +10,15 @@ import Contact from "../features/contact/contact.astro";
 ---
 
 <Layout title="Paulina Komenda Kancelaria Adwokacka">
-  <div>
+  <main>
     <Hero />
     <Services client:only="react" />
-    <About />
-    <Background client:idle />
-    <Reviews client:only="react" />
+    <div>
+      <About />
+      <Background client:idle />
+      <Reviews client:only="react" />
+    </div>
     <Blog client:only="react" />
     <Contact />
-  </div>
+  </main>
 </Layout>

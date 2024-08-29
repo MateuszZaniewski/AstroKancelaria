@@ -18,10 +18,24 @@ import { Image } from "astro:assets";
       <div
         class="hidden lg:flex gap-12 2xl:gap-16 font-normal font-sans pt-2 items-center"
       >
-        <span class="h-fit whitespace-nowrap font-semibold">USŁUGI PRAWNE</span>
-        <span class="h-fit whitespace-nowrap font-semibold">O MNIE</span>
-        <span class="h-fit whitespace-nowrap font-semibold">BLOG</span>
-        <CtaButton text="KONTAKT" variant="contain" />
+        <a
+          href="#services"
+          class="h-fit whitespace-nowrap font-semibold cursor-pointer nav-link"
+          >USŁUGI PRAWNE</a
+        >
+        <a
+          href="#about"
+          class="h-fit whitespace-nowrap font-semibold cursor-pointer nav-link"
+          >O MNIE</a
+        >
+        <a
+          href="#blog"
+          class="h-fit whitespace-nowrap font-semibold cursor-pointer nav-link"
+          >BLOG</a
+        >
+        <a href="#contact" class="nav-link">
+          <CtaButton text="KONTAKT" variant="contain" />
+        </a>
       </div>
       <div class="lg:hidden flex items-center">
         <button class="outline-none mobile-menu-button">
@@ -54,9 +68,9 @@ import { Image } from "astro:assets";
 
   <!-- Mobile hamburger menu -->
   <div
-    class="hidden mobile-menu fixed overflow-hidden overscroll-contain top-0 left-0 w-full h-screen z-40 animation-menu-slide-out"
+    class="hidden mobile-menu absolute top-0 left-0 w-full h-screen z-40 animation-menu-slide-out"
   >
-    <div class="min-h-screen bg-[#EEE5DA] px-5 scroll-y-none">
+    <div class="min-h-screen bg-[#EEE5DA] px-5 pb-12">
       <div class="flex justify-between">
         <div class="flex justify-end items-center">
           <Image
@@ -96,15 +110,21 @@ import { Image } from "astro:assets";
       <div
         class="pt-[7.5vh] sm:pt-[9vh] text-3xl sm:text-4xl sm:gap-[3.5vh] flex flex-col gap-[2.3vh] font-cinzel"
       >
-        <span>ZAKRES USŁUG <br class="sm:hidden" /> PRAWNYCH</span>
-        <span>O MNIE</span>
-        <span>OPINIE</span>
-        <span>BLOG</span>
+        <a href="#services" class="nav-link"
+          >ZAKRES USŁUG <br class="sm:hidden" /> PRAWNYCH</a
+        >
+        <a href="#about" class="nav-link">O MNIE</a>
+        <a href="#opinions" class="nav-link">OPINIE</a>
+        <a href="#blog" class="nav-link">BLOG</a>
       </div>
       <div class="pt-[6.6vh]">
-        <h3 class="text-3xl text-center font-cinzel sm:text-4xl sm:gap-[3.5vh]">
-          KONTAKT
-        </h3>
+        <a href="#contact" class="nav-link">
+          <h3
+            class="text-3xl text-center font-cinzel sm:text-4xl sm:gap-[3.5vh]"
+          >
+            KONTAKT
+          </h3>
+        </a>
         <div
           class="sm:max-w-[360px] sm:mx-auto flex flex-col gap-[2.3vh] pt-[1.8vh] sm:pt-[2.3vh]"
         >
@@ -174,29 +194,79 @@ import { Image } from "astro:assets";
   .animation-menu-slide-out {
     animation: slide-up 0.7s forwards;
   }
+
+  .overflow-hidden {
+    overflow: hidden;
+  }
+
+  .mobile-menu {
+    overflow-y: auto;
+    -webkit-overflow-scrolling: touch; /* for smooth scrolling on iOS */
+  }
 </style>
 
 <script>
-  const btn = document.querySelector(".mobile-menu-button");
-  const menu = document.querySelector(".mobile-menu");
-  const hamburgerIcon = document.querySelector(".hamburger-icon");
-  const closeIcon = document.querySelector(".close-icon");
-  const close = document.querySelector(".mobile-menu-close");
+  document.addEventListener("DOMContentLoaded", () => {
+    // Select elements
+    const btn = document.querySelector(".mobile-menu-button");
+    const menu = document.querySelector(".mobile-menu");
+    const hamburgerIcon = document.querySelector(".hamburger-icon");
+    const closeIcon = document.querySelector(".close-icon");
+    const close = document.querySelector(".mobile-menu-close");
+    const navLinks = document.querySelectorAll(".mobile-menu .nav-link");
 
-  btn.addEventListener("click", () => {
-    menu.classList.remove("hidden", "animation-menu-slide-out");
-    menu.classList.add("animation-menu-slide-in");
-    hamburgerIcon.classList.add("hidden");
-    closeIcon.classList.remove("hidden");
-  });
+    // Open mobile menu
+    btn.addEventListener("click", () => {
+      menu.classList.remove("hidden", "animation-menu-slide-out");
+      menu.classList.add("animation-menu-slide-in");
+      hamburgerIcon.classList.add("hidden");
+      closeIcon.classList.remove("hidden");
 
-  close.addEventListener("click", () => {
-    menu.classList.remove("animation-menu-slide-in");
-    menu.classList.add("animation-menu-slide-out");
-    setTimeout(() => {
-      menu.classList.add("hidden");
-    }, 700); // Match the duration of the slide-up animation
-    hamburgerIcon.classList.remove("hidden");
-    closeIcon.classList.add("hidden");
+      // Disable scrolling on the body
+      document.body.classList.add("overflow-hidden");
+    });
+
+    // Close mobile menu
+    close.addEventListener("click", () => {
+      menu.classList.remove("animation-menu-slide-in");
+      menu.classList.add("animation-menu-slide-out");
+      setTimeout(() => {
+        menu.classList.add("hidden");
+        // Re-enable scrolling on the body
+        document.body.classList.remove("overflow-hidden");
+      }, 700); // Match the duration of the slide-up animation
+
+      hamburgerIcon.classList.remove("hidden");
+      closeIcon.classList.add("hidden");
+    });
+
+    // Smooth scrolling and close menu on link click
+    navLinks.forEach((link) => {
+      link.addEventListener("click", (e) => {
+        e.preventDefault(); // Prevent default anchor link behavior
+
+        // Get the target element by id from the href attribute
+        const targetId = link.getAttribute("href").substring(1); // Remove the '#' character
+        const targetElement = document.getElementById(targetId);
+
+        if (targetElement) {
+          targetElement.scrollIntoView({
+            behavior: "smooth", // Smooth scrolling behavior
+          });
+        }
+
+        // Close mobile menu
+        menu.classList.remove("animation-menu-slide-in");
+        menu.classList.add("animation-menu-slide-out");
+        setTimeout(() => {
+          menu.classList.add("hidden");
+          // Re-enable scrolling on the body
+          document.body.classList.remove("overflow-hidden");
+        }, 700); // Match the duration of the slide-up animation
+
+        hamburgerIcon.classList.remove("hidden");
+        closeIcon.classList.add("hidden");
+      });
+    });
   });
 </script>

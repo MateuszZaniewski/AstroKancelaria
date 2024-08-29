@@ -17,14 +17,14 @@ export const Reviews = () => {
 
   const handlersTablet = useSwipeable({
     onSwipedLeft: () =>
-      setCount((prev) => (prev < opinions.length - 1 ? prev + 2 : prev)),
-    onSwipedRight: () => setCount((prev) => (prev > 0 ? prev - 2 : prev)),
+      setCount((prev) => (prev + 2 < opinions.length ? prev + 2 : prev)),
+    onSwipedRight: () => setCount((prev) => (prev > 1 ? prev - 2 : 0)),
     preventScrollOnSwipe: true,
     trackMouse: true, // enables swiping with mouse as well
   });
 
   return (
-    <section className="bg-[#EEE5DA] pb-24 pt-20">
+    <section className="bg-[#EEE5DA] pb-24 pt-20" id="opinions">
       <h2 className="px-[5vw] font-cinzel text-3xl lg:pl-[9.4vw] lg:text-5xl">
         OPINIE NASZYCH KLIENTÓW
       </h2>
@@ -58,15 +58,15 @@ export const Reviews = () => {
           {...handlersTablet}
           className="hidden min-h-[500px] md:flex md:justify-center md:px-[2vw]"
         >
-          <div className="flex gap-5 pb-20">
+          <div className="flex pb-20">
             {opinions.slice(count, count + 2).map((opinion, index) => (
               <div key={opinion.text}>
-                <div>
+                <div className="flex">
                   <Opinion opinion={opinion} client:load />
+                  <div
+                    className={`${index % 2 === 0 ? "mx-5 h-auto w-[2px] border-r-2 border-[#B58C67]" : ""}`}
+                  />
                 </div>
-                {index === 0 && count < opinions.length - 1 && (
-                  <div className="mx-5 h-auto w-[2px] bg-[#B58C67]" />
-                )}
               </div>
             ))}
           </div>
@@ -85,13 +85,13 @@ export const Reviews = () => {
 
       {/* Desktop version without pagination */}
       <div className="hidden px-[9.3vw] lg:flex 2xl:justify-center">
-        {opinions.map((opinion, index) => (
+        {opinions.slice(0, 3).map((opinion, index) => (
           <div className="flex" key={opinion.text}>
             <div>
               <Opinion key={opinion.text} opinion={opinion} />
             </div>
 
-            {index < opinions.length - 1 && (
+            {index < 2 && (
               <div className="mx-5 h-auto w-[2px] bg-[#B58C67] 2xl:mx-16" />
             )}
           </div>
