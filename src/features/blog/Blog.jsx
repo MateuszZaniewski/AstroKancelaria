@@ -27,7 +27,7 @@ export const Blog = () => {
     <section className="bg-[#EEE5DA] pb-24 pt-20" id="blog">
       <div className="flex items-center justify-between px-[5vw] lg:px-[9.4vw]">
         <h2 className="font-cinzel text-3xl lg:text-5xl">BLOG</h2>
-        <span className="text-normal cursor-pointer underline">
+        <span className="text-normal relative block w-fit border-b-[2px] border-black after:absolute after:block after:h-[2px] after:w-full after:origin-left after:scale-x-0 after:bg-[#B58C67] after:transition after:duration-300 after:content-[''] after:hover:scale-x-100">
           WSZYSTKIE WPISY
         </span>
       </div>

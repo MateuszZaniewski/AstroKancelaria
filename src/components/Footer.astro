@@ -2,7 +2,9 @@
 const containerStyle = "flex flex-col pl-[5vw] max-w-[400px] sm:max-w-full";
 const headingStyle = "pb-4 font-cinzel text-2xl";
 const elementsStyle =
-  "grid grid-cols-2 grid-rows-auto gap-x-10 gap-y-7 text-normal sm:flex sm:flex-col sm:gap-5 cursor-pointer";
+  "grid grid-cols-2 grid-rows-auto gap-x-10 gap-y-7 sm:flex sm:flex-col sm:gap-5 ";
+const linkStyles =
+  "hover:font-semibold cursor-pointer text-normal active:text-[#D9C6AF] focus:border-[#533630]";
 ---
 
 <section class="bg-[#0E1F2A] pt-5 md:pt-14 lg:pt-20 pb-5 text-[#B58C67]">
@@ -17,23 +19,23 @@ const elementsStyle =
     <div class=`${containerStyle} md:order-2`>
       <h3 class=`${headingStyle}`>USŁUGI PRAWNE</h3>
       <div class=`${elementsStyle}`>
-        <span>Prawo rodzinne</span>
-        <span>Konwencja Haska</span>
-        <span>Prawo spadkowe</span>
-        <span>Prawo karne</span>
-        <span>Prawo cywilne</span>
+        <span class=`${linkStyles}`>Prawo rodzinne</span>
+        <span class=`${linkStyles}`>Konwencja Haska</span>
+        <span class=`${linkStyles}`>Prawo spadkowe</span>
+        <span class=`${linkStyles}`>Prawo karne</span>
+        <span class=`${linkStyles}`>Prawo cywilne</span>
       </div>
     </div>
     <!--  -->
     <div class=`${containerStyle} pt-12 sm:pt-0 md:order-3`>
       <h3 class=`${headingStyle}`>KANCELARIA</h3>
       <div class=`${elementsStyle}`>
-        <span class="h-fit">O mnie</span>
-        <span>Blog</span>
-        <span>Facebook</span>
-        <span>Instagram</span>
-        <span>RODO</span>
-        <span>Polityka prywatności</span>
+        <span class=`${linkStyles} h-fit`>O mnie</span>
+        <span class=`${linkStyles}`>Blog</span>
+        <span class=`${linkStyles}`>Facebook</span>
+        <span class=`${linkStyles}`>Instagram</span>
+        <span class=`${linkStyles}`>RODO</span>
+        <span class=`${linkStyles}`>Polityka prywatności</span>
       </div>
     </div>
     <!--  -->

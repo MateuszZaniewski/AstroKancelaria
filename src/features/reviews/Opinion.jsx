@@ -1,6 +1,7 @@
-export const Opinion = ({ opinion }) => {
+export const Opinion = ({ opinion, index }) => {
+  console.log(index);
   return (
-    <div className="max-w-[365px] flex-grow-0 md:w-[40vw] lg:w-[27vw]">
+    <div className={`max-w-[365px] flex-grow-0 md:w-[40vw] lg:w-[27vw]`}>
       <div className="flex flex-col gap-5 px-2 py-2">
         <div className="flex justify-between">
           <h3 className="text-normal font-semibold">{opinion.name}</h3>
