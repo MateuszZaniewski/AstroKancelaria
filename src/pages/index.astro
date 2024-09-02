@@ -10,15 +10,28 @@ import Contact from "../features/contact/contact.astro";
 ---
 
 <Layout title="Paulina Komenda Kancelaria Adwokacka">
-  <main>
-    <Hero />
-    <Services client:only="react" />
-    <div>
-      <About />
-      <Background client:idle />
-      <Reviews client:only="react" />
+  <main class="overflow-hidden">
+    <!-- Container for both logo and background -->
+    <div
+      class="absolute top-0 w-full min-h-screen bg-[#0E1F2A] flex items-center justify-center animate-slideLeft"
+    >
+      <img
+        src="/animationLogo1440.svg"
+        alt="Logo"
+        class="animate-revealLogo px-10"
+      />
     </div>
-    <Blog client:only="react" />
-    <Contact />
+
+    <Hero />
+    <div class="invisible animate-showRestOfThePage">
+      <Services client:only="react" />
+      <div>
+        <About />
+        <Background client:idle />
+        <Reviews client:only="react" />
+      </div>
+      <Blog client:only="react" />
+      <Contact />
+    </div>
   </main>
 </Layout>
