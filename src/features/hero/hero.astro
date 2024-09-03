@@ -43,8 +43,15 @@ import CtaButton from "../../ui/CtaButton.astro";
       </div>
     </div>
     <!-- Animate to this point -->
-    <div class="flex items-end h-full sm:h-24 mt-8 md:h-16 w-[2px] md:hidden">
-      <div class="bg-[#B58C67] w-2 h-16"></div>
+    <div class="flex items-end h-full sm:h-24 mt-8 md:h-16 w-4 md:hidden">
+      <div
+        class="bg-[#B58C67] w-[2px] h-16 relative overflow-hidden invisible animate-showElement"
+      >
+        <div
+          class="bg-[#0E1F2A] w-[2px] rounded-full h-4 absolute -top-4 left-0 animate-animateLine"
+        >
+        </div>
+      </div>
     </div>
   </div>
 </div>
