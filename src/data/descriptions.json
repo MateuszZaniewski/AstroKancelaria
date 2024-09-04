@@ -1,6 +1,7 @@
 [
   {
     "name": "PRAWO RODZINNE",
+    "id": "rodzinne",
     "source": "/family-law.png",
     "introduction": "Kancelaria prawna specjalizuje się w prowadzeniu spraw z zakresu prawa rodzinnego, obejmując szeroki wachlarz usług i wsparcia prawnego dla klientów w trudnych sytuacjach życiowych. Do głównych obszarów działalności kancelarii należą:",
     "services": [
@@ -33,6 +34,7 @@
   },
   {
     "name": "KONWENCJA HASKA",
+    "id": "haska",
     "source": "/haski.png",
     "introduction": "Kancelaria oferuje wszechstronną pomoc prawną w sprawach prowadzonych w trybie Konwencji Haskiej dotyczącej cywilnych aspektów uprowadzenia dziecka za granicę. Nasze usługi obejmują:",
     "services": [
@@ -58,6 +60,7 @@
   },
   {
     "name": "PRAWO SPADKOWE",
+    "id": "spadkowe",
     "source": "/spadkowe.png",
     "introduction": "Kancelaria oferuje kompleksowe usługi prawne związane z reprezentacją klientów w różnych rodzajach postępowań spadkowych. Nasze wsparcie obejmuje:",
     "services": [
@@ -78,6 +81,7 @@
   },
   {
     "name": "PRAWO KARNE",
+    "id": "karne",
     "source": "/criminal.png",
     "introduction": "Kancelaria oferuje kompleksową obronę prawną w postępowaniach karnych oraz wykroczeniowych na każdym etapie postępowania. Nasze usługi obejmują:",
     "services": [
@@ -110,6 +114,7 @@
   },
   {
     "name": "PRAWO CYWILNE",
+    "id": "cywilne",
     "source": "/civil.png",
     "introduction": "Kancelaria świadczy kompleksowe usługi prawne, obejmujące reprezentację klientów przed sądami na każdym etapie postępowania w różnych rodzajach spraw. Nasze specjalizacje obejmują:",
     "services": [

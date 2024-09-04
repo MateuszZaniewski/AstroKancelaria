@@ -101,7 +101,7 @@ import Menu from "./Menu.astro";
   }
 
   .animation-menu-slide-out {
-    animation: slide-up 0.7s forwards;
+    animation: slide-up 0.1s forwards;
   }
 
   .overflow-hidden {
@@ -121,8 +121,7 @@ import Menu from "./Menu.astro";
     const menu = document.querySelector(".mobile-menu");
     const hamburgerIcon = document.querySelector(".hamburger-icon");
     const closeIcon = document.querySelector(".close-icon");
-    const close = document.querySelector(".mobile-menu-close");
-    const navLinks = document.querySelectorAll(".mobile-menu .nav-link");
+    const navLinks = document.querySelectorAll(".nav-link");
 
     // Open mobile menu
     btn.addEventListener("click", () => {
@@ -133,20 +132,7 @@ import Menu from "./Menu.astro";
 
       // Disable scrolling on the body
       document.body.style.position = "fixed";
-    });
-
-    // Close mobile menu
-    close.addEventListener("click", () => {
-      menu.classList.remove("animation-menu-slide-in");
-      menu.classList.add("animation-menu-slide-out");
-      setTimeout(() => {
-        menu.classList.add("hidden");
-        // Re-enable scrolling on the body
-        document.body.style.position = "relative";
-      }, 700); // Match the duration of the slide-up animation
-
-      hamburgerIcon.classList.remove("hidden");
-      closeIcon.classList.add("hidden");
+      document.body.style.overflow = "hidden";
     });
 
     // Smooth scrolling and close menu on link click
@@ -159,22 +145,26 @@ import Menu from "./Menu.astro";
         const targetElement = document.getElementById(targetId);
 
         if (targetElement) {
-          targetElement.scrollIntoView({
-            behavior: "smooth", // Smooth scrolling behavior
-          });
+          // Close the mobile menu first
+          menu.classList.remove("animation-menu-slide-in");
+          menu.classList.add("animation-menu-slide-out");
+
+          setTimeout(() => {
+            menu.classList.add("hidden");
+            // Re-enable scrolling on the body
+            document.body.style.position = "";
+            document.body.style.overflow = "";
+
+            // Scroll to the target element
+            targetElement.scrollIntoView({
+              behavior: "smooth", // Smooth scrolling behavior
+              block: "start", // Align the top of the element with the top of the viewport
+            });
+          }, 100); // Match the duration of the slide-up animation
+
+          hamburgerIcon.classList.remove("hidden");
+          closeIcon.classList.add("hidden");
         }
-
-        // Close mobile menu
-        menu.classList.remove("animation-menu-slide-in");
-        menu.classList.add("animation-menu-slide-out");
-        setTimeout(() => {
-          menu.classList.add("hidden");
-          // Re-enable scrolling on the body
-          document.body.classList.remove("overflow-hidden");
-        }, 700); // Match the duration of the slide-up animation
-
-        hamburgerIcon.classList.remove("hidden");
-        closeIcon.classList.add("hidden");
       });
     });
   });

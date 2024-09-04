@@ -30,12 +30,12 @@ export default {
           "0%": {
             opacity: "0",
             transform: "translateX(100%)",
-            overflow: "hidden",
+            // overflow: "hidden",
           },
           "100%": {
             opacity: "1",
             transform: "translateX(0)", // End at the original position
-            overflow: "auto",
+            // overflow: "auto",
           },
         },
         showRestOfThePage: {
@@ -80,10 +80,10 @@ export default {
         },
         animateNoScroll: {
           "0%": {
-            overflow: "hidden",
+            overflow: "auto",
           },
           "80%": {
-            overflow: "hidden",
+            overflow: "auto",
           },
           "100%": {
             overflow: "auto",
@@ -119,6 +119,14 @@ export default {
             visibility: "visible",
           },
         },
+        slideInFromRight: {
+          "0%": {
+            opacity: "0.5",
+          },
+          "100%": {
+            opacity: "1",
+          },
+        },
       },
       animation: {
         animateNoScroll: "animateNoScroll 9000ms ease-in forwards",
@@ -132,6 +140,7 @@ export default {
           "animateHeroButtons 1000ms ease-out forwards 8300ms",
         showElement: "showElement 100ms forwards 8300ms",
         animateLine: "animateLine 1500ms linear infinite forwards 8300ms",
+        slideInFromRight: "slideInFromRight 300ms ease-in forwards",
       },
     },
     fontFamily: {
