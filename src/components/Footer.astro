@@ -1,5 +1,6 @@
 ---
-const containerStyle = "flex flex-col pl-[5vw] max-w-[400px] sm:max-w-full";
+const containerStyle =
+  "flex flex-col pl-[5vw] max-w-[400px] sm:max-w-full xl:min-w-[240px]";
 const headingStyle = "pb-4 font-cinzel text-2xl";
 const elementsStyle =
   "grid grid-cols-2 grid-rows-auto gap-x-10 gap-y-7 sm:flex sm:flex-col sm:gap-5 ";
@@ -65,21 +66,8 @@ const linkStyles =
   </div>
 </section>
 
-<script>
-  const navLinks = document.querySelectorAll(".nav-link");
-
-  navLinks.forEach((link) => {
-    link.addEventListener("click", (e) => {
-      e.preventDefault(); // Prevent default anchor link behavior
-
-      // Get the target element by id from the href attribute
-      const targetId = link.getAttribute("href").substring(1); // Remove the '#' character
-      const targetElement = document.getElementById(targetId);
-      // Scroll to the target element
-      targetElement.scrollIntoView({
-        behavior: "smooth", // Smooth scrolling behavior
-        block: "start", // Align the top of the element with the top of the viewport
-      });
-    });
+<script src="../helpers/smoothScroll.js">
+  document.addEventListener("DOMContentLoaded", () => {
+    enableSmoothScroll(".nav-link");
   });
 </script>

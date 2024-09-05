@@ -1,0 +1,23 @@
+---
+import posts from "../../data/posts.json";
+import CtaButton from "../../ui/CtaButton.astro";
+---
+
+<section class="px-5 pb-5">
+  <div class="w-full h-full max-w-[688px] max-h-[344px]">
+    <img src="/blog1HighRes.png" class="w-full h-full" />
+  </div>
+  <div class="py-3">
+    <h2 class="text-lg font-semibold">{posts[0].name}</h2>
+    <div class="text-sm pt-1">
+      <span>{posts[0].date}</span> |
+      <span>{posts[0].category}</span>
+    </div>
+  </div>
+  <div>
+    <p>{posts[0].textShort}</p>
+  </div>
+  <div class="flex justify-end">
+    <CtaButton text="CZYTAJ DALEJ" variant="outlined" />
+  </div>
+</section>

@@ -1,5 +1,6 @@
 ---
 import { Image } from "astro:assets";
+import CtaButton from "../../ui/CtaButton.astro";
 import photo from "../../../public/persona.svg";
 ---
 
@@ -36,6 +37,9 @@ import photo from "../../../public/persona.svg";
           zapewnienie kompleksowej pomocy prawnej wszystkim, którzy jej
           potrzebują, w formie i zakresie dostosowanym do sytuacji Klienta.
         </p>
+        <a href="#contact" class="nav-link max-w-fit">
+          <CtaButton text="SKONTAKTUJ SIĘ" variant="contain" />
+        </a>
       </div>
     </div>
     <div class="pl-[9.4vw] sm:flex sm:justify-center sm:pl-0">
@@ -52,3 +56,9 @@ import photo from "../../../public/persona.svg";
     </div>
   </div>
 </section>
+
+<script src="../../helpers/smoothScroll.js">
+  document.addEventListener("DOMContentLoaded", () => {
+    enableSmoothScroll(".nav-link");
+  });
+</script>

@@ -3,9 +3,17 @@ import CtaButton from "../ui/CtaButton.astro";
 import logo from "../../public/logoKomenda.svg";
 import { Image } from "astro:assets";
 import Menu from "./Menu.astro";
+
+interface Props {
+  animate: boolean;
+}
+
+const { animate } = Astro.props;
 ---
 
-<nav class="absolute w-full invisible -z-50 -top-26 animate-animateNavbar">
+<nav
+  class={`absolute z-10 w-full ${animate === true && "animate-animateNavbar invisible -z-50 -top-26"}`}
+>
   <div class="max-w-[1600px] mx-auto px-5 sm:px-10">
     <div class="flex justify-between">
       <div class="flex justify-end items-center">
@@ -110,7 +118,7 @@ import Menu from "./Menu.astro";
 
   .mobile-menu {
     overflow-y: auto;
-    -webkit-overflow-scrolling: touch; /* for smooth scrolling on iOS */
+    -webkit-overflow-scrolling: touch;
   }
 </style>
 
@@ -118,6 +126,7 @@ import Menu from "./Menu.astro";
   document.addEventListener("DOMContentLoaded", () => {
     // Select elements
     const btn = document.querySelector(".mobile-menu-button");
+    const closeBtn = document.querySelector(".mobile-menu-close");
     const menu = document.querySelector(".mobile-menu");
     const hamburgerIcon = document.querySelector(".hamburger-icon");
     const closeIcon = document.querySelector(".close-icon");
@@ -133,6 +142,22 @@ import Menu from "./Menu.astro";
       // Disable scrolling on the body
       document.body.style.position = "fixed";
       document.body.style.overflow = "hidden";
+    });
+
+    // Close mobile menu when clicking the "X" button
+    closeBtn.addEventListener("click", () => {
+      menu.classList.remove("animation-menu-slide-in");
+      menu.classList.add("animation-menu-slide-out");
+
+      setTimeout(() => {
+        menu.classList.add("hidden");
+        // Re-enable scrolling on the body
+        document.body.style.position = "";
+        document.body.style.overflow = "";
+
+        hamburgerIcon.classList.remove("hidden");
+        closeIcon.classList.add("hidden");
+      }, 100); // Match the duration of the slide-up animation
     });
 
     // Smooth scrolling and close menu on link click

@@ -27,9 +27,12 @@ export const Blog = () => {
     <section className="bg-[#EEE5DA] pb-24 pt-20" id="blog">
       <div className="flex items-center justify-between px-[5vw] lg:px-[9.4vw]">
         <h2 className="font-cinzel text-3xl lg:text-5xl">BLOG</h2>
-        <span className="text-normal relative block w-fit cursor-pointer border-b-[2px] border-black after:absolute after:block after:h-[2px] after:w-full after:origin-left after:scale-x-0 after:bg-[#B58C67] after:transition after:duration-300 after:content-[''] after:hover:scale-x-100">
+        <a
+          href="/blog"
+          className="text-normal relative block w-fit cursor-pointer border-b-[2px] border-black after:absolute after:block after:h-[2px] after:w-full after:origin-left after:scale-x-0 after:bg-[#B58C67] after:transition after:duration-300 after:content-[''] after:hover:scale-x-100"
+        >
           WSZYSTKIE WPISY
-        </span>
+        </a>
       </div>
       <div className="block pt-7 md:hidden">
         {/* Mobile version with pagination, visible 1 item at most */}

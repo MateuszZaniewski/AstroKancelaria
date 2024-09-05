@@ -1,6 +1,5 @@
 ---
 import Header from "../components/Header.astro";
-import Footer from "../components/Footer.astro";
 interface Props {
   title: string;
 }
@@ -50,10 +49,9 @@ const { title } = Astro.props;
     <title>{title}</title>
   </head>
   <body class="overflow-hidden animate-animateNoScroll">
-    <section class="relative z-10">
-      <Header animate={true} />
+    <section class="relative z-10 bg-[#EEE5DA]">
+      <Header animate={false} />
       <slot />
-      <Footer />
     </section>
   </body>
 </html>

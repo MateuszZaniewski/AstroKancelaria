@@ -2,9 +2,7 @@
 const { text = "", variant = "contain" } = Astro.props;
 ---
 
-<div>
-  <button
-    class=`${variant === "contain" ? "py-2 px-6 bg-[#B58C67] h-fit whitespace-nowrap hover:bg-[#A27350] hover:text-white active:bg-[#8B5D43]" : variant === "outlined" ? "relative text-xl w-fit block after:block after:content-[''] after:absolute after:h-[3px] after:bg-[#B58C67] after:w-full after:scale-x-0 after:hover:scale-x-100 after:transition after:duration-300 after:origin-left border-b-2 border-black" : "border-b-2 border-black"}`
-    >{text}</button
-  >
-</div>
+<button
+  class=`${variant === "contain" ? "py-2 px-6 bg-[#B58C67] h-fit whitespace-nowrap hover:bg-[#A27350] hover:text-white active:bg-[#8B5D43] text-black" : variant === "outlined" ? "relative text-normal lg:text-xl w-fit block after:block after:content-[''] after:absolute after:h-[3px] after:bg-[#B58C67] after:w-full after:scale-x-0 after:hover:scale-x-100 after:transition after:duration-300 after:origin-left border-b-2 border-black" : "border-b-2 border-black"}`
+  >{text}</button
+>
