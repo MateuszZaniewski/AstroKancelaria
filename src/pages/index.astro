@@ -10,9 +10,9 @@ import Contact from "../features/contact/contact.astro";
 ---
 
 <Layout title="Paulina Komenda Kancelaria Adwokacka">
-  <main class="overflow-hidden">
+  <main class="overflow-hidden relative">
     <div
-      class="absolute top-0 w-full min-h-screen bg-[#0E1F2A] flex items-center justify-center animate-slideLeft"
+      class="fixed inset-0 w-full h-screen bg-[#0E1F2A] flex items-center justify-center animate-slideLeft"
     >
       <img
         src="/animationLogo1440.svg"
@@ -22,7 +22,7 @@ import Contact from "../features/contact/contact.astro";
     </div>
 
     <Hero />
-    <div class="invisible animate-showRestOfThePage">
+    <div>
       <Services client:only="react" />
       <div>
         <About />
@@ -33,4 +33,12 @@ import Contact from "../features/contact/contact.astro";
       <Contact />
     </div>
   </main>
+  <!-- <main>
+    <div class="bg-blue-300 h-screen"></div>
+    <div class="bg-purple-200 h-screen"></div>
+    <div class="bg-orange-300 h-screen"></div>
+    <div class="bg-[#0E1F2A] h-screen"></div>
+    <div class="bg-[#233f0c] h-screen"></div>
+    <div class="bg-[#db4747] h-screen"></div>
+  </main> -->
 </Layout>

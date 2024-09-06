@@ -9,10 +9,12 @@ interface Props {
 }
 
 const { animate } = Astro.props;
+// mix-blend-difference
 ---
 
 <nav
-  class={`absolute z-10 w-full ${animate === true && "animate-animateNavbar invisible -z-50 -top-26"}`}
+  id="navbar"
+  class={`absolute z-10 w-full ${animate === true && "animate-animateNavbar invisible -z-50 -top-26 "}`}
 >
   <div class="max-w-[1600px] mx-auto px-5 sm:px-10">
     <div class="flex justify-between">
@@ -25,7 +27,7 @@ const { animate } = Astro.props;
         />
       </div>
       <div
-        class="hidden lg:flex gap-12 2xl:gap-16 font-normal font-sans pt-2 items-center"
+        class="hidden lg:flex gap-12 2xl:gap-16 font-normal font-sans pt-2 items-center mix-blend-difference transition-colors"
       >
         <a
           href="#services"

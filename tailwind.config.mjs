@@ -28,12 +28,12 @@ export default {
         },
         revealHero: {
           "0%": {
-            opacity: "0",
+            visibility: "hidden",
             transform: "translateX(100%)",
             // overflow: "hidden",
           },
           "100%": {
-            opacity: "1",
+            visibility: "visible",
             transform: "translateX(0)", // End at the original position
             // overflow: "auto",
           },
@@ -49,11 +49,13 @@ export default {
         animateNavbar: {
           "0%": {
             visibility: "hidden",
+            // position: "absolute",
             zIndex: "-50",
             top: "-100px",
           },
           "100%": {
             visibility: "visible",
+            // position: "fixed",
             zIndex: "50",
             top: "0px",
           },
