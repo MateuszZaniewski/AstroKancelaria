@@ -71,7 +71,7 @@ export const Services = () => {
           {descriptions.map((desc, index) => (
             <div
               key={desc.summary}
-              className={`border-l-4 border-[#B58C67] pl-7`}
+              className={`border-l-2 border-[#B58C67] pl-7`}
             >
               <Description
                 introduction={descriptions[index].introduction}

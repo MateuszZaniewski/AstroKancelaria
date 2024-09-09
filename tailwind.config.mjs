@@ -150,5 +150,13 @@ export default {
       cinzel: ["Cinzel", "sans-serif"],
     },
   },
-  plugins: [],
+  plugins: [
+    function ({ addBase }) {
+      addBase({
+        html: {
+          scrollBehavior: "smooth",
+        },
+      });
+    },
+  ],
 };

@@ -1,6 +1,6 @@
 ---
 import CtaButton from "../ui/CtaButton.astro";
-import logo from "../../public/logoKomenda.svg";
+import logo from "../../public/newLogo.svg";
 import { Image } from "astro:assets";
 import Menu from "./Menu.astro";
 
@@ -18,14 +18,14 @@ const { animate } = Astro.props;
 >
   <div class="max-w-[1600px] mx-auto px-5 sm:px-10">
     <div class="flex justify-between">
-      <div class="flex justify-end items-center">
+      <a href="/">
         <Image
           src={logo}
           alt="logoKancelariaPaulinaKomenda"
-          class="h-full max-h-[83px] w-[64vw] max-w-[298px] min-w-[230px] pt-[2.3vh] cursor-pointer"
+          class="h-full max-h-[83px] w-full max-w-[298px] min-w-[230px] pt-[2.3vh] cursor-pointer"
           loading="eager"
         />
-      </div>
+      </a>
       <div
         class="hidden lg:flex gap-12 2xl:gap-16 font-normal font-sans pt-2 items-center mix-blend-difference transition-colors"
       >
