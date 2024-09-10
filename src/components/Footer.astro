@@ -1,4 +1,5 @@
 ---
+import { FooterLink } from "./FooterLink";
 const containerStyle =
   "flex flex-col pl-[5vw] max-w-[440px] sm:max-w-full xl:min-w-[260px]";
 const headingStyle = "pb-4 font-cinzel text-2xl";
@@ -20,11 +21,21 @@ const linkStyles =
     <div class=`${containerStyle} md:order-2`>
       <h3 class=`${headingStyle}`>USŁUGI PRAWNE</h3>
       <div class=`${elementsStyle}`>
-        <a href="#rodzinne" class=`${linkStyles}`>Prawo rodzinne</a>
-        <a href="#haska" class=`${linkStyles}`>Konwencja Haska</a>
-        <a href="#spadkowe" class=`${linkStyles}`>Prawo spadkowe</a>
-        <a href="#karne" class=`${linkStyles}`>Prawo karne</a>
-        <a href="#cywilne" class=`${linkStyles}`>Prawo cywilne</a>
+        <FooterLink client:load tabNum={0} linkTo="#rodzinne"
+          >Prawo rodzinne</FooterLink
+        >
+        <FooterLink client:load tabNum={1} linkTo="#haska"
+          >Konwencja Haska</FooterLink
+        >
+        <FooterLink client:load tabNum={2} linkTo="#spadkowe"
+          >Prawo spadkowe</FooterLink
+        >
+        <FooterLink client:load tabNum={3} linkTo="#karne"
+          >Prawo karne</FooterLink
+        >
+        <FooterLink client:load tabNum={4} linkTo="#cywilne"
+          >Prawo cywilne</FooterLink
+        >
       </div>
     </div>
     <!--  -->

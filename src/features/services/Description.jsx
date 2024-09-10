@@ -1,3 +1,4 @@
+import { serviceOpen } from "../../store/store";
 export const Description = ({
   introduction,
   services,
@@ -7,7 +8,7 @@ export const Description = ({
 }) => {
   return (
     <div
-      className={`${active === index ? "text-normal my-4 flex flex-col gap-4 font-normal sm:px-4 md:pr-[5.3vw] 2xl:w-[800px] 2xl:pl-[2vw]" : "hidden"}`}
+      className={`${serviceOpen.get() === index ? "text-normal my-4 flex flex-col gap-4 font-normal sm:px-4 md:pr-[5.3vw] 2xl:w-[800px] 2xl:pl-[2vw]" : "hidden"}`}
     >
       <p>{introduction}</p>
       <div className="flex flex-col gap-2 pl-4">

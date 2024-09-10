@@ -64,31 +64,19 @@
       class="no-underline overflow-hidden w-full mx-auto h-[340px] sm:h-[367px] max-w-[90vw] max-h-[90vw] md:max-w-[80vw] md:max-h-[80vw] lg:max-w-[70vw] lg:h-[60vh] lg:max-h-[553px] border border-gray-700"
     >
       <div
-        id="embed-map-canvas"
         class="w-full mx-auto h-[340px] sm:h-[367px] max-w-[90vw] max-h-[90vw] md:max-w-[80vw] md:max-h-[80vw] lg:max-w-[70vw] lg:h-[60vh] lg:max-h-[553px] flex justify-center items-center"
       >
-        <!-- <iframe
+        <iframe
+          width="600"
+          height="450"
           class="w-full mx-auto h-[340px] sm:h-[367px] max-w-[90vw] max-h-[90vw] md:max-w-[80vw] md:max-h-[80vw] lg:max-w-[70vw] lg:h-[60vh] lg:max-h-[553px]"
-          src="53.137351989746094,23.16714096069336"
-          title="googlemap"
-          loading="lazy"
-          allowfullscreen></iframe> -->
-        <!-- <gmp-map
-          center="53.137351989746094,23.16714096069336"
-          zoom="16"
-          map-id="DEMO_MAP_ID"
+          loading="eager"
+          allowfullscreen
+          referrerpolicy="no-referrer-when-downgrade"
+          src="https://www.google.com/maps/embed/v1/place?q=place_id:ChIJaQR7qR78H0cR6qcYYujZtIQ&key=AIzaSyBwBSYBNGnBKiyWP-Fogd9yL1KoYL7DQyA"
         >
-          <gmp-advanced-marker
-            position="53.137351989746094,23.16714096069336"
-            title="My location"></gmp-advanced-marker>
-        </gmp-map> -->
-        <h2>Error</h2>
+        </iframe>
       </div>
     </div>
   </div>
 </section>
-
-<script
-  async
-  src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB0p4c5jGZDjs0RSAdtTtrb9LYolgd4iL8&callback=console.debug&libraries=maps,marker&v=beta"
-></script>

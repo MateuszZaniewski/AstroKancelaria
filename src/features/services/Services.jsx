@@ -2,17 +2,19 @@ import { useState, useEffect, useRef } from "react";
 import { Category } from "./Category.jsx";
 import { Description } from "./Description.jsx";
 import descriptions from "../../data/descriptions.json";
+import { useStore } from "@nanostores/react";
+import { serviceOpen } from "../../store/store";
 
 export const Services = () => {
-  const [activeTab, setActiveTab] = useState(-1);
+  const activeTab = useStore(serviceOpen);
   const descriptionRefs = useRef([]);
 
   useEffect(() => {
-    window.innerWidth >= 1024 ? setActiveTab(0) : setActiveTab(-1);
+    window.innerWidth >= 1024 ? serviceOpen.set(0) : serviceOpen.set(-1);
   }, []);
 
   const handleActiveTab = (index) => {
-    setActiveTab(index);
+    serviceOpen.set(index);
 
     if (window.innerWidth < 1024) {
       setTimeout(() => {

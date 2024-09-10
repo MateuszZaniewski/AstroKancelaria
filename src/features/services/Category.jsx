@@ -1,7 +1,8 @@
+import { serviceOpen } from "../../store/store";
 export const Category = ({ text, source, index, active, changeTab }) => {
   return (
     <div
-      className={`flex w-full cursor-pointer items-center justify-center gap-5 sm:max-w-[688px] ${active === index && "bg-[#D1B9A1] sm:py-2"}`}
+      className={`flex w-full cursor-pointer items-center justify-center gap-5 sm:max-w-[688px] ${serviceOpen.get() === index && "bg-[#D1B9A1] sm:py-2"}`}
       onClick={() => changeTab(index)}
     >
       <div className="flex w-full items-center justify-between sm:w-[600px] lg:max-w-[400px]">
