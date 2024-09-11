@@ -20,22 +20,43 @@ const linkStyles =
     <!--  -->
     <div class=`${containerStyle} md:order-2`>
       <h3 class=`${headingStyle}`>USŁUGI PRAWNE</h3>
-      <div class=`${elementsStyle}`>
-        <FooterLink client:load tabNum={0} linkTo="#rodzinne"
-          >Prawo rodzinne</FooterLink
-        >
-        <FooterLink client:load tabNum={1} linkTo="#haska"
-          >Konwencja Haska</FooterLink
-        >
-        <FooterLink client:load tabNum={2} linkTo="#spadkowe"
-          >Prawo spadkowe</FooterLink
-        >
-        <FooterLink client:load tabNum={3} linkTo="#karne"
-          >Prawo karne</FooterLink
-        >
-        <FooterLink client:load tabNum={4} linkTo="#cywilne"
-          >Prawo cywilne</FooterLink
-        >
+      <div class="hidden lg:block">
+        <div class=`${elementsStyle}`>
+          <FooterLink client:load tabNum={0} linkTo="#tgt"
+            >Prawo rodzinne</FooterLink
+          >
+          <FooterLink client:load tabNum={1} linkTo="#tgt"
+            >Konwencja Haska</FooterLink
+          >
+          <FooterLink client:load tabNum={2} linkTo="#tgt"
+            >Prawo spadkowe</FooterLink
+          >
+          <FooterLink client:load tabNum={3} linkTo="#tgt"
+            >Prawo karne</FooterLink
+          >
+          <FooterLink client:load tabNum={4} linkTo="#tgt"
+            >Prawo cywilne</FooterLink
+          >
+        </div>
+      </div>
+      <div class="block lg:hidden">
+        <div class=`${elementsStyle}`>
+          <FooterLink client:load tabNum={0} linkTo="#rodzinne"
+            >Prawo rodzinne</FooterLink
+          >
+          <FooterLink client:load tabNum={1} linkTo="#haska"
+            >Konwencja Haska</FooterLink
+          >
+          <FooterLink client:load tabNum={2} linkTo="#spadkowe"
+            >Prawo spadkowe</FooterLink
+          >
+          <FooterLink client:load tabNum={3} linkTo="#karne"
+            >Prawo karne</FooterLink
+          >
+          <FooterLink client:load tabNum={4} linkTo="#cywilne"
+            >Prawo cywilne</FooterLink
+          >
+        </div>
       </div>
     </div>
     <!--  -->
