@@ -3,7 +3,7 @@
     "name": "PRAWO RODZINNE",
     "id": "rodzinne",
     "source": "/family-law.png",
-    "introduction": "Kancelaria prawna specjalizuje się w prowadzeniu spraw z zakresu prawa rodzinnego, obejmując szeroki wachlarz usług i wsparcia prawnego dla klientów w trudnych sytuacjach życiowych. Do głównych obszarów działalności kancelarii należą:",
+    "introduction": "Kancelaria specjalizuje się w prowadzeniu spraw z zakresu prawa rodzinnego m.in. o:",
     "services": [
       {
         "description": "Rozwód - Prowadzenie spraw rozwodowych, w tym przygotowanie dokumentacji, reprezentacja klientów przed sądem oraz doradztwo prawne w kwestiach związanych z podziałem majątku i ustaleniem opieki nad dziećmi."
@@ -30,16 +30,16 @@
         "description": "Ustalenie miejsca pobytu dziecka - Doradztwo i reprezentacja w sprawach dotyczących ustalenia miejsca pobytu dziecka, zarówno w kontekście sporów między rodzicami, jak i w sytuacjach wymagających interwencji sądowej."
       }
     ],
-    "summary": "Kancelaria dokłada wszelkich starań, aby zapewnić swoim klientom profesjonalną obsługę, wsparcie oraz skuteczne rozwiązania prawne w każdej z wymienionych dziedzin prawa rodzinnego."
+    "summary": "Oferta Kancelarii obejmuje w szczególności udzielanie porad prawnych, sporządzanie pism procesowych oraz zastępstwo procesowe na każdym etapie postępowania."
   },
   {
     "name": "KONWENCJA HASKA",
     "id": "haska",
     "source": "/haski.png",
-    "introduction": "Kancelaria oferuje wszechstronną pomoc prawną w sprawach prowadzonych w trybie Konwencji Haskiej dotyczącej cywilnych aspektów uprowadzenia dziecka za granicę. Nasze usługi obejmują:",
+    "introduction": "Kancelaria oferuje pomoc w zakresie spraw prowadzonych w trybie konwencji haskiej dotyczącej cywilnych aspektów uprowadzenia dziecka za granicę.",
     "services": [
       {
-        "description": "Przygotowanie dokumentów - Pomagamy klientom w sporządzeniu wszystkich niezbędnych dokumentów.",
+        "description": "Pomagamy klientom w sporządzeniu wszystkich niezbędnych dokumentów, takich jak :",
         "subservices": [
           {
             "description": "Wniosek o nakazanie powrotu dziecka - Wniosek skierowany do odpowiednich organów w celu nakazania powrotu dziecka do kraju stałego pobytu."
@@ -56,7 +56,7 @@
         "description": "Reprezentacja w postępowaniu - Oferujemy reprezentację klientów na każdym etapie postępowania sądowego, zarówno przed sądami krajowymi, jak i międzynarodowymi, zapewniając profesjonalne wsparcie prawne i obronę interesów klienta."
       }
     ],
-    "summary": "Nasza kancelaria dokłada wszelkich starań, aby proces związany z uprowadzeniem dziecka za granicę przebiegał sprawnie i skutecznie, dążąc do jak najszybszego i najbardziej korzystnego rozwiązania dla klienta."
+    "summary": "Kancelaria dokłada wszelkich starań, aby proces związany z bezprawnym uprowadzeniem bądź bezprawnym zatrzymaniem dziecka za granicą przebiegał sprawnie i skutecznie, dążąc do jak najszybszego i najkorzystniejszego rozwiązania dla Klienta."
   },
   {
     "name": "PRAWO SPADKOWE",

@@ -26,16 +26,19 @@ import CtaButton from "../../ui/CtaButton.astro";
       >
         <h1
           class="font-cinzel leading-[1.2] 2xl:text-6xl lg:text-5xl md:text-[40px] text-[30px]"
+          aria-label="Kancelaria adwokacka"
         >
           Kancelaria adwokacka
         </h1>
         <h1
           class="font-cinzel leading-[1.2] 2xl:text-6xl lg:text-5xl md:text-[40px] text-[30px] xl:hidden"
+          aria-label="Adwokat Paulina komenda"
         >
           Adwokat <br /> Paulina komenda
         </h1>
         <h1
           class="hidden xl:block font-cinzel leading-[1.2] 2xl:text-6xl lg:text-5xl md:text-[40px] text-[30px]"
+          aria-label="Adwokat Paulina komenda"
         >
           Adwokat Paulina komenda
         </h1>
@@ -43,10 +46,10 @@ import CtaButton from "../../ui/CtaButton.astro";
       <div
         class="flex flex-col items-center gap-[3.5vh] justify-center md:max-w-[400px] lg:max-w-[770px] lg:flex-row lg:gap-12 opacity-0 animate-animateHeroButtons"
       >
-        <a href="#contact" class="nav-link">
+        <a href="#contact" class="nav-link" aria-label="Kontakt">
           <CtaButton text="SKONTAKTUJ SIĘ" variant="contain" />
         </a>
-        <a href="#services" class="nav-link">
+        <a href="#services" class="nav-link" aria-label="Usługi prawne">
           <CtaButton text="USŁUGI PRAWNE" variant="outlined" />
         </a>
       </div>

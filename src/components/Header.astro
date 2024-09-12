@@ -1,7 +1,5 @@
 ---
 import CtaButton from "../ui/CtaButton.astro";
-import logo from "../../public/newLogo.svg";
-import { Image } from "astro:assets";
 import Menu from "./Menu.astro";
 
 interface Props {
@@ -9,7 +7,6 @@ interface Props {
 }
 
 const { animate } = Astro.props;
-// mix-blend-difference
 ---
 
 <nav
@@ -19,8 +16,8 @@ const { animate } = Astro.props;
   <div class="max-w-[1600px] mx-auto px-5 sm:px-10">
     <div class="flex justify-between">
       <a href="/">
-        <Image
-          src={logo}
+        <img
+          src="/newLogo.svg"
           alt="logoKancelariaPaulinaKomenda"
           class="h-full max-h-[83px] w-full max-w-[298px] min-w-[230px] pt-[2.3vh] cursor-pointer"
           loading="eager"
@@ -32,19 +29,19 @@ const { animate } = Astro.props;
         <a
           href="#services"
           class="h-fit whitespace-nowrap font-semibold cursor-pointer nav-link hover:text-[#B58C67] active:text-[#333333] focus:border-[#533630]"
-          >USŁUGI PRAWNE</a
+          aria-label="Usługi prawne">USŁUGI PRAWNE</a
         >
         <a
           href="#about"
           class="h-fit whitespace-nowrap font-semibold cursor-pointer nav-link hover:text-[#B58C67] active:text-[#333333] focus:border-[#533630]"
-          >O MNIE</a
+          aria-label="O mnie">O MNIE</a
         >
         <a
           href="#blog"
           class="h-fit whitespace-nowrap font-semibold cursor-pointer nav-link hover:text-[#B58C67] active:text-[#333333] focus:border-[#533630]"
-          >BLOG</a
+          aria-label="Blog">BLOG</a
         >
-        <a href="#contact" class="nav-link">
+        <a href="#contact" class="nav-link" aria-label="Kontakt">
           <CtaButton text="KONTAKT" variant="contain" />
         </a>
       </div>
