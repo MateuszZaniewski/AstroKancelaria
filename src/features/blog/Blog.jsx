@@ -83,7 +83,7 @@ export const Blog = () => {
       </div>
 
       {/* Desktop version without pagination */}
-      <div className="hidden h-full flex-1 px-[9.3vw] pt-16 lg:flex 2xl:justify-center">
+      <div className="hidden h-full flex-1 px-[9.3vw] pt-16 lg:flex 2xl:mx-auto 2xl:max-w-[1600px] 2xl:justify-center">
         {posts.slice(0, 3).map((post, index) => (
           <div className="flex" key={index}>
             <div>

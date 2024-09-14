@@ -30,14 +30,17 @@ export const Services = () => {
   };
 
   return (
-    <section className="bg-[#EEE5DA] pb-10 lg:min-h-[100vh]" id="services">
+    <section
+      className="bg-[#EEE5DA] pb-10 lg:min-h-[100vh] 2xl:min-h-fit"
+      id="services"
+    >
       <h2
         id="tgt"
-        className="pl-5 pt-10 font-cinzel text-3xl sm:pl-10 sm:text-4xl md:pl-[9.3vw] lg:pb-14 lg:pt-20 lg:text-5xl"
+        className="pl-5 pt-10 font-cinzel text-3xl sm:pl-10 sm:text-4xl md:pl-[9.3vw] lg:pb-14 lg:pt-20 lg:text-5xl 2xl:mx-auto 2xl:max-w-[2000px]"
       >
         ZAKRES USŁUG PRAWNYCH
       </h2>
-      <div className="flex flex-col sm:items-center lg:max-w-[1440px] lg:flex-row lg:items-start 2xl:pl-[9.3vw]">
+      <div className="flex flex-col sm:items-center lg:max-w-[1440px] lg:flex-row lg:items-start 2xl:mx-auto">
         <div className="flex w-full flex-col px-5 pt-4 sm:max-w-[90vw] sm:px-0 sm:pt-10 lg:max-w-[565px] xl:max-w-[650px]">
           <div className="w-full sm:flex sm:w-[90vw] sm:flex-col sm:items-center md:mx-auto md:max-w-[500px] lg:ml-[9.3vw] lg:mr-[4.5vw] lg:w-[365px] lg:items-start lg:gap-6">
             {descriptions.map((disc, index) => (

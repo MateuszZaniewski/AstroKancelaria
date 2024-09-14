@@ -26,7 +26,7 @@ export const Reviews = () => {
 
   return (
     <section className="bg-[#EEE5DA] pb-24 pt-20" id="opinions">
-      <h2 className="px-[5vw] font-cinzel text-3xl lg:pl-[9.4vw] lg:text-5xl">
+      <h2 className="px-[5vw] font-cinzel text-3xl lg:pl-[9.4vw] lg:text-5xl 2xl:mx-auto">
         OPINIE NASZYCH KLIENTÓW
       </h2>
       <img
@@ -85,7 +85,7 @@ export const Reviews = () => {
       </div>
 
       {/* Desktop version without pagination */}
-      <div className="hidden px-[9.3vw] lg:flex 2xl:justify-center">
+      <div className="hidden px-[9.3vw] lg:flex 2xl:mx-auto 2xl:max-w-[1600px] 2xl:justify-center">
         {opinions.slice(0, 3).map((opinion, index) => (
           <div className="flex" key={opinion.text}>
             <div>
