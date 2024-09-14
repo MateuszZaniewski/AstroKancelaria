@@ -47,7 +47,7 @@ export const Reviews = () => {
             <div
               key={opinion.text}
               onClick={() => setCount(index)}
-              className={`h-[2px] w-[70px] cursor-pointer ${count === index ? "bg-black" : "bg-[#D1B9A1]"}`}
+              className={`h-[2px] w-[70px] ${count === index ? "bg-black" : "bg-[#D1B9A1]"}`}
             ></div>
           ))}
         </div>

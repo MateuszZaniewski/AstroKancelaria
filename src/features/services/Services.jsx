@@ -47,7 +47,7 @@ export const Services = () => {
               <div
                 ref={(el) => (descriptionRefs.current[index] = el)}
                 key={disc.name}
-                className="pb-2"
+                className=""
                 id={disc.id}
               >
                 <Category

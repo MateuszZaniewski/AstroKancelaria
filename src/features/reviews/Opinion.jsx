@@ -1,7 +1,7 @@
 export const Opinion = ({ opinion, index }) => {
   return (
     <div
-      className={`flex h-auto max-w-[365px] flex-grow-0 cursor-pointer md:w-[40vw] lg:w-[27vw]`}
+      className={`flex h-auto max-w-[365px] flex-grow-0 md:w-[40vw] lg:w-[27vw]`}
     >
       <div className="flex flex-col gap-5 px-2 py-2">
         <div className="flex justify-between">

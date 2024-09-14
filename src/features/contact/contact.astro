@@ -1,5 +1,7 @@
 ---
-
+const leftContainerStyle = "flex gap-1";
+const socialHoverStyles =
+  "h-8 w-8 lg:h-9 lg:w-9 cursor-pointer hover:opacity-55";
 ---
 
 <section class="bg-[#B58C67] pt-20 pb-10 xl:px-16 2xl:px-36" id="contact">
@@ -16,23 +18,71 @@
       class="flex flex-col gap-[3.5vh] max-w-[365px] sm:max-w-[420px] pb-7 sm:ml-[9.3vw] md:px-0 lg:ml-4 px-5 sm:px-0 2xl:gap-8 min-w-fit"
     >
       <h3 class="">Zadzwoń i umów się na spotkanie w kancelarii.</h3>
-      <div class="flex gap-1 items-start">
+      <div class=`${leftContainerStyle} items-start`>
         <img loading="lazy" src="IconLocation.svg" alt="Location Icon" />
         <span>ul. Ogrodowa 4/20 <br /> 15-011 Białystok</span>
       </div>
-      <div class="flex gap-1 items-center">
+      <div class=`${leftContainerStyle} items-center`>
         <img loading="lazy" src="IconClock.svg" alt="Clock Icon" />
         <span>poniedziałek - piątek 9:00 - 17:00 </span>
       </div>
-      <div class="flex gap-1 items-center">
-        <img loading="lazy" src="IconPhone.svg" alt="Phone Icon" />
+      <div class=`${leftContainerStyle} items-center hover:text-[#EEE5DA]`>
+        <svg
+          width="28"
+          height="28"
+          viewBox="0 0 28 28"
+          fill="currentColor"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <mask
+            id="mask0_33_19"
+            style="mask-type:alpha"
+            maskUnits="userSpaceOnUse"
+            x="0"
+            y="0"
+            width="28"
+            height="28"
+          >
+            <rect width="28" height="28" fill="#D9D9D9"></rect>
+          </mask>
+          <g mask="url(#mask0_33_19)">
+            <path
+              d="M23.275 24.5C20.8444 24.5 18.4431 23.9701 16.0708 22.9104C13.6986 21.8507 11.5403 20.3486 9.59583 18.4042C7.65139 16.4597 6.14931 14.3014 5.08958 11.9292C4.02986 9.55694 3.5 7.15556 3.5 4.725C3.5 4.375 3.61667 4.08333 3.85 3.85C4.08333 3.61667 4.375 3.5 4.725 3.5H9.45C9.72222 3.5 9.96528 3.59236 10.1792 3.77708C10.3931 3.96181 10.5194 4.18056 10.5583 4.43333L11.3167 8.51667C11.3556 8.82778 11.3458 9.09028 11.2875 9.30417C11.2292 9.51806 11.1222 9.70278 10.9667 9.85833L8.1375 12.7167C8.52639 13.4361 8.98819 14.1312 9.52292 14.8021C10.0576 15.4729 10.6458 16.1194 11.2875 16.7417C11.8903 17.3444 12.5222 17.9035 13.1833 18.4187C13.8444 18.934 14.5444 19.4056 15.2833 19.8333L18.025 17.0917C18.2 16.9167 18.4285 16.7854 18.7104 16.6979C18.9924 16.6104 19.2694 16.5861 19.5417 16.625L23.5667 17.4417C23.8389 17.5194 24.0625 17.6604 24.2375 17.8646C24.4125 18.0687 24.5 18.2972 24.5 18.55V23.275C24.5 23.625 24.3833 23.9167 24.15 24.15C23.9167 24.3833 23.625 24.5 23.275 24.5ZM7.02917 10.5L8.95417 8.575L8.45833 5.83333H5.8625C5.95972 6.63056 6.09583 7.41806 6.27083 8.19583C6.44583 8.97361 6.69861 9.74167 7.02917 10.5ZM17.4708 20.9417C18.2292 21.2722 19.0021 21.5347 19.7896 21.7292C20.5771 21.9236 21.3694 22.05 22.1667 22.1083V19.5417L19.425 18.9875L17.4708 20.9417Z"
+            ></path>
+          </g>
+        </svg>
         <a href="tel:+48698741258">698 741 258</a>
       </div>
-      <div class="flex gap-1 items-center">
-        <img loading="lazy" src="IconEmail.svg" alt="Email Icon" />
-        <a href="mailto:kontakt@adwkomenda.pl">kontakt@adwkomenda.pl</a>
+      <div class=`${leftContainerStyle} items-center hover:text-[#EEE5DA]`>
+        <svg
+          width="28"
+          height="28"
+          viewBox="0 0 28 28"
+          fill="currentColor"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <mask
+            id="mask0_33_24"
+            style="mask-type:alpha"
+            maskUnits="userSpaceOnUse"
+            x="0"
+            y="0"
+            width="28"
+            height="28"
+          >
+            <rect width="28" height="28" fill="#D9D9D9"></rect>
+          </mask>
+          <g mask="url(#mask0_33_24)">
+            <path
+              d="M14.0002 25.6666C12.3863 25.6666 10.8696 25.3603 9.45016 24.7478C8.03072 24.1353 6.796 23.3041 5.746 22.2541C4.696 21.2041 3.86475 19.9694 3.25225 18.5499C2.63975 17.1305 2.3335 15.6138 2.3335 13.9999C2.3335 12.386 2.63975 10.8694 3.25225 9.44992C3.86475 8.03047 4.696 6.79575 5.746 5.74575C6.796 4.69575 8.03072 3.8645 9.45016 3.252C10.8696 2.6395 12.3863 2.33325 14.0002 2.33325C15.6141 2.33325 17.1307 2.6395 18.5502 3.252C19.9696 3.8645 21.2043 4.69575 22.2543 5.74575C23.3043 6.79575 24.1356 8.03047 24.7481 9.44992C25.3606 10.8694 25.6668 12.386 25.6668 13.9999V15.6916C25.6668 16.8388 25.2731 17.8159 24.4856 18.6228C23.6981 19.4298 22.7307 19.8333 21.5835 19.8333C20.9029 19.8333 20.2613 19.6874 19.6585 19.3958C19.0557 19.1041 18.5502 18.686 18.1418 18.1416C17.5779 18.7055 16.9411 19.1284 16.2314 19.4103C15.5217 19.6923 14.7779 19.8333 14.0002 19.8333C12.3863 19.8333 11.0106 19.2645 9.87308 18.127C8.73558 16.9895 8.16683 15.6138 8.16683 13.9999C8.16683 12.386 8.73558 11.0103 9.87308 9.87284C11.0106 8.73534 12.3863 8.16659 14.0002 8.16659C15.6141 8.16659 16.9897 8.73534 18.1272 9.87284C19.2647 11.0103 19.8335 12.386 19.8335 13.9999V15.6916C19.8335 16.1971 19.9988 16.6249 20.3293 16.9749C20.6599 17.3249 21.0779 17.4999 21.5835 17.4999C22.0891 17.4999 22.5071 17.3249 22.8377 16.9749C23.1682 16.6249 23.3335 16.1971 23.3335 15.6916V13.9999C23.3335 11.3944 22.4293 9.18742 20.621 7.37909C18.8127 5.57075 16.6057 4.66659 14.0002 4.66659C11.3946 4.66659 9.18766 5.57075 7.37933 7.37909C5.571 9.18742 4.66683 11.3944 4.66683 13.9999C4.66683 16.6055 5.571 18.8124 7.37933 20.6208C9.18766 22.4291 11.3946 23.3333 14.0002 23.3333H19.8335V25.6666H14.0002ZM14.0002 17.4999C14.9724 17.4999 15.7988 17.1596 16.4793 16.4791C17.1599 15.7985 17.5002 14.9721 17.5002 13.9999C17.5002 13.0277 17.1599 12.2013 16.4793 11.5208C15.7988 10.8402 14.9724 10.4999 14.0002 10.4999C13.0279 10.4999 12.2016 10.8402 11.521 11.5208C10.8404 12.2013 10.5002 13.0277 10.5002 13.9999C10.5002 14.9721 10.8404 15.7985 11.521 16.4791C12.2016 17.1596 13.0279 17.4999 14.0002 17.4999Z"
+            ></path>
+          </g>
+        </svg>
+        <a href="mailto:kontakt@adwkomenda.pl" class="hover:text-[#EEE5DA]"
+          >kontakt@adwkomenda.pl</a
+        >
       </div>
-      <div class="flex gap-1 items-center">
+      <div class=`${leftContainerStyle} items-center`>
         <img loading="lazy" src="IconNIP.svg" alt="NIP Icon" />
         <span>NIP: 123456789</span>
       </div>
@@ -41,19 +91,19 @@
           loading="lazy"
           src="/facebook.svg"
           alt="Facebook Icon"
-          class="h-8 w-8 lg:h-9 lg:w-9 cursor-pointer hover:scale-110"
+          class=`${socialHoverStyles}`
         />
         <img
           loading="lazy"
           src="/instagram.svg"
           alt="Instagram Icon"
-          class="h-8 w-8 lg:h-9 lg:w-9 cursor-pointer hover:scale-110"
+          class=`${socialHoverStyles}`
         />
         <img
           loading="lazy"
           src="/linkedin.svg"
           alt="Linkedin Icon"
-          class="h-8 w-8 lg:h-9 lg:w-9 cursor-pointer hover:scale-110"
+          class=`${socialHoverStyles}`
         />
       </div>
     </div>

@@ -1,7 +1,7 @@
 ---
 import { FooterLink } from "./FooterLink";
 const containerStyle =
-  "flex flex-col pl-[5vw] max-w-[440px] sm:max-w-full xl:min-w-[260px]";
+  "flex flex-col pl-[5vw] max-w-[440px] sm:max-w-full xl:min-w-[260px] min-w-fit";
 const headingStyle = "pb-4 font-cinzel text-2xl";
 const elementsStyle =
   "grid grid-cols-2 grid-rows-auto gap-x-10 gap-y-7 sm:flex sm:flex-col sm:gap-5 ";
@@ -72,13 +72,18 @@ const linkStyles =
       </div>
     </div>
     <!--  -->
-    <div class=`${containerStyle} pt-12 sm:pt-0 md:order-1`>
+    <div class=`${containerStyle} pt-12 sm:pt-0 md:order-1 `>
       <a href="#contact" class=`${headingStyle} nav-link`>KONTAKT</a>
       <div class="flex flex-col gap-5 text-normal">
         <span>ul. Ogrodowa 4/20 <br /> 15-011 Białystok</span>
         <span>Pon - Pt 9:00 - 17:00</span>
-        <a href="tel:+48698741258">Tel.: 698 741 258</a>
-        <a href="mailto:kontakt@adwkomenda.pl">kontakt@adwkomenda.pl</a>
+        <a href="tel:+48698741258" class="hover:font-semibold"
+          >Tel.: 698 741 258</a
+        >
+        <a
+          href="mailto:kontakt@adwkomenda.pl"
+          class="hover:font-semibold md:min-w-52">kontakt@adwkomenda.pl</a
+        >
         <span>NIP: 123456789</span>
       </div>
     </div>
