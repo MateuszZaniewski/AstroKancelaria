@@ -1,4 +1,5 @@
 ---
+import { Link } from "astro-link";
 import { FooterLink } from "./FooterLink";
 const containerStyle =
   "flex flex-col pl-[5vw] max-w-[440px] sm:max-w-full xl:min-w-[260px] min-w-fit";
@@ -67,24 +68,31 @@ const linkStyles =
         <a href="#blog" class=`${linkStyles}`>Blog</a>
         <a href="#" class=`${linkStyles}`>Facebook</a>
         <a href="#" class=`${linkStyles}`>Instagram</a>
-        <a href="#" class=`${linkStyles}`>RODO</a>
-        <a href="#" class=`${linkStyles}`>Polityka prywatności</a>
+        <a
+          href="/rodo"
+          target="_blank"
+          class="hover:font-semibold cursor-pointer text-normal active:text-[#D9C6AF] focus:border-[#533630]"
+          >RODO</a
+        >
+        <!-- <a href="#" class=`${linkStyles}`>Polityka prywatności</a> -->
       </div>
     </div>
     <!--  -->
     <div class=`${containerStyle} pt-12 sm:pt-0 md:order-1 `>
       <a href="#contact" class=`${headingStyle} nav-link`>KONTAKT</a>
       <div class="flex flex-col gap-5 text-normal">
-        <span>ul. Ogrodowa 4/20 <br /> 15-011 Białystok</span>
+        <span
+          >ul. Sienkiewicza 55A/90 15-002 Białystok <br /> Budynek "Trzy Kłosy"</span
+        >
         <span>Pon - Pt 9:00 - 17:00</span>
         <a href="tel:+48698741258" class="hover:font-semibold"
           >Tel.: 698 741 258</a
         >
         <a
-          href="mailto:kontakt@adwkomenda.pl"
-          class="hover:font-semibold md:min-w-52">kontakt@adwkomenda.pl</a
+          href="mailto:adw.komenda@gmail.com"
+          class="hover:font-semibold md:min-w-52">adw.komenda@gmail.com</a
         >
-        <span>NIP: 123456789</span>
+        <span>NIP: 9662171426 </span>
       </div>
     </div>
     <!--  -->
@@ -92,13 +100,13 @@ const linkStyles =
   <div
     class="flex gap-2 lg:gap-10 items-center justify-center pt-14 pb-10 px-[5vw] lg:px-10"
   >
-    <div class="grow w-auto h-[1px] bg-[#B58C67]"></div>
+    <div class="grow w-auto h-[1px] bg-[#5A4620]"></div>
     <img
       loading="lazy"
       class="max-w-[300px] max-h-[83px]"
       src="/logoKomenda.svg"
       alt="logoKancelariaPaulinaKomenda"
     />
-    <div class="grow w-auto h-[1px] bg-[#B58C67]"></div>
+    <div class="grow w-auto h-[1px] bg-[#5A4620]"></div>
   </div>
 </section>

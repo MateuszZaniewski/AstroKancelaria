@@ -18,7 +18,7 @@ export const Description = ({
           return (
             <div key={serviceIndex} className="flex flex-col gap-1">
               <span>
-                &#8226; <strong>{title}</strong> - {description}
+                &#8226; <strong>{title}</strong>
               </span>
               {service.subservices && service.subservices.length > 0 && (
                 <div className="pl-6">
