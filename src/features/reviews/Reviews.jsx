@@ -25,7 +25,7 @@ export const Reviews = () => {
   });
 
   return (
-    <section className="bg-[#EEE5DA] pb-24 pt-20" id="opinions">
+    <section className="bg-[#EEE5DA] pt-20" id="opinions">
       <h2 className="px-[5vw] font-cinzel text-3xl lg:pl-[9.4vw] lg:text-5xl 2xl:mx-auto">
         OPINIE KLIENTÓW
       </h2>

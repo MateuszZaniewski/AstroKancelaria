@@ -8,7 +8,7 @@ export const Description = ({
 }) => {
   return (
     <div
-      className={`${serviceOpen.get() === index ? "text-normal my-4 flex flex-col gap-4 font-normal sm:px-4 md:pr-[5.3vw] 2xl:w-[800px] 2xl:pl-[2vw]" : "hidden"}`}
+      className={`${serviceOpen.get() === index ? "text-normal my-4 flex flex-col gap-4 font-normal sm:px-4 md:pr-[5.3vw] lg:my-0 lg:pt-2 2xl:w-[800px] 2xl:pl-[2vw]" : "hidden"}`}
     >
       <p>{introduction}</p>
       <div className="flex flex-col gap-2 pl-4">

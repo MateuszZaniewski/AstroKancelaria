@@ -41,13 +41,12 @@ export const Services = () => {
         ZAKRES USŁUG PRAWNYCH
       </h2>
       <div className="flex flex-col sm:items-center lg:max-w-[1440px] lg:flex-row lg:items-start 2xl:mx-auto">
-        <div className="flex w-full flex-col px-5 pt-4 sm:max-w-[90vw] sm:px-0 sm:pt-10 lg:max-w-[565px] xl:max-w-[650px]">
+        <div className="flex w-full flex-col px-5 pl-7 pt-4 sm:max-w-[90vw] sm:px-0 sm:pt-10 lg:max-w-[565px] lg:border-r-2 lg:border-[#B58C67] lg:pt-0 xl:max-w-[650px]">
           <div className="w-full sm:flex sm:w-[90vw] sm:flex-col sm:items-center md:mx-auto md:max-w-[500px] lg:ml-[9.3vw] lg:mr-[4.5vw] lg:w-[365px] lg:items-start lg:gap-6">
             {descriptions.map((disc, index) => (
               <div
                 ref={(el) => (descriptionRefs.current[index] = el)}
                 key={disc.name}
-                className=""
                 id={disc.id}
               >
                 <Category
@@ -76,7 +75,7 @@ export const Services = () => {
           {descriptions.map((desc, index) => (
             <div
               key={desc.summary}
-              className={`border-l-2 border-[#B58C67] pl-7`}
+              className={`border-l-2 border-[#B58C67] pl-7 lg:border-none`}
             >
               <Description
                 introduction={descriptions[index].introduction}
