@@ -3,14 +3,13 @@ import CtaButton from "../../ui/CtaButton.astro";
 ---
 
 <div
-  class=`bg-[url('/tłoMobile.svg')] md:bg-[url('/tłoLg.svg')] lg:bg-[url('/tłoLg.svg')] xl:bg-[url('/tło.svg')] min-h-[100vh] min-h-screen w-auto bg-cover bg-center md:bg-right-top lg:bg-right-top xl:bg-top xl:max-w-[2600px] xl:mx-auto invisible animate-revealHero`
+  class=`bg-[url('/tłoMobile.svg')] md:bg-[url('/tłoLg.svg')] lg:bg-[url('/tłoLg.svg')] xl:bg-[url('/tło.svg')] min-h-[100vh] min-h-screen w-auto bg-cover bg-center md:bg-right-top lg:bg-right-top xl:bg-top xl:max-w-[2600px] xl:mx-auto `
 >
   <div
     class="flex flex-col items-center justify-between min-h-screen xl:mr-[16vw]"
   >
-    <!-- Animate from here -->
     <div
-      class="w-full px-12 md:px-0 lg:px-12 pt-[13.062vh] md:pl-[2vw] lg:w-[1100px] lg:mr-0 2xl:max-w-[2000px] 2xl:pt-60 2xl:pr-80 h-full invisible animate-animateHeroText"
+      class="w-full px-12 md:px-0 lg:px-12 pt-[13.062vh] md:pl-[2vw] lg:w-[1100px] lg:mr-0 2xl:max-w-[2000px] 2xl:pt-60 2xl:pr-80 h-full"
     >
       <div
         class="flex justify-center pb-[4.7vh] max-w-[400px] mx-auto lg:mx-0 lg:max-w-[770px] md:mx-0"
@@ -44,7 +43,7 @@ import CtaButton from "../../ui/CtaButton.astro";
         </h1>
       </div>
       <div
-        class="flex flex-col items-center gap-[3.5vh] justify-center md:max-w-[400px] lg:max-w-[770px] lg:flex-row lg:gap-12 opacity-0 animate-animateHeroButtons"
+        class="flex flex-col items-center gap-[3.5vh] justify-center md:max-w-[400px] lg:max-w-[770px] lg:flex-row lg:gap-12"
       >
         <a href="#contact" class="nav-link" aria-label="Kontakt">
           <CtaButton text="SKONTAKTUJ SIĘ" variant="contain" />
@@ -56,9 +55,7 @@ import CtaButton from "../../ui/CtaButton.astro";
     </div>
     <!-- Animate to this point -->
     <div class="flex items-end h-full sm:h-24 mt-8 md:h-16 w-4 md:hidden">
-      <div
-        class="bg-[#B58C67] w-[2px] h-16 relative overflow-hidden invisible animate-showElement"
-      >
+      <div class="bg-[#B58C67] w-[2px] h-16 relative overflow-hidden">
         <div
           class="bg-[#0E1F2A] w-[2px] rounded-full h-4 absolute -top-4 left-0 animate-animateLine"
         >

@@ -131,18 +131,10 @@ export default {
         },
       },
       animation: {
-        animateNoScroll: "animateNoScroll 9000ms ease-in forwards",
-        revealLogo: "revealLogo 1200ms ease-out forwards 800ms",
-        slideLeft: "slideLeft 1600ms ease-out forwards 2800ms",
-        revealHero: "revealHero 1600ms ease-out forwards 2800ms",
-        showRestOfThePage: "showRestOfThePage 100ms ease-out forwards 4100ms",
-        animateHeroText: "animateHeroText 2000ms ease-out forwards 5300ms",
-        animateNavbar: "animateNavbar 1000ms ease-out forwards 7800ms",
-        animateHeroButtons:
-          "animateHeroButtons 1000ms ease-out forwards 8300ms",
-        showElement: "showElement 100ms forwards 8300ms",
-        animateLine: "animateLine 1500ms linear infinite forwards 8300ms",
-        slideInFromRight: "slideInFromRight 300ms ease-in forwards",
+        // animateNoScroll: "animateNoScroll 9000ms ease-in forwards",
+        revealLogo: "revealLogo 1000ms ease-out forwards 800ms",
+        slideLeft: "slideLeft 1000ms ease-out forwards 2000ms",
+        animateLine: "animateLine 1500ms linear infinite forwards",
       },
     },
     fontFamily: {
