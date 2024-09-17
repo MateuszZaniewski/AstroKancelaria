@@ -1,10 +1,14 @@
 ---
+import Modal from "../../components/Modal.astro";
 const leftContainerStyle = "flex gap-1 w-fit";
 const socialHoverStyles =
   "h-8 w-8 lg:h-9 lg:w-9 cursor-pointer hover:opacity-55";
 ---
 
-<section class="bg-[#B58C67] pt-20 pb-10 xl:px-16 2xl:px-36" id="contact">
+<section
+  class="bg-[#B58C67] pt-20 pb-10 xl:px-16 2xl:px-36 relative"
+  id="contact"
+>
   <h2
     class="text-3xl font-cinzel sm:text-4xl pb-7 lg:pb-16 px-5 sm:px-[9.3vw] lg:px-12 lg:text-5xl"
   >
@@ -24,8 +28,13 @@ const socialHoverStyles =
       <div class=`${leftContainerStyle} items-start`>
         <img loading="lazy" src="IconLocation.svg" alt="Location Icon" />
         <span
-          >ul. Sienkiewicza 55A/90 <br /> 15-002 Białystok <br /> Spółdzielnia "Trzy
-          Kłosy"</span
+          >ul. Sienkiewicza 55A/90 <br /> 15-002 Białystok <br />
+          <span
+            class="cursor-pointer text-gray-800 italic underline"
+            id="modal"
+          >
+            Spółdzielnia "Trzy Kłosy"</span
+          ></span
         >
       </div>
       <div class=`${leftContainerStyle} items-center`>
@@ -132,17 +141,58 @@ const socialHoverStyles =
         </iframe>
       </div>
     </div>
-    <!-- <div class="pt-5">
-      <img
-        src="3klosyUpScaling.jpg"
-        alt="3klosyUpScaling"
-        width="600"
-        height="450"
-        class="w-full mx-auto h-[340px] sm:h-[367px] max-w-[90vw] max-h-[90vw] md:max-w-[80vw] md:max-h-[80vw] lg:max-w-[70vw] lg:h-[60vh] lg:max-h-[553px] 2xl:max-w-[1200px]"
-        loading="lazy"
-      />
-    </div> -->
   </div>
-  <!-- <div class="bg-[url(/zdjecieKancy.jpg)] bg-cover bg-center h-[500px] w-full">
-  </div> -->
+  <!-- Hidden section with kancelaria image -->
+  <section
+    id="kanca"
+    class="hidden absolute top-0 left-0 w-full h-full bg-black/70 flex justify-center items-center z-50"
+  >
+    <div
+      class="w-fit min-h-fit h-[99%] p-4 flex justify-center items-center relative"
+      id="modalContainer"
+    >
+      <!-- Image with Close Button -->
+      <div class="relative w-full h-full">
+        <img
+          src="/zdjecieKancy.jpg"
+          id="modalImage"
+          alt="Kancelaria"
+          class="w-full h-1/2 md:w-full md:h-full"
+        />
+        <!-- Close button inside the image -->
+        <button
+          id="closeBtn"
+          class="absolute top-2 right-2 text-black rounded-full px-2 py-1 font-bold"
+          style="z-index: 10;"
+        >
+          X
+        </button>
+      </div>
+    </div>
+  </section>
 </section>
+
+<script>
+  const modal = document.getElementById("modal");
+  const kanca = document.getElementById("kanca");
+  const closeBtn = document.getElementById("closeBtn");
+
+  modal.addEventListener("click", (e) => {
+    kanca.classList.toggle("hidden");
+  });
+  // To close the image when clicking outside the image or on ESC key
+  kanca.addEventListener("click", (e) => {
+    if (e.target !== kanca) return;
+    kanca.classList.add("hidden");
+  });
+
+  document.addEventListener("keydown", (e) => {
+    if (e.key === "Escape") {
+      kanca.classList.add("hidden");
+    }
+  });
+
+  closeBtn.addEventListener("click", () => {
+    kanca.classList.add("hidden");
+  });
+</script>

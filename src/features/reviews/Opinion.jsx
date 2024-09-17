@@ -23,7 +23,7 @@ export const Opinion = ({ opinion, index }) => {
           <span>{opinion.date}</span>
         </div>
         <div>
-          <p className="text-lg">{opinion.text}</p>
+          <p className="text-justify text-lg">{opinion.text}</p>
         </div>
       </div>
     </div>
