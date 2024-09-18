@@ -1,4 +1,4 @@
-export const Opinion = ({ opinion, index }) => {
+export const Opinion = ({ opinion }) => {
   return (
     <div
       className={`flex h-auto max-w-[365px] flex-grow-0 md:w-[40vw] lg:w-[27vw]`}
@@ -23,7 +23,7 @@ export const Opinion = ({ opinion, index }) => {
           <span>{opinion.date}</span>
         </div>
         <div>
-          <p className="text-justify text-lg">{opinion.text}</p>
+          <p className="text-lg">{opinion.text}</p>
         </div>
       </div>
     </div>

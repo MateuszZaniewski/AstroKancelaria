@@ -1,0 +1,57 @@
+---
+
+---
+
+<section
+  id="kanca"
+  class="hidden absolute top-0 left-0 w-full h-full bg-black/70 flex justify-center items-center z-50"
+>
+  <div
+    class="w-fit min-h-fit h-[99%] p-4 flex justify-center items-center relative"
+    id="modalContainer"
+  >
+    <!-- Image with Close Button -->
+    <div class="relative w-full h-full">
+      <img
+        src="/zdjecieKancy.jpg"
+        loading="lazy"
+        id="modalImage"
+        alt="Kancelaria"
+        class="w-full h-1/2 md:w-full md:h-full"
+      />
+      <!-- Close button inside the image -->
+      <button
+        id="closeBtn"
+        class="absolute top-2 right-2 text-black rounded-full px-2 py-1 font-bold"
+        style="z-index: 10;"
+      >
+        X
+      </button>
+    </div>
+  </div>
+</section>
+
+<script>
+  const modal = document.getElementById("modal");
+  const kanca = document.getElementById("kanca");
+  const closeBtn = document.getElementById("closeBtn");
+
+  modal.addEventListener("click", (e) => {
+    kanca.classList.toggle("hidden");
+  });
+  // To close the image when clicking outside the image or on ESC key
+  kanca.addEventListener("click", (e) => {
+    if (e.target !== kanca) return;
+    kanca.classList.add("hidden");
+  });
+
+  document.addEventListener("keydown", (e) => {
+    if (e.key === "Escape") {
+      kanca.classList.add("hidden");
+    }
+  });
+
+  closeBtn.addEventListener("click", () => {
+    kanca.classList.add("hidden");
+  });
+</script>

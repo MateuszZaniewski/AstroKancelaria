@@ -5,7 +5,6 @@ import { useSwipeable } from "react-swipeable";
 
 export const Reviews = () => {
   const [count, setCount] = useState(0);
-  const [activeTab, setActiveTab] = useState(0);
 
   // Swipe handlers
   const handlers = useSwipeable({
@@ -39,7 +38,7 @@ export const Reviews = () => {
       <div className="block md:hidden">
         {/* Mobile version with pagination, visible 1 item at most */}
         <div {...handlers} className="flex min-h-[500px] justify-center">
-          <Opinion opinion={opinions[count]} index={count} />
+          <Opinion opinion={opinions[count]} />
         </div>
 
         <div className="flex justify-center px-[9vw]">

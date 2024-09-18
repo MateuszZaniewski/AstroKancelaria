@@ -1,8 +1,8 @@
 ---
-import Modal from "../../components/Modal.astro";
-const leftContainerStyle = "flex gap-1 w-fit";
-const socialHoverStyles =
-  "h-8 w-8 lg:h-9 lg:w-9 cursor-pointer hover:opacity-55";
+import Container from "./container.astro";
+import SocialIcon from "./socialIcon.astro";
+import GoogleMap from "./googleMap.astro";
+import Kancelaria from "./kancelaria.astro";
 ---
 
 <section
@@ -25,23 +25,25 @@ const socialHoverStyles =
         Zadzwoń i umów się na spotkanie w kancelarii. <br /> Kancelaria obsługuje
         Klientów również w języku angielskim.
       </h3>
-      <div class=`${leftContainerStyle} items-start`>
-        <img loading="lazy" src="IconLocation.svg" alt="Location Icon" />
-        <span
-          >ul. Sienkiewicza 55A/90 <br /> 15-002 Białystok <br />
-          <span
-            class="cursor-pointer text-gray-800 italic underline"
-            id="modal"
-          >
-            Spółdzielnia "Trzy Kłosy"</span
-          ></span
-        >
-      </div>
-      <div class=`${leftContainerStyle} items-center`>
-        <img loading="lazy" src="IconClock.svg" alt="Clock Icon" />
-        <span>poniedziałek - piątek 9:00 - 17:00 </span>
-      </div>
-      <div class=`${leftContainerStyle} items-center hover:text-[#EEE5DA]`>
+      <Container
+        items_position="items-start"
+        isHovered={false}
+        src="IconLocation.svg"
+        alt="Location Icon"
+      >
+        <span>ul. Sienkiewicza 55A/90 <br /> 15-002 Białystok <br /></span>
+        <span class="cursor-pointer text-gray-800 italic underline" id="modal">
+          Spółdzielnia "Trzy Kłosy"</span
+        ></Container
+      >
+      <Container
+        items_position="items-center"
+        isHovered={false}
+        src="IconClock.svg"
+        alt="Clock Icon"
+        ><span>poniedziałek - piątek 9:00 - 17:00 </span></Container
+      >
+      <div class=`flex gap-1 w-fit items-center hover:text-[#EEE5DA]`>
         <svg
           width="28"
           height="28"
@@ -68,7 +70,7 @@ const socialHoverStyles =
         </svg>
         <a href="tel:+48508726150">508 726 150</a>
       </div>
-      <div class=`${leftContainerStyle} items-center hover:text-[#EEE5DA]`>
+      <div class=`flex gap-1 w-fit items-center hover:text-[#EEE5DA]`>
         <svg
           width="28"
           height="28"
@@ -97,102 +99,19 @@ const socialHoverStyles =
           >adw.komenda@gmail.com</a
         >
       </div>
-      <div class=`${leftContainerStyle} items-center`>
-        <img loading="lazy" src="IconNIP.svg" alt="NIP Icon" />
-        <span>NIP: 9662171426</span>
-      </div>
-      <div class="flex gap-5 items-center lg:pt-4">
-        <img
-          loading="lazy"
-          src="/facebook.svg"
-          alt="Facebook Icon"
-          class=`${socialHoverStyles}`
-        />
-        <img
-          loading="lazy"
-          src="/instagram.svg"
-          alt="Instagram Icon"
-          class=`${socialHoverStyles}`
-        />
-        <img
-          loading="lazy"
-          src="/linkedin.svg"
-          alt="Linkedin Icon"
-          class=`${socialHoverStyles}`
-        />
-      </div>
-    </div>
-    <div
-      class="no-underline overflow-hidden w-full mx-auto h-[340px] sm:h-[367px] max-w-[90vw] max-h-[90vw] md:max-w-[80vw] md:max-h-[80vw] lg:max-w-[70vw] lg:h-[60vh] lg:max-h-[553px] border border-gray-700 2xl:max-w-[1200px]"
-    >
-      <div
-        class="w-full mx-auto h-[340px] sm:h-[367px] max-w-[90vw] max-h-[90vw] md:max-w-[80vw] md:max-h-[80vw] lg:max-w-[70vw] lg:h-[60vh] lg:max-h-[553px] flex justify-center items-center 2xl:max-w-[1200px]"
+      <Container
+        items_position="items-center"
+        isHovered={false}
+        src="IconNIP.svg"
+        alt="NIP Icon"><span>NIP: 9662171426</span></Container
       >
-        <iframe
-          title="Sienkiewicza 55a/90 Białystok Kancelaria Adwokacka Paulina Komenda"
-          width="600"
-          height="450"
-          class="w-full mx-auto h-[340px] sm:h-[367px] max-w-[90vw] max-h-[90vw] md:max-w-[80vw] md:max-h-[80vw] lg:max-w-[70vw] lg:h-[60vh] lg:max-h-[553px] 2xl:max-w-[1200px]"
-          loading="lazy"
-          allowfullscreen
-          referrerpolicy="no-referrer-when-downgrade"
-          src="https://www.google.com/maps/embed/v1/place?q=Sienkiewicza%2055a%2F90%2C%20Bia%C5%82ystok%2C%20Polska&key=AIzaSyBwBSYBNGnBKiyWP-Fogd9yL1KoYL7DQyA&maptype=satellite"
-        >
-        </iframe>
+      <div class="flex gap-5 items-center lg:pt-4">
+        <SocialIcon src="/facebook.svg" alt="Facebook Icon" />
+        <SocialIcon src="/instagram.svg" alt="Instagram Icon" />
+        <SocialIcon src="/linkedin.svg" alt="Linkedin Icon" />
       </div>
     </div>
+    <GoogleMap />
   </div>
-  <!-- Hidden section with kancelaria image -->
-  <section
-    id="kanca"
-    class="hidden absolute top-0 left-0 w-full h-full bg-black/70 flex justify-center items-center z-50"
-  >
-    <div
-      class="w-fit min-h-fit h-[99%] p-4 flex justify-center items-center relative"
-      id="modalContainer"
-    >
-      <!-- Image with Close Button -->
-      <div class="relative w-full h-full">
-        <img
-          src="/zdjecieKancy.jpg"
-          id="modalImage"
-          alt="Kancelaria"
-          class="w-full h-1/2 md:w-full md:h-full"
-        />
-        <!-- Close button inside the image -->
-        <button
-          id="closeBtn"
-          class="absolute top-2 right-2 text-black rounded-full px-2 py-1 font-bold"
-          style="z-index: 10;"
-        >
-          X
-        </button>
-      </div>
-    </div>
-  </section>
+  <Kancelaria />
 </section>
-
-<script>
-  const modal = document.getElementById("modal");
-  const kanca = document.getElementById("kanca");
-  const closeBtn = document.getElementById("closeBtn");
-
-  modal.addEventListener("click", (e) => {
-    kanca.classList.toggle("hidden");
-  });
-  // To close the image when clicking outside the image or on ESC key
-  kanca.addEventListener("click", (e) => {
-    if (e.target !== kanca) return;
-    kanca.classList.add("hidden");
-  });
-
-  document.addEventListener("keydown", (e) => {
-    if (e.key === "Escape") {
-      kanca.classList.add("hidden");
-    }
-  });
-
-  closeBtn.addEventListener("click", () => {
-    kanca.classList.add("hidden");
-  });
-</script>

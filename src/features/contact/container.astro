@@ -1,0 +1,10 @@
+---
+const { items_position, isHovered, src, alt } = Astro.props;
+---
+
+<div
+  class=`flex gap-1 w-fit ${items_position} ${isHovered ? "hover:text-[#EEE5DA]" : ""}`
+>
+  <img loading="lazy" src={src} alt={alt} />
+  <slot />
+</div>

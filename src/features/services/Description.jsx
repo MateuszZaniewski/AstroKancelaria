@@ -8,27 +8,17 @@ export const Description = ({
 }) => {
   return (
     <div
-      className={`${serviceOpen.get() === index ? "text-normal my-4 flex flex-col gap-4 text-justify font-normal sm:px-4 md:pr-[5.3vw] lg:my-0 lg:pt-2 2xl:w-[800px] 2xl:pl-[2vw]" : "hidden"}`}
+      className={`${serviceOpen.get() === index ? "text-normal my-4 flex flex-col gap-4 font-normal sm:px-4 md:pr-[5.3vw] lg:my-0 lg:pt-2 2xl:w-[800px] 2xl:pl-[2vw]" : "hidden"}`}
     >
       <p>{introduction}</p>
-      <div className="flex flex-col gap-2 pl-4">
+      <div className="flex flex-col gap-2">
         {services.map((service, serviceIndex) => {
           const [title, ...rest] = service.description.split(" - ");
-          const description = rest.join(" - ");
           return (
             <div key={serviceIndex} className="flex flex-col gap-1">
               <span>
                 &#8226; <strong>{title}</strong>
               </span>
-              {service.subservices && service.subservices.length > 0 && (
-                <div className="pl-6">
-                  {service.subservices.map((subservice, subIndex) => (
-                    <div key={subIndex} className="flex flex-row gap-1">
-                      <span>&#8226; {subservice.description}</span>
-                    </div>
-                  ))}
-                </div>
-              )}
             </div>
           );
         })}
