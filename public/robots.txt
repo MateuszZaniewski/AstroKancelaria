@@ -1,0 +1,7 @@
+User-agent: *
+Disallow: /private/
+Allow: /
+Disallow: /login/
+Disallow: /admin/
+
+Sitemap: https://kancelaria-paulina-komenda.netlify.app/sitemap-index.xml

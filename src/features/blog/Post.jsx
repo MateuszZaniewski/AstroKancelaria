@@ -8,7 +8,7 @@ export const Post = ({ post }) => {
           <img loading="lazy" src={post.source} alt={post.source} />
         </div>
         <div className="flex h-full flex-col justify-between">
-          <h4 className="text-lg font-bold">{post.name}</h4>
+          <h2 className="text-lg font-bold">{post.name}</h2>
           <div className="flex gap-1 text-sm lg:pt-1">
             <span>{post.date}</span>|<span>{post.category}</span>
           </div>
