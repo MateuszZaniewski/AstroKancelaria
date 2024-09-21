@@ -24,7 +24,7 @@ export const ReviewsReact = () => {
   });
 
   return (
-    <section className="bg-[#EEE5DA] pt-20" id="opinions">
+    <section className="bg-[#EEE5DA]" id="opinions">
       <h2 className="px-[5vw] font-cinzel text-3xl lg:pl-[9.4vw] lg:text-5xl 2xl:mx-auto">
         OPINIE KLIENTÓW
       </h2>
@@ -37,7 +37,7 @@ export const ReviewsReact = () => {
 
       <div className="block md:hidden">
         {/* Mobile version with pagination, visible 1 item at most */}
-        <div {...handlers} className="flex min-h-[500px] justify-center">
+        <div {...handlers} className="flex min-h-[450px] justify-center">
           <Opinion opinion={opinions[count]} />
         </div>
 
@@ -56,7 +56,7 @@ export const ReviewsReact = () => {
         {/* Tablet version with pagination, visible 2 items at most */}
         <div
           {...handlersTablet}
-          className="hidden min-h-[500px] md:flex md:justify-center md:px-[2vw]"
+          className="hidden min-h-[450px] md:flex md:justify-center md:px-[2vw]"
         >
           <div className="flex pb-20">
             {opinions.slice(count, count + 2).map((opinion, index) => (
