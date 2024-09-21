@@ -11,20 +11,20 @@ const { animate } = Astro.props;
 
 <nav
   id="navbar"
-  class={`absolute z-10 w-full ${animate === true && "animate-animateNavbar invisible -z-50 -top-26 "}`}
+  class={`fixed top-0 z-10 w-full menu-transparent ${animate === true && "animate-animateNavbar invisible -z-50 -top-26 "}`}
 >
-  <div class="max-w-[1600px] mx-auto px-5 sm:px-10">
+  <div class="max-w-[1600px] mx-auto px-5 sm:px-10 py-[1vh]">
     <div class="flex justify-between">
       <a href="/">
         <img
           src="/newLogo.svg"
           alt="logoKancelariaPaulinaKomenda"
-          class="h-full max-h-[83px] w-full max-w-[298px] min-w-[230px] pt-[2.3vh] cursor-pointer"
+          class="h-full max-h-[83px] w-full max-w-[298px] min-w-[230px] cursor-pointer"
           loading="eager"
         />
       </a>
       <div
-        class="hidden lg:flex gap-12 2xl:gap-16 font-normal font-sans pt-2 items-center mix-blend-difference transition-colors"
+        class="hidden lg:flex gap-12 2xl:gap-16 font-normal font-sans items-center"
       >
         <a
           href="#services"
@@ -85,6 +85,30 @@ const { animate } = Astro.props;
 </nav>
 
 <style>
+  .menu-transparent {
+    background-color: transparent;
+    color: black;
+    transition:
+      background-color 0.3s ease,
+      color 0.3s ease;
+  }
+
+  .menu-light {
+    background-color: #eee5da;
+    color: black;
+    transition:
+      background-color 0.3s ease,
+      color 0.3s ease;
+  }
+
+  .menu-dark {
+    background-color: #0e1f2a;
+    color: #b58c67;
+    transition:
+      background-color 0.3s ease,
+      color 0.3s ease;
+  }
+
   @keyframes slide-down {
     0% {
       transform: translateY(-100%);
@@ -123,6 +147,7 @@ const { animate } = Astro.props;
 
 <script defer>
   document.addEventListener("DOMContentLoaded", () => {
+    let scrollPosition = 0;
     // Select elements
     const btn = document.querySelector(".mobile-menu-button");
     const closeBtn = document.querySelector(".mobile-menu-close");
@@ -133,13 +158,15 @@ const { animate } = Astro.props;
 
     // Open mobile menu
     btn.addEventListener("click", () => {
+      scrollPosition = window.scrollY;
       menu.classList.remove("hidden", "animation-menu-slide-out");
       menu.classList.add("animation-menu-slide-in");
       hamburgerIcon.classList.add("hidden");
       closeIcon.classList.remove("hidden");
 
       // Disable scrolling on the body
-      document.body.style.position = "fixed";
+      document.body.style.position = "sticky";
+      document.body.style.top = `-${scrollPosition}px`;
       document.body.style.overflow = "hidden";
     });
 
@@ -191,5 +218,83 @@ const { animate } = Astro.props;
         }
       });
     });
+    const navbar = document.querySelector("#navbar");
+    const hero = document.querySelector("#hero");
+    const services = document.querySelector("#services");
+    const about = document.querySelector("#about");
+    const background = document.querySelector("#background");
+    const blog = document.querySelector("#blog");
+    const reviews = document.querySelector("#opinions");
+    const contact = document.querySelector("#contact");
+    const footer = document.querySelector("#footer");
+
+    // #EEE5DA - background color for light background
+    // #0E1F2A - background color for dark background
+
+    console.log("Navbar", navbar.getBoundingClientRect().height);
+    console.log("Hero", hero.getBoundingClientRect().top);
+    console.log("Services", services.getBoundingClientRect().top);
+    console.log("About", about.getBoundingClientRect().top);
+    console.log("Background", background.getBoundingClientRect().top);
+    console.log("Reviews", reviews.getBoundingClientRect().top);
+    console.log("Blog", blog.getBoundingClientRect().top);
+    console.log("Contact", contact.getBoundingClientRect().top);
+    console.log("Footer", footer.getBoundingClientRect().top);
+
+    /* pseudo code
+      if navbar is at the top of the page make it transparent
+      if navbar is between (top - 1px) and about top make it light
+      if navbar is between (top - background bottom) and  reviews top make it dark
+      if navbar is below background top make it light
+    */
+
+    const changeHeaderBackground = () => {
+      // Get the current scroll position
+      const scrollPosition = window.scrollY;
+      const navbarHeight = navbar.getBoundingClientRect().height;
+
+      // Get the position of ssections from the top of the page
+      const heroTop = hero.getBoundingClientRect().top + window.scrollY;
+      const servicesTop = services.getBoundingClientRect().top + window.scrollY;
+      const aboutTop =
+        about.getBoundingClientRect().top - navbarHeight + window.scrollY;
+      const backgroundTop =
+        background.getBoundingClientRect().top + window.scrollY;
+      const reviewsTop =
+        reviews.getBoundingClientRect().top - navbarHeight + window.scrollY;
+      const blogTop = blog.getBoundingClientRect().top + window.scrollY;
+      const contactTop = contact.getBoundingClientRect().top + window.scrollY;
+
+      if (scrollPosition === 0) {
+        navbar.classList.remove("menu-dark");
+        navbar.classList.remove("menu-light");
+        navbar.classList.add("menu-transparent");
+      } else if (scrollPosition > 0 && scrollPosition <= aboutTop) {
+        navbar.classList.remove("menu-transparent");
+        navbar.classList.remove("menu-dark");
+        navbar.classList.add("menu-light");
+      } else if (scrollPosition > aboutTop && scrollPosition <= reviewsTop) {
+        navbar.classList.remove("menu-light");
+        navbar.classList.remove("menu-transparent");
+        navbar.classList.add("menu-dark");
+      } else if (scrollPosition > reviewsTop) {
+        navbar.classList.remove("menu-dark");
+        navbar.classList.remove("menu-transparent");
+        navbar.classList.add("menu-light");
+      }
+
+      // // Check if the user has scrolled past the services section
+      // if (scrollPosition >= servicesTop) {
+      //   navbar.classList.add("bg-red-500");
+      // } else {
+      //   navbar.classList.remove("bg-red-500");
+      // }
+    };
+
+    // Call changeHeaderBackground on page load to check initial state
+    changeHeaderBackground();
+
+    // Attach the scroll event listener to the window
+    window.addEventListener("scroll", changeHeaderBackground);
   });
 </script>

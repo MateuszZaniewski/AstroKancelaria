@@ -1,11 +1,11 @@
 ---
 import Hero from "../features/hero/hero.astro";
 import About from "../features/about/about.astro";
-import { Services } from "../features/services/Services";
+import Services from "../features/services/Services.astro";
 import Layout from "../layouts/Layout.astro";
 import Background from "../ui/Background.astro";
-import { Reviews } from "../features/reviews/Reviews";
-import { Blog } from "../features/blog/Blog";
+import Reviews from "../features/reviews/Reviews.astro";
+import Blog from "../features/blog/Blog.astro";
 import Contact from "../features/contact/contact.astro";
 ---
 
@@ -18,27 +18,20 @@ import Contact from "../features/contact/contact.astro";
         src="/animationLogo1440.svg"
         alt="Logo"
         class="animate-revealLogo px-10 opacity-0"
+        loading="lazy"
       />
     </div>
 
     <Hero />
     <div>
-      <Services client:only="react" />
+      <Services />
       <div>
         <About />
         <Background />
-        <Reviews client:only="react" />
+        <Reviews />
       </div>
-      <Blog client:only="react" />
+      <Blog />
       <Contact />
     </div>
   </main>
-  <!-- <main>
-    <div class="bg-blue-300 h-screen"></div>
-    <div class="bg-purple-200 h-screen"></div>
-    <div class="bg-orange-300 h-screen"></div>
-    <div class="bg-[#0E1F2A] h-screen"></div>
-    <div class="bg-[#233f0c] h-screen"></div>
-    <div class="bg-[#db4747] h-screen"></div>
-  </main> -->
 </Layout>
