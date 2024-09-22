@@ -20,7 +20,6 @@ const linkStyles =
   <div
     class="flex flex-col sm:flex-row sm:flex-wrap sm:justify-start sm:gap-x-12 sm:gap-y-5 md:justify-start md:pr-2 lg:justify-center"
   >
-    <!--  -->
     <div class=`${containerStyle} md:order-2`>
       <h3 class=`${headingStyle}`>USŁUGI PRAWNE</h3>
       <div class="hidden lg:block">
@@ -66,38 +65,55 @@ const linkStyles =
     <div class=`${containerStyle} pt-12 sm:pt-0 md:order-3`>
       <h3 class=`${headingStyle}`>KANCELARIA</h3>
       <div class=`${elementsStyle}`>
-        <a href="#about" class=`${linkStyles} h-fit`>O mnie</a>
-        <a href="#blog" class=`${linkStyles}`>Blog</a>
-        <a href="#" class=`${linkStyles}`>Facebook</a>
-        <a href="#" class=`${linkStyles}`>Instagram</a>
         <a
+          aria-label="link to about section"
+          href="#about"
+          class=`${linkStyles} h-fit`>O mnie</a
+        >
+        <a aria-label="link to blog section" href="#blog" class=`${linkStyles}`
+          >Blog</a
+        >
+        <a aria-label="link to facebook" href="#" class=`${linkStyles}`
+          >Facebook</a
+        >
+        <a aria-label="link to instagram" href="#" class=`${linkStyles}`
+          >Instagram</a
+        >
+        <a
+          aria-label="link to rodo"
           href="/rodo"
           target="_blank"
           class="hover:font-semibold cursor-pointer text-normal active:text-[#D9C6AF] focus:border-[#533630]"
           >RODO</a
         >
-        <!-- <a href="#" class=`${linkStyles}`>Polityka prywatności</a> -->
       </div>
     </div>
     <!--  -->
     <div class=`${containerStyle} pt-12 sm:pt-0 md:order-1 `>
-      <a href="#contact" class=`${headingStyle} nav-link`>KONTAKT</a>
+      <a
+        aria-label="link to contact"
+        href="#contact"
+        class=`${headingStyle} nav-link`>KONTAKT</a
+      >
       <div class="flex flex-col gap-5 text-normal">
         <span
           >ul. Sienkiewicza 55A/90 15-002 Białystok <br /> Spółdzielnia "Trzy Kłosy"</span
         >
         <span>Pon - Pt 9:00 - 17:00</span>
-        <a href="tel:+48698741258" class="hover:font-semibold"
-          >Tel.: 698 741 258</a
+        <a
+          aria-label="link to phone"
+          href="tel:+48698741258"
+          class="hover:font-semibold footer-phone">Tel.: 698 741 258</a
         >
         <a
+          aria-label="link to email"
           href="mailto:adw.komenda@gmail.com"
-          class="hover:font-semibold md:min-w-52">adw.komenda@gmail.com</a
+          class="hover:font-semibold md:min-w-52 footer-email"
+          >adw.komenda@gmail.com</a
         >
         <span>NIP: 9662171426 </span>
       </div>
     </div>
-    <!--  -->
   </div>
   <div
     class="flex gap-2 lg:gap-10 items-center justify-center pt-14 pb-10 px-[5vw] lg:px-10"
@@ -106,7 +122,7 @@ const linkStyles =
     <img
       loading="lazy"
       class="max-w-[300px] max-h-[83px]"
-      src="/logoKomenda.svg"
+      src="/newLogoForDarkBackground.svg"
       alt="logoKancelariaPaulinaKomenda"
     />
     <div class="grow w-auto h-[1px] bg-[#5A4620]"></div>

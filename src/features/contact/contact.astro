@@ -73,7 +73,11 @@ import Kancelaria from "./kancelaria.astro";
             ></path>
           </g>
         </svg>
-        <a href="tel:+48508726150">508 726 150</a>
+        <a
+          aria-label="link to phone"
+          href="tel:+48508726150"
+          class="contact-phone">508 726 150</a
+        >
       </div>
       <div class=`flex gap-1 w-fit items-center hover:text-[#EEE5DA]`>
         <svg
@@ -100,8 +104,10 @@ import Kancelaria from "./kancelaria.astro";
             ></path>
           </g>
         </svg>
-        <a href="mailto:adw.komenda@gmail.com" class="hover:text-[#EEE5DA]"
-          >adw.komenda@gmail.com</a
+        <a
+          aria-label="link to email"
+          href="mailto:adw.komenda@gmail.com"
+          class="hover:text-[#EEE5DA] contact-email">adw.komenda@gmail.com</a
         >
       </div>
       <Container

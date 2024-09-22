@@ -9,6 +9,7 @@ export const FooterLink = ({ linkTo, children, tabNum }) => {
       href={linkTo}
       className="text-normal nav-link cursor-pointer hover:font-semibold focus:border-[#533630] active:text-[#D9C6AF]"
       onClick={handleClick}
+      aria-label={`link to ${children} section`}
     >
       {children}
     </a>

@@ -1,14 +1,14 @@
 ---
 import { Image } from "astro:assets";
-import logo from "../../public/logoKomenda.svg";
+import logo from "../../public/newLogo.svg";
 ---
 
 <div class="flex justify-between">
-  <div class="flex justify-end items-center">
+  <div>
     <Image
       src={logo}
       alt="logoKancelariaPaulinaKomenda"
-      class="h-full max-h-[83px] w-[64vw] max-w-[298px] min-w-[230px] pt-[2.3vh] cursor-pointer"
+      class="h-full max-h-[83px] w-fit max-w-[298px] min-w-[230px] cursor-pointer menu-logo"
       loading="eager"
     />
   </div>
@@ -42,15 +42,32 @@ import logo from "../../public/logoKomenda.svg";
 <div
   class="pt-[7.5vh] sm:pt-[9vh] text-3xl sm:text-4xl sm:gap-[3.5vh] flex flex-col gap-[2.3vh] font-cinzel text-black"
 >
-  <a href="#services" class="nav-link"
+  <a
+    aria-label="link to services section"
+    href="#services"
+    class="nav-link menu-services"
     >ZAKRES USŁUG <br class="sm:hidden" /> PRAWNYCH</a
   >
-  <a href="#about" class="nav-link">O MNIE</a>
-  <a href="#opinions" class="nav-link">OPINIE</a>
-  <a href="#blog" class="nav-link">BLOG</a>
+  <a
+    aria-label="link to about section"
+    href="#about"
+    class="nav-link menu-about">O MNIE</a
+  >
+  <a
+    aria-label="link to opinions section"
+    href="#opinions"
+    class="nav-link menu-opinions">OPINIE</a
+  >
+  <a aria-label="link to blog section" href="#blog" class="nav-link menu-blog"
+    >BLOG</a
+  >
 </div>
 <div class="pt-[6.6vh] text-black">
-  <a href="#contact" class="nav-link">
+  <a
+    aria-label="link to contact section"
+    href="#contact"
+    class="nav-link menu-contact"
+  >
     <h3 class="text-3xl text-center font-cinzel sm:text-4xl sm:gap-[3.5vh]">
       KONTAKT
     </h3>
@@ -64,12 +81,18 @@ import logo from "../../public/logoKomenda.svg";
     </div>
     <div class="flex gap-1">
       <img loading="lazy" src="IconPhone.svg" alt="Phone Icon" />
-      <a href="tel:+48508726150" class="text-lg">508 726 150</a>
+      <a
+        aria-label="link to phone"
+        href="tel:+48508726150"
+        class="text-lg menu-phone">508 726 150</a
+      >
     </div>
     <div class="flex gap-1">
       <img loading="lazy" src="IconEmail.svg" alt="Email Icon" />
-      <a href="mailto:adw.komenda@gmail.com" class="text-lg"
-        >adw.komenda@gmail.com</a
+      <a
+        aria-label="link to email"
+        href="mailto:adw.komenda@gmail.com"
+        class="text-lg menu-email">adw.komenda@gmail.com</a
       >
     </div>
   </div>

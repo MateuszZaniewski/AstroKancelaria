@@ -15,11 +15,12 @@ const { animate } = Astro.props;
 >
   <div class="max-w-[1600px] mx-auto px-5 sm:px-10 py-[1vh]">
     <div class="flex justify-between">
-      <a href="/">
+      <a href="/" aria-label="link to homepage">
         <img
+          id="logoKancelaria"
           src="/newLogo.svg"
           alt="logoKancelariaPaulinaKomenda"
-          class="h-full max-h-[83px] w-full max-w-[298px] min-w-[230px] cursor-pointer"
+          class="h-full max-h-[67px] w-full max-w-[235px] min-w-[235px] cursor-pointer nav-logo"
           loading="eager"
         />
       </a>
@@ -28,20 +29,24 @@ const { animate } = Astro.props;
       >
         <a
           href="#services"
-          class="h-fit whitespace-nowrap font-semibold cursor-pointer nav-link hover:text-[#B58C67] active:text-[#333333] focus:border-[#533630]"
-          aria-label="Usługi prawne">USŁUGI PRAWNE</a
+          class="h-fit whitespace-nowrap font-semibold cursor-pointer nav-link hover:text-[#B58C67] active:text-[#333333] focus:border-[#533630] nav-services"
+          aria-label="link to services section">USŁUGI PRAWNE</a
         >
         <a
           href="#about"
-          class="h-fit whitespace-nowrap font-semibold cursor-pointer nav-link hover:text-[#B58C67] active:text-[#333333] focus:border-[#533630]"
-          aria-label="O mnie">O MNIE</a
+          class="h-fit whitespace-nowrap font-semibold cursor-pointer nav-link hover:text-[#B58C67] active:text-[#333333] focus:border-[#533630] nav-about"
+          aria-label="link to about section">O MNIE</a
         >
         <a
           href="#blog"
-          class="h-fit whitespace-nowrap font-semibold cursor-pointer nav-link hover:text-[#B58C67] active:text-[#333333] focus:border-[#533630]"
-          aria-label="Blog">BLOG</a
+          class="h-fit whitespace-nowrap font-semibold cursor-pointer nav-link hover:text-[#B58C67] active:text-[#333333] focus:border-[#533630] nav-blog"
+          aria-label="link to blog section">BLOG</a
         >
-        <a href="#contact" class="nav-link" aria-label="Kontakt">
+        <a
+          href="#contact"
+          class="nav-link nav-contact"
+          aria-label="link to contact"
+        >
           <CtaButton text="KONTAKT" variant="contain" />
         </a>
       </div>
@@ -78,7 +83,7 @@ const { animate } = Astro.props;
   <div
     class="hidden mobile-menu absolute top-0 left-0 w-full h-screen z-40 animation-menu-slide-out"
   >
-    <div class="min-h-screen bg-[#EEE5DA] px-5 pb-12">
+    <div class="min-h-screen bg-[#EEE5DA] px-5 py-[1vh] pb-12">
       <Menu />
     </div>
   </div>
@@ -145,156 +150,7 @@ const { animate } = Astro.props;
   }
 </style>
 
-<script defer>
-  document.addEventListener("DOMContentLoaded", () => {
-    let scrollPosition = 0;
-    // Select elements
-    const btn = document.querySelector(".mobile-menu-button");
-    const closeBtn = document.querySelector(".mobile-menu-close");
-    const menu = document.querySelector(".mobile-menu");
-    const hamburgerIcon = document.querySelector(".hamburger-icon");
-    const closeIcon = document.querySelector(".close-icon");
-    const navLinks = document.querySelectorAll(".nav-link");
-
-    // Open mobile menu
-    btn.addEventListener("click", () => {
-      scrollPosition = window.scrollY;
-      menu.classList.remove("hidden", "animation-menu-slide-out");
-      menu.classList.add("animation-menu-slide-in");
-      hamburgerIcon.classList.add("hidden");
-      closeIcon.classList.remove("hidden");
-
-      // Disable scrolling on the body
-      document.body.style.position = "sticky";
-      document.body.style.top = `-${scrollPosition}px`;
-      document.body.style.overflow = "hidden";
-    });
-
-    // Close mobile menu when clicking the "X" button
-    closeBtn.addEventListener("click", () => {
-      menu.classList.remove("animation-menu-slide-in");
-      menu.classList.add("animation-menu-slide-out");
-
-      setTimeout(() => {
-        menu.classList.add("hidden");
-        // Re-enable scrolling on the body
-        document.body.style.position = "";
-        document.body.style.overflow = "";
-
-        hamburgerIcon.classList.remove("hidden");
-        closeIcon.classList.add("hidden");
-      }, 700); // Match the duration of the slide-up animation
-    });
-
-    // Smooth scrolling and close menu on link click
-    navLinks.forEach((link) => {
-      link.addEventListener("click", (e) => {
-        e.preventDefault(); // Prevent default anchor link behavior
-
-        // Get the target element by id from the href attribute
-        const targetId = link.getAttribute("href").substring(1); // Remove the '#' character
-        const targetElement = document.getElementById(targetId);
-
-        if (targetElement) {
-          // Close the mobile menu first
-          menu.classList.remove("animation-menu-slide-in");
-          menu.classList.add("animation-menu-slide-out");
-
-          setTimeout(() => {
-            menu.classList.add("hidden");
-            // Re-enable scrolling on the body
-            document.body.style.position = "";
-            document.body.style.overflow = "";
-
-            // Scroll to the target element
-            targetElement.scrollIntoView({
-              behavior: "smooth", // Smooth scrolling behavior
-              block: "start", // Align the top of the element with the top of the viewport
-            });
-          }, 100); // Match the duration of the slide-up animation
-
-          hamburgerIcon.classList.remove("hidden");
-          closeIcon.classList.add("hidden");
-        }
-      });
-    });
-    const navbar = document.querySelector("#navbar");
-    const hero = document.querySelector("#hero");
-    const services = document.querySelector("#services");
-    const about = document.querySelector("#about");
-    const background = document.querySelector("#background");
-    const blog = document.querySelector("#blog");
-    const reviews = document.querySelector("#opinions");
-    const contact = document.querySelector("#contact");
-    const footer = document.querySelector("#footer");
-
-    // #EEE5DA - background color for light background
-    // #0E1F2A - background color for dark background
-
-    console.log("Navbar", navbar.getBoundingClientRect().height);
-    console.log("Hero", hero.getBoundingClientRect().top);
-    console.log("Services", services.getBoundingClientRect().top);
-    console.log("About", about.getBoundingClientRect().top);
-    console.log("Background", background.getBoundingClientRect().top);
-    console.log("Reviews", reviews.getBoundingClientRect().top);
-    console.log("Blog", blog.getBoundingClientRect().top);
-    console.log("Contact", contact.getBoundingClientRect().top);
-    console.log("Footer", footer.getBoundingClientRect().top);
-
-    /* pseudo code
-      if navbar is at the top of the page make it transparent
-      if navbar is between (top - 1px) and about top make it light
-      if navbar is between (top - background bottom) and  reviews top make it dark
-      if navbar is below background top make it light
-    */
-
-    const changeHeaderBackground = () => {
-      // Get the current scroll position
-      const scrollPosition = window.scrollY;
-      const navbarHeight = navbar.getBoundingClientRect().height;
-
-      // Get the position of ssections from the top of the page
-      const heroTop = hero.getBoundingClientRect().top + window.scrollY;
-      const servicesTop = services.getBoundingClientRect().top + window.scrollY;
-      const aboutTop =
-        about.getBoundingClientRect().top - navbarHeight + window.scrollY;
-      const backgroundTop =
-        background.getBoundingClientRect().top + window.scrollY;
-      const reviewsTop =
-        reviews.getBoundingClientRect().top - navbarHeight + window.scrollY;
-      const blogTop = blog.getBoundingClientRect().top + window.scrollY;
-      const contactTop = contact.getBoundingClientRect().top + window.scrollY;
-
-      if (scrollPosition === 0) {
-        navbar.classList.remove("menu-dark");
-        navbar.classList.remove("menu-light");
-        navbar.classList.add("menu-transparent");
-      } else if (scrollPosition > 0 && scrollPosition <= aboutTop) {
-        navbar.classList.remove("menu-transparent");
-        navbar.classList.remove("menu-dark");
-        navbar.classList.add("menu-light");
-      } else if (scrollPosition > aboutTop && scrollPosition <= reviewsTop) {
-        navbar.classList.remove("menu-light");
-        navbar.classList.remove("menu-transparent");
-        navbar.classList.add("menu-dark");
-      } else if (scrollPosition > reviewsTop) {
-        navbar.classList.remove("menu-dark");
-        navbar.classList.remove("menu-transparent");
-        navbar.classList.add("menu-light");
-      }
-
-      // // Check if the user has scrolled past the services section
-      // if (scrollPosition >= servicesTop) {
-      //   navbar.classList.add("bg-red-500");
-      // } else {
-      //   navbar.classList.remove("bg-red-500");
-      // }
-    };
-
-    // Call changeHeaderBackground on page load to check initial state
-    changeHeaderBackground();
-
-    // Attach the scroll event listener to the window
-    window.addEventListener("scroll", changeHeaderBackground);
-  });
+<script>
+  import headerEffects from "../helpers/headerEffects.js";
+  headerEffects();
 </script>
