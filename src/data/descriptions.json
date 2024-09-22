@@ -2,7 +2,7 @@
   {
     "name": "PRAWO RODZINNE",
     "id": "rodzinne",
-    "source": "/family-law.png",
+    "source": "/family-law.webp",
     "introduction": "Kancelaria specjalizuje się w prowadzeniu spraw z zakresu prawa rodzinnego m.in. o:",
     "services": [
       {
@@ -35,7 +35,7 @@
   {
     "name": "KONWENCJA HASKA",
     "id": "haska",
-    "source": "/haski.png",
+    "source": "/haski.webp",
     "introduction": "Kancelaria oferuje pomoc w zakresie spraw prowadzonych w trybie konwencji haskiej dotyczącej cywilnych aspektów uprowadzenia dziecka za granicę. Pomagamy w przygotowaniu odpowiednich dokumentów takich jak : wniosek o nakazanie powrotu dziecka, odpowiedź na wniosek, wnioski dowodowe oraz oferujemy reprezentację Klientów w postępowaniu sądowym.",
     "services": [],
     "summary": "Kancelaria dokłada wszelkich starań, aby proces związany z bezprawnym uprowadzeniem bądź bezprawnym zatrzymaniem dziecka za granicą przebiegał sprawnie i skutecznie, dążąc do jak najszybszego i najkorzystniejszego rozwiązania dla Klienta."
@@ -43,7 +43,7 @@
   {
     "name": "PRAWO SPADKOWE",
     "id": "spadkowe",
-    "source": "/spadkowe.png",
+    "source": "/spadkowe.webp",
     "introduction": "Kancelaria oferuje kompleksowe usługi prawne związane z reprezentacją Klientów w sprawach o:",
     "services": [
       {
@@ -61,7 +61,7 @@
   {
     "name": "PRAWO KARNE",
     "id": "karne",
-    "source": "/criminal.png",
+    "source": "/criminal.webp",
     "introduction": "Kancelaria oferuje obronę w postępowaniach karnych oraz wykroczeniowych na każdym etapie postępowania. Pomagamy w szczególności w sprawach o:",
     "services": [
       {
@@ -82,7 +82,7 @@
   {
     "name": "PRAWO CYWILNE",
     "id": "cywilne",
-    "source": "/civil.png",
+    "source": "/civil.webp",
     "introduction": "Kancelaria świadczy usługi prawne związane z reprezentacją Klientów przed sądami na każdym etapie postępowania m.in. w sprawach o :",
     "services": [
       {
