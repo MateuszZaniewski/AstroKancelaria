@@ -59,10 +59,16 @@ export default function headerEffects() {
             document.body.style.position = "";
             document.body.style.overflow = "";
 
+            // Scroll to the target element with offset for the navbar height
+            const navbarHeight = navbar.getBoundingClientRect().height;
+            const elementPosition =
+              targetElement.getBoundingClientRect().top + window.scrollY;
+            const offsetPosition = elementPosition - navbarHeight;
+
             // Scroll to the target element
-            targetElement.scrollIntoView({
+            window.scrollTo({
+              top: offsetPosition,
               behavior: "smooth", // Smooth scrolling behavior
-              block: "start", // Align the top of the element with the top of the viewport
             });
           }, 100); // Match the duration of the slide-up animation
 

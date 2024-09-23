@@ -12,6 +12,22 @@ const { title } = Astro.props;
 <!doctype html>
 <html lang="en">
   <head>
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "LegalService",
+        "name": "Kancelaria Adwokacka Paulina Komenda Białystok",
+        "description": "Kancelaria Adwokacka Paulina Komenda Białystok - kompleksowa obsługa klientów w zakresie prawa rodzinnego, karnego, cywilnego oraz spadkowego.",
+        "url": "https://example.com/uslugi-prawne",
+        "contactPoint": {
+          "@type": "ContactPoint",
+          "telephone": "+48508726150",
+          "contactType": "Customer Service",
+          "areaServed": "PL",
+          "availableLanguage": ["Polish", "English"]
+        }
+      }
+    </script>
     <script
       id="Cookiebot"
       src="https://consent.cookiebot.com/uc.js"
