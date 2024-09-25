@@ -9,6 +9,7 @@ export const Opinion = ({ opinion }) => {
           <img
             loading="lazy"
             src={opinion.provider === "Google" ? "google.svg" : "default.svg"}
+            className="h-full w-full"
             alt="Provider Logo"
           />
         </div>
