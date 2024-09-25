@@ -1,6 +1,7 @@
 ---
 import { ViewTransitions } from "astro:transitions";
 import Header from "../components/Header.astro";
+import "../styles/fonts.css";
 interface Props {
   title: string;
 }
@@ -16,36 +17,6 @@ const { title } = Astro.props;
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <link rel="sitemap" href="/sitemap-index.xml" />
-
-    <!-- Preconnect to Google Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-
-    <!-- Preload Fonts -->
-    <link
-      rel="preload"
-      href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap"
-      as="style"
-      onload="this.onload=null;this.rel='stylesheet'"
-    />
-    <link
-      rel="preload"
-      href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400..900&display=swap"
-      as="style"
-      onload="this.onload=null;this.rel='stylesheet'"
-    />
-
-    <!-- Fallback if JS is disabled -->
-    <noscript>
-      <link
-        href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap"
-        rel="stylesheet"
-      />
-      <link
-        href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400..900&display=swap"
-        rel="stylesheet"
-      />
-    </noscript>
 
     <meta name="generator" content={Astro.generator} />
     <title>{title}</title>
