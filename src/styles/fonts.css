@@ -1,122 +1,109 @@
-/* cinzel-regular - latin */
+/* Cinzel-regular */
 @font-face {
-  font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
   font-family: "Cinzel";
   font-style: normal;
   font-weight: 400;
+  font-display: swap;
   src:
-    url("../fonts/cinzel-v23-latin-regular.woff2") format("woff2"),
-    /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
-      url("../fonts/cinzel-v23-latin-regular.ttf") format("truetype"); /* Chrome 4+, Firefox 3.5+, IE 9+, Safari 3.1+, iOS 4.2+, Android Browser 2.2+ */
-}
-/* cinzel-500 - latin */
-@font-face {
-  font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
-  font-family: "Cinzel";
-  font-style: normal;
-  font-weight: 500;
-  src:
-    url("../fonts/cinzel-v23-latin-500.woff2") format("woff2"),
-    /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
-      url("../fonts/cinzel-v23-latin-500.ttf") format("truetype"); /* Chrome 4+, Firefox 3.5+, IE 9+, Safari 3.1+, iOS 4.2+, Android Browser 2.2+ */
-}
-/* cinzel-600 - latin */
-@font-face {
-  font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
-  font-family: "Cinzel";
-  font-style: normal;
-  font-weight: 600;
-  src:
-    url("../fonts/cinzel-v23-latin-600.woff2") format("woff2"),
-    /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
-      url("../fonts/cinzel-v23-latin-600.ttf") format("truetype"); /* Chrome 4+, Firefox 3.5+, IE 9+, Safari 3.1+, iOS 4.2+, Android Browser 2.2+ */
-}
-/* cinzel-700 - latin */
-@font-face {
-  font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
-  font-family: "Cinzel";
-  font-style: normal;
-  font-weight: 700;
-  src:
-    url("../fonts/cinzel-v23-latin-700.woff2") format("woff2"),
-    /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
-      url("../fonts/cinzel-v23-latin-700.ttf") format("truetype"); /* Chrome 4+, Firefox 3.5+, IE 9+, Safari 3.1+, iOS 4.2+, Android Browser 2.2+ */
-}
-/* cinzel-800 - latin */
-@font-face {
-  font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
-  font-family: "Cinzel";
-  font-style: normal;
-  font-weight: 800;
-  src:
-    url("../fonts/cinzel-v23-latin-800.woff2") format("woff2"),
-    /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
-      url("../fonts/cinzel-v23-latin-800.ttf") format("truetype"); /* Chrome 4+, Firefox 3.5+, IE 9+, Safari 3.1+, iOS 4.2+, Android Browser 2.2+ */
-}
-/* cinzel-900 - latin */
-@font-face {
-  font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
-  font-family: "Cinzel";
-  font-style: normal;
-  font-weight: 900;
-  src:
-    url("../fonts/cinzel-v23-latin-900.woff2") format("woff2"),
-    /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
-      url("../fonts/cinzel-v23-latin-900.ttf") format("truetype"); /* Chrome 4+, Firefox 3.5+, IE 9+, Safari 3.1+, iOS 4.2+, Android Browser 2.2+ */
+    url("../fonts/Cinzel-Regular.woff2") format("woff2"),
+    url("../fonts/Cinzel-Regular.ttf") format("truetype");
 }
 
-/* open-sans-regular - latin */
+/* Cinzel-medium */
 @font-face {
-  font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+  font-family: "Cinzel";
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+  src:
+    url("../fonts/Cinzel-Medium.woff2") format("woff2"),
+    url("../fonts/Cinzel-Medium.ttf") format("truetype");
+}
+
+/* Cinzel-semibold */
+@font-face {
+  font-family: "Cinzel";
+  font-style: normal;
+  font-weight: 600;
+  font-display: swap;
+  src:
+    url("../fonts/Cinzel-SemiBold.woff2") format("woff2"),
+    url("../fonts/Cinzel-SemiBold.ttf") format("truetype");
+}
+
+/* Cinzel-bold */
+@font-face {
+  font-family: "Cinzel";
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src:
+    url("../fonts/Cinzel-Bold.woff2") format("woff2"),
+    url("../fonts/Cinzel-Bold.ttf") format("truetype");
+}
+
+/* Cinzel-extrabold */
+@font-face {
+  font-family: "Cinzel";
+  font-style: normal;
+  font-weight: 800;
+  font-display: swap;
+  src:
+    url("../fonts/Cinzel-ExtraBold.woff2") format("woff2"),
+    url("../fonts/Cinzel-ExtraBold.ttf") format("truetype");
+}
+
+/* Open Sans regular */
+@font-face {
   font-family: "Open Sans";
   font-style: normal;
   font-weight: 400;
+  font-display: swap;
   src:
     url("../fonts/open-sans-v40-latin-regular.woff2") format("woff2"),
-    /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
-      url("../fonts/open-sans-v40-latin-regular.ttf") format("truetype"); /* Chrome 4+, Firefox 3.5+, IE 9+, Safari 3.1+, iOS 4.2+, Android Browser 2.2+ */
+    url("../fonts/open-sans-v40-latin-regular.ttf") format("truetype");
 }
-/* open-sans-500 - latin */
+
+/* Open Sans medium (500) */
 @font-face {
-  font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
   font-family: "Open Sans";
   font-style: normal;
   font-weight: 500;
+  font-display: swap;
   src:
     url("../fonts/open-sans-v40-latin-500.woff2") format("woff2"),
-    /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
-      url("../fonts/open-sans-v40-latin-500.ttf") format("truetype"); /* Chrome 4+, Firefox 3.5+, IE 9+, Safari 3.1+, iOS 4.2+, Android Browser 2.2+ */
+    url("../fonts/open-sans-v40-latin-500.ttf") format("truetype");
 }
-/* open-sans-600 - latin */
+
+/* Open Sans semibold (600) */
 @font-face {
-  font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
   font-family: "Open Sans";
   font-style: normal;
   font-weight: 600;
+  font-display: swap;
   src:
     url("../fonts/open-sans-v40-latin-600.woff2") format("woff2"),
-    /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
-      url("../fonts/open-sans-v40-latin-600.ttf") format("truetype"); /* Chrome 4+, Firefox 3.5+, IE 9+, Safari 3.1+, iOS 4.2+, Android Browser 2.2+ */
+    url("../fonts/open-sans-v40-latin-600.ttf") format("truetype");
 }
-/* open-sans-700 - latin */
+
+/* Open Sans bold (700) */
 @font-face {
-  font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
   font-family: "Open Sans";
   font-style: normal;
   font-weight: 700;
+  font-display: swap;
   src:
     url("../fonts/open-sans-v40-latin-700.woff2") format("woff2"),
-    /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
-      url("../fonts/open-sans-v40-latin-700.ttf") format("truetype"); /* Chrome 4+, Firefox 3.5+, IE 9+, Safari 3.1+, iOS 4.2+, Android Browser 2.2+ */
+    url("../fonts/open-sans-v40-latin-700.ttf") format("truetype");
 }
-/* open-sans-800 - latin */
+
+/* Open Sans extrabold (800) */
 @font-face {
-  font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
   font-family: "Open Sans";
   font-style: normal;
   font-weight: 800;
+  font-display: swap;
   src:
     url("../fonts/open-sans-v40-latin-800.woff2") format("woff2"),
-    /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
-      url("../fonts/open-sans-v40-latin-800.ttf") format("truetype"); /* Chrome 4+, Firefox 3.5+, IE 9+, Safari 3.1+, iOS 4.2+, Android Browser 2.2+ */
+    url("../fonts/open-sans-v40-latin-800.ttf") format("truetype");
 }

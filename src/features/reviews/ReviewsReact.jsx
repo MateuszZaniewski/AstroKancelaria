@@ -31,7 +31,7 @@ export const ReviewsReact = () => {
       <img
         loading="lazy"
         src="quotes.svg"
-        className="h-full w-full py-7 pl-[5vw] lg:pl-[9.4vw]"
+        className="py-7 pl-[5vw] lg:pl-[9.4vw]"
         alt="quotes"
       />
 
