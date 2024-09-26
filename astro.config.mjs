@@ -33,6 +33,6 @@ export default defineConfig({
   vite: {
     plugins: [compression()],
   },
-  output: "static", // Use static output for Cloudflare Pages
+  output: "server", // Use static output for Cloudflare Pages
   adapter: cloudflare(), // Use Cloudflare Pages adapter
 });
