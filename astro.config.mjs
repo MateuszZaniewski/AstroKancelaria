@@ -9,7 +9,7 @@ import compress from "astro-compress";
 
 // https://astro.build/config
 export default defineConfig({
-  site: "https://kancelaria-paulinakomenda.netlify.app/",
+  // site: "https://kancelaria-paulinakomenda.netlify.app/",
   integrations: [react(), tailwind(), sitemap(), compress()],
   vite: {
     plugins: [compression()],
