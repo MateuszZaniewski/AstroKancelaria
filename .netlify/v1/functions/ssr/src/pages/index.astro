@@ -1,0 +1,37 @@
+---
+import Hero from "../features/hero/hero.astro";
+import About from "../features/about/about.astro";
+import Services from "../features/services/Services.astro";
+import Layout from "../layouts/Layout.astro";
+import Background from "../ui/Background.astro";
+import Reviews from "../features/reviews/Reviews.astro";
+import Blog from "../features/blog/Blog.astro";
+import Contact from "../features/contact/contact.astro";
+---
+
+<Layout title="Paulina Komenda Kancelaria Adwokacka">
+  <main class="overflow-hidden relative">
+    <div
+      class="fixed z-20 inset-0 w-full h-screen bg-[#0E1F2A] flex items-center justify-center animate-slideLeft"
+    >
+      <img
+        src="/animationLogo1440.png"
+        alt="Logo"
+        class="animate-revealLogo px-10 opacity-0"
+        loading="lazy"
+      />
+    </div>
+
+    <Hero />
+    <div>
+      <Services />
+      <div>
+        <About />
+        <Background />
+        <Reviews />
+      </div>
+      <Blog />
+      <Contact />
+    </div>
+  </main>
+</Layout>
