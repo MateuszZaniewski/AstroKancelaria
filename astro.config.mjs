@@ -39,7 +39,6 @@
 
 import { defineConfig } from "astro/config";
 import cloudflare from "@astrojs/cloudflare";
-import staticAdapter from "@astrojs/static"; // Add this
 import compression from "vite-plugin-compression";
 import react from "@astrojs/react";
 import tailwind from "@astrojs/tailwind";
@@ -54,6 +53,4 @@ export default defineConfig({
   },
   output: "static", // Static output
   // Use static adapter for development, cloudflare for production
-  adapter:
-    process.env.NODE_ENV === "production" ? cloudflare() : staticAdapter(),
 });
