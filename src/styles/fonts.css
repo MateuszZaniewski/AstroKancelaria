@@ -4,9 +4,7 @@
   font-style: normal;
   font-weight: 400;
   font-display: swap;
-  src:
-    url("../fonts/Cinzel-Regular.woff2") format("woff2"),
-    url("../fonts/Cinzel-Regular.ttf") format("truetype");
+  src: url("../fonts/Cinzel-Regular.ttf") format("truetype");
 }
 
 /* Cinzel-medium */
@@ -15,9 +13,7 @@
   font-style: normal;
   font-weight: 500;
   font-display: swap;
-  src:
-    url("../fonts/Cinzel-Medium.woff2") format("woff2"),
-    url("../fonts/Cinzel-Medium.ttf") format("truetype");
+  src: url("../fonts/Cinzel-Medium.ttf") format("truetype");
 }
 
 /* Cinzel-semibold */
@@ -26,9 +22,7 @@
   font-style: normal;
   font-weight: 600;
   font-display: swap;
-  src:
-    url("../fonts/Cinzel-SemiBold.woff2") format("woff2"),
-    url("../fonts/Cinzel-SemiBold.ttf") format("truetype");
+  src: url("../fonts/Cinzel-SemiBold.ttf") format("truetype");
 }
 
 /* Cinzel-bold */
@@ -37,9 +31,7 @@
   font-style: normal;
   font-weight: 700;
   font-display: swap;
-  src:
-    url("../fonts/Cinzel-Bold.woff2") format("woff2"),
-    url("../fonts/Cinzel-Bold.ttf") format("truetype");
+  src: url("../fonts/Cinzel-Bold.ttf") format("truetype");
 }
 
 /* Cinzel-extrabold */
@@ -48,9 +40,7 @@
   font-style: normal;
   font-weight: 800;
   font-display: swap;
-  src:
-    url("../fonts/Cinzel-ExtraBold.woff2") format("woff2"),
-    url("../fonts/Cinzel-ExtraBold.ttf") format("truetype");
+  src: url("../fonts/Cinzel-ExtraBold.ttf") format("truetype");
 }
 
 /* Open Sans regular */
@@ -59,9 +49,7 @@
   font-style: normal;
   font-weight: 400;
   font-display: swap;
-  src:
-    url("../fonts/open-sans-v40-latin-regular.woff2") format("woff2"),
-    url("../fonts/open-sans-v40-latin-regular.ttf") format("truetype");
+  src: url("../fonts/OpenSans-Regular.ttf") format("truetype");
 }
 
 /* Open Sans medium (500) */
@@ -70,9 +58,7 @@
   font-style: normal;
   font-weight: 500;
   font-display: swap;
-  src:
-    url("../fonts/open-sans-v40-latin-500.woff2") format("woff2"),
-    url("../fonts/open-sans-v40-latin-500.ttf") format("truetype");
+  src: url("../fonts/OpenSans-Medium.ttf") format("truetype");
 }
 
 /* Open Sans semibold (600) */
@@ -81,9 +67,7 @@
   font-style: normal;
   font-weight: 600;
   font-display: swap;
-  src:
-    url("../fonts/open-sans-v40-latin-600.woff2") format("woff2"),
-    url("../fonts/open-sans-v40-latin-600.ttf") format("truetype");
+  src: url("../fonts/OpenSans-SemiBold.ttf") format("truetype");
 }
 
 /* Open Sans bold (700) */
@@ -92,9 +76,7 @@
   font-style: normal;
   font-weight: 700;
   font-display: swap;
-  src:
-    url("../fonts/open-sans-v40-latin-700.woff2") format("woff2"),
-    url("../fonts/open-sans-v40-latin-700.ttf") format("truetype");
+  src: url("../fonts/OpenSans-Bold.ttf") format("truetype");
 }
 
 /* Open Sans extrabold (800) */
@@ -103,7 +85,5 @@
   font-style: normal;
   font-weight: 800;
   font-display: swap;
-  src:
-    url("../fonts/open-sans-v40-latin-800.woff2") format("woff2"),
-    url("../fonts/open-sans-v40-latin-800.ttf") format("truetype");
+  src: url("../fonts/OpenSans-ExtraBold.ttf") format("truetype");
 }
