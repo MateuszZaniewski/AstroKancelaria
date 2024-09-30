@@ -79,28 +79,17 @@ export default function headerEffects() {
     });
     const logo = document.querySelector("#logoKancelaria");
     const navbar = document.querySelector("#navbar");
-    const hero = document.querySelector("#hero");
-    const services = document.querySelector("#services");
     const about = document.querySelector("#about");
-    const background = document.querySelector("#background");
-    const blog = document.querySelector("#blog");
     const reviews = document.querySelector("#opinions");
-    const contact = document.querySelector("#contact");
-    const footer = document.querySelector("#footer");
 
     const changeHeaderBackground = () => {
       const scrollPosition = window.scrollY;
-      const navbarHeight = navbar.getBoundingClientRect().height;
-      const heroTop = hero.getBoundingClientRect().top + window.scrollY;
-      const servicesTop = services.getBoundingClientRect().top + window.scrollY;
+      const navbarHeight = navbar?.getBoundingClientRect().height;
       const aboutTop =
-        about.getBoundingClientRect().top - navbarHeight + window.scrollY;
-      const backgroundTop =
-        background.getBoundingClientRect().top + window.scrollY;
+        about?.getBoundingClientRect().top - navbarHeight + window.scrollY;
+
       const reviewsTop =
-        reviews.getBoundingClientRect().top - navbarHeight + window.scrollY;
-      const blogTop = blog.getBoundingClientRect().top + window.scrollY;
-      const contactTop = contact.getBoundingClientRect().top + window.scrollY;
+        reviews?.getBoundingClientRect().top - navbarHeight + window.scrollY;
 
       if (scrollPosition === 0) {
         navbar.classList.remove("menu-dark");
