@@ -22,8 +22,8 @@ import Kancelaria from "./kancelaria.astro";
       class="flex flex-col gap-[3.5vh] max-w-[365px] sm:max-w-[420px] pb-7 sm:ml-[9.3vw] md:px-0 lg:ml-4 px-5 sm:px-0 2xl:gap-8 min-w-fit"
     >
       <h3 class="w-fit max-w-[400px]">
-        Zadzwoń i umów się na spotkanie w kancelarii. <br /> Kancelaria obsługuje
-        Klientów również w języku angielskim.
+        Zadzwoń i umów się na spotkanie w kancelarii. <br /> We offer comprehensive
+        legal support in English for the foreign clients.
       </h3>
       <Container
         items_position="items-start"
@@ -42,11 +42,17 @@ import Kancelaria from "./kancelaria.astro";
         >
       </Container>
       <Container
-        items_position="items-center"
+        items_position="items-start"
         isHovered={false}
         src="IconClock.svg"
         alt="Clock Icon"
-        ><span>poniedziałek - piątek 9:00 - 17:00 </span></Container
+        ><div class="max-w-[420px]">
+          <span>poniedziałek - piątek 9:00 - 17:00 </span>
+          <br /><span
+            >Istnieje możliwość ustalenia spotkania poza godzinami pracy
+            kancelarii po uprzednim ustaleniu.</span
+          >
+        </div></Container
       >
       <div class=`flex gap-1 w-fit items-center hover:text-[#EEE5DA]`>
         <svg

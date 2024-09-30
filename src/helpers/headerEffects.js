@@ -1,6 +1,7 @@
 export default function headerEffects() {
   document.addEventListener("DOMContentLoaded", () => {
     let scrollPosition = 0;
+
     // Select elements
     const btn = document.querySelector(".mobile-menu-button");
     const closeBtn = document.querySelector(".mobile-menu-close");
@@ -77,6 +78,7 @@ export default function headerEffects() {
         }
       });
     });
+
     const logo = document.querySelector("#logoKancelaria");
     const navbar = document.querySelector("#navbar");
     const about = document.querySelector("#about");
@@ -85,35 +87,48 @@ export default function headerEffects() {
     const changeHeaderBackground = () => {
       const scrollPosition = window.scrollY;
       const navbarHeight = navbar?.getBoundingClientRect().height;
-      const aboutTop =
-        about?.getBoundingClientRect().top - navbarHeight + window.scrollY;
 
-      const reviewsTop =
-        reviews?.getBoundingClientRect().top - navbarHeight + window.scrollY;
+      if (window.location.pathname === "/blog") {
+        // Logika dla strony bloga
+        if (scrollPosition > 5) {
+          navbar.classList.remove("menu-transparent");
+          navbar.classList.add("menu-light");
+        } else {
+          navbar.classList.remove("menu-light");
+          navbar.classList.add("menu-transparent");
+        }
+      } else {
+        // Logika dla strony głównej
+        const aboutTop =
+          about?.getBoundingClientRect().top - navbarHeight + window.scrollY;
+        const reviewsTop =
+          reviews?.getBoundingClientRect().top - navbarHeight + window.scrollY;
 
-      if (scrollPosition === 0) {
-        navbar.classList.remove("menu-dark");
-        navbar.classList.remove("menu-light");
-        navbar.classList.add("menu-transparent");
-        logo.src = "/newLogo.svg";
-      } else if (scrollPosition > 0 && scrollPosition <= aboutTop) {
-        navbar.classList.remove("menu-transparent");
-        navbar.classList.remove("menu-dark");
-        navbar.classList.add("menu-light");
-        logo.src = "/newLogo.svg";
-      } else if (scrollPosition > aboutTop && scrollPosition <= reviewsTop) {
-        navbar.classList.remove("menu-light");
-        navbar.classList.remove("menu-transparent");
-        navbar.classList.add("menu-dark");
-        logo.src = "/newLogoForDarkBackground.svg";
-      } else if (scrollPosition > reviewsTop) {
-        navbar.classList.remove("menu-dark");
-        navbar.classList.remove("menu-transparent");
-        navbar.classList.add("menu-light");
-        logo.src = "/newLogo.svg";
+        if (scrollPosition === 0) {
+          navbar.classList.remove("menu-dark");
+          navbar.classList.remove("menu-light");
+          navbar.classList.add("menu-transparent");
+          logo.src = "/newLogo.svg";
+        } else if (scrollPosition > 0 && scrollPosition <= aboutTop) {
+          navbar.classList.remove("menu-transparent");
+          navbar.classList.remove("menu-dark");
+          navbar.classList.add("menu-light");
+          logo.src = "/newLogo.svg";
+        } else if (scrollPosition > aboutTop && scrollPosition <= reviewsTop) {
+          navbar.classList.remove("menu-light");
+          navbar.classList.remove("menu-transparent");
+          navbar.classList.add("menu-dark");
+          logo.src = "/newLogoForDarkBackground.svg";
+        } else if (scrollPosition > reviewsTop) {
+          navbar.classList.remove("menu-dark");
+          navbar.classList.remove("menu-transparent");
+          navbar.classList.add("menu-light");
+          logo.src = "/newLogo.svg";
+        }
       }
     };
 
+    // Wywołaj funkcję przy załadowaniu strony oraz podczas scrollowania
     changeHeaderBackground();
     window.addEventListener("scroll", changeHeaderBackground);
   });

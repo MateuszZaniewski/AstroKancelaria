@@ -1,5 +1,6 @@
 [
   {
+    "slug": "post1",
     "source": "blog1.webp",
     "bigsource": "blog1big.svg",
     "name": "Zasady i procedury w sprawach o zasiedzenie nieruchomości 1",
@@ -9,6 +10,7 @@
     "textLong": "Zasiedzenie nieruchomości - będące jednym z najczęściej występujących w praktyce przejawów instytucji „dawności” - polega na tym, że posiadacz nieruchomości niebędący jej właścicielem, może nabyć jej prawa własności o ile posiada nieruchomość nieprzerwanie przez określony prawem czas."
   },
   {
+    "slug": "post2",
     "source": "blog2.webp",
     "bigsource": "blog2big.svg",
     "name": "Rozwód: kluczowe kroki i wskazówki 2",
@@ -16,6 +18,7 @@
     "category": "Prawo rodzinne"
   },
   {
+    "slug": "post3",
     "source": "blog3.webp",
     "bigsource": "blog3big.svg",
     "name": "Ograniczenie i pozbawienie władzy rodzicielskiej: Co warto wiedzieć? 3",
@@ -23,107 +26,10 @@
     "category": "Prawo rodzinne"
   },
   {
+    "slug": "post4",
     "source": "blog4.svg",
     "bigsource": "blog4.svg",
     "name": "Zasady i procedury w sprawach o zasiedzenie nieruchomości 4",
-    "date": "10/09/2024",
-    "category": "Prawo cywilne"
-  },
-  {
-    "source": "blog5.svg",
-    "bigsource": "blog5.svg",
-    "name": "Zasady i i brak zasad 5",
-    "date": "28/09/2024",
-    "category": "Prawo karne"
-  },
-  {
-    "source": "blog2.webp",
-    "bigsource": "blog2big.svg",
-    "name": "Rozwód: kluczowe kroki i wskazówki 6",
-    "date": "28/09/2024",
-    "category": "Prawo rodzinne"
-  },
-  {
-    "source": "blog3.webp",
-    "bigsource": "blog3big.svg",
-    "name": "Ograniczenie i pozbawienie władzy rodzicielskiej: Co warto wiedzieć? 7",
-    "date": "15/10/2024",
-    "category": "Prawo rodzinne"
-  },
-  {
-    "source": "blog4.svg",
-    "bigsource": "blog4.svg",
-    "name": "Zasady i procedury w sprawach o zasiedzenie nieruchomości 8",
-    "date": "10/09/2024",
-    "category": "Prawo cywilne"
-  },
-  {
-    "source": "blog5.svg",
-    "bigsource": "blog5.svg",
-    "name": "Zasady i i brak zasad 9",
-    "date": "28/09/2024",
-    "category": "Prawo karne"
-  },
-  {
-    "source": "blog3.webp",
-    "bigsource": "blog3big.svg",
-    "name": "Ograniczenie i pozbawienie władzy rodzicielskiej: Co warto wiedzieć? 10",
-    "date": "15/10/2024",
-    "category": "Prawo rodzinne"
-  },
-  {
-    "source": "blog4.svg",
-    "bigsource": "blog4.svg",
-    "name": "Zasady i procedury w sprawach o zasiedzenie nieruchomości 11",
-    "date": "10/09/2024",
-    "category": "Prawo cywilne"
-  },
-  {
-    "source": "blog5.svg",
-    "bigsource": "blog5.svg",
-    "name": "Zasady i i brak zasad 12",
-    "date": "28/09/2024",
-    "category": "Prawo karne"
-  },
-  {
-    "source": "blog2.webp",
-    "bigsource": "blog2big.svg",
-    "name": "Rozwód: kluczowe kroki i wskazówki 13",
-    "date": "28/09/2024",
-    "category": "Prawo rodzinne"
-  },
-  {
-    "source": "blog3.webp",
-    "bigsource": "blog3big.svg",
-    "name": "Ograniczenie i pozbawienie władzy rodzicielskiej: Co warto wiedzieć? 14",
-    "date": "15/10/2024",
-    "category": "Prawo rodzinne"
-  },
-  {
-    "source": "blog4.svg",
-    "bigsource": "blog4.svg",
-    "name": "Zasady i procedury w sprawach o zasiedzenie nieruchomości 15",
-    "date": "10/09/2024",
-    "category": "Prawo cywilne"
-  },
-  {
-    "source": "blog5.svg",
-    "bigsource": "blog5.svg",
-    "name": "Zasady i i brak zasad 16",
-    "date": "28/09/2024",
-    "category": "Prawo karne"
-  },
-  {
-    "source": "blog4.svg",
-    "bigsource": "blog4.svg",
-    "name": "Zasady i procedury w sprawach o zasiedzenie nieruchomości 17",
-    "date": "10/09/2024",
-    "category": "Prawo cywilne"
-  },
-  {
-    "source": "blog4.svg",
-    "bigsource": "blog4.svg",
-    "name": "Zasady i procedury w sprawach o zasiedzenie nieruchomości 18",
     "date": "10/09/2024",
     "category": "Prawo cywilne"
   }

@@ -21,7 +21,7 @@ export const MainArticle = () => {
       <div className="mx-auto max-w-[688px]">
         <p>{posts[0].textShort}</p>
       </div>
-      <div className="mx-auto flex max-w-[688px] justify-end">
+      <div className="mx-auto flex max-w-[688px] justify-end pt-4">
         <button className="text-normal relative block w-fit border-b-2 border-black after:absolute after:block after:h-[3px] after:w-full after:origin-left after:scale-x-0 after:bg-[#B58C67] after:transition after:duration-300 after:content-[''] after:hover:scale-x-100 lg:text-xl">
           CZYTAJ DALEJ
         </button>
