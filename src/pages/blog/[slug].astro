@@ -1,20 +1,26 @@
 ---
-import { getCollection } from "astro:content";
-const posts = await getCollection("posts");
+import PostLayout from "../../layouts/PostLayout.astro";
+import Header from "../../components/Header.astro";
+import BreadCrumbs from "../../features/blog/article/breadCrumbs.astro";
 const { slug } = Astro.params;
 
-// Find the post with the matching slug
-const post = posts.find((post) => post.slug === slug);
+let Post;
+
+try {
+  Post = await import(`../../content/posts/${slug}.md`);
+  console.log(Post);
+} catch (error) {
+  console.error("Failed to import post:", error);
+  Post = null; // Or handle the error appropriately
+}
 ---
 
-{
-  post ? (
-    <div>
-      <h1>{post.data.title}</h1>
-      <img src={post.data.source} alt={post.data.title} />
-      <p>{post.body}</p>
-    </div>
-  ) : (
-    <p>Post not found</p>
-  )
-}
+<PostLayout title={Post ? Post.title : "Post Not Found"}>
+  <Header animate={false} />
+  <div class="pt-[20vh] px-[5vw]">
+    <BreadCrumbs />
+    {Post ? <Post.Content /> : <p>Post not found.</p>}
+  </div>
+</PostLayout>
+
+<style></style>
