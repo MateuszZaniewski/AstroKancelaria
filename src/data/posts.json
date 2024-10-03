@@ -1,36 +1,29 @@
 [
   {
     "slug": "post1",
-    "source": "blog1.webp",
-    "bigsource": "blog1big.svg",
-    "name": "Zasady i procedury w sprawach o zasiedzenie nieruchomości 1",
-    "date": "10/09/2024",
-    "category": "Prawo cywilne",
-    "textShort": "Nieruchomość to świetna inwestycja - zwłaszcza w niepewnych gospodarczo czasach. Najczęściej do nabycia nieruchomości dochodzi w drodze jej kupna, jednak nie jest to jedyny sposób. Niekiedy, aby stać się jej właścicielem wystarczy posiadać określoną nieruchomość, przez sprecyzowany przez prawo czas (zasiedzenie). Jakie więc warunki należy spełnić, aby zasiedzieć nieruchomość?",
-    "textLong": "Zasiedzenie nieruchomości - będące jednym z najczęściej występujących w praktyce przejawów instytucji „dawności” - polega na tym, że posiadacz nieruchomości niebędący jej właścicielem, może nabyć jej prawa własności o ile posiada nieruchomość nieprzerwanie przez określony prawem czas."
+    "source": "post1.jpg",
+    "bigsource": "post1.jpg",
+    "name": "Uprowadzenie dziecka za granicę a Konwencja Haska",
+    "date": "03/10/2024",
+    "category": "Prawo rodzinne",
+    "textShort": "Czym jest Konwencja haska ? Konwencja dotycząca cywilnych aspektów uprowadzenia dziecka za granicę, sporządzona w Hadze dnia 25 października 1980 r. jest międzynarodowym porozumieniem, którego celem jest przeciwdziałanie negatywnym skutkom uprowadzania lub zatrzymywania dziecka za granicą."
   },
   {
     "slug": "post2",
-    "source": "blog2.webp",
-    "bigsource": "blog2big.svg",
-    "name": "Rozwód: kluczowe kroki i wskazówki 2",
-    "date": "28/09/2024",
-    "category": "Prawo rodzinne"
+    "source": "post2.jpg",
+    "bigsource": "post2.jpg",
+    "name": "Rozwód - krok po kroku",
+    "date": "29/09/2024",
+    "category": "Prawo cywilne",
+    "textShort": "Sprawy o rozwód niekiedy przebiegają burzliwie, towarzyszą im zazwyczaj silne emocje powstałe na skutek rozpadu małżeństwa szczególnie, gdy niezbędnym jest rozstrzygnięcie o kwestii winy         w rozkładzie pożycia czy też dalszym losie wspólnych małoletnich dzieci."
   },
   {
     "slug": "post3",
-    "source": "blog3.webp",
-    "bigsource": "blog3big.svg",
-    "name": "Ograniczenie i pozbawienie władzy rodzicielskiej: Co warto wiedzieć? 3",
-    "date": "15/10/2024",
-    "category": "Prawo rodzinne"
-  },
-  {
-    "slug": "post4",
-    "source": "blog4.svg",
-    "bigsource": "blog4.svg",
-    "name": "Zasady i procedury w sprawach o zasiedzenie nieruchomości 4",
-    "date": "10/09/2024",
-    "category": "Prawo cywilne"
+    "source": "post3.jpg",
+    "bigsource": "post3.jpg",
+    "name": "Alimenty na dziecko - czym są, jaka jest ich wysokość i do kiedy je płacić?",
+    "date": "15/09/2024",
+    "category": "Prawo rodzinne",
+    "textShort": "Alimentów na rzecz dziecka można dochodzić zarówno w pozwie o rozwód jak też w oddzielnym powództwie. W przypadku, gdy dziecko jest małoletnie, w jego imieniu z pozwem przeciwko drugiemu rodzicowi występuje przedstawiciel ustawowy."
   }
 ]

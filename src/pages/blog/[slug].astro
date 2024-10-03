@@ -2,13 +2,13 @@
 import PostLayout from "../../layouts/PostLayout.astro";
 import Header from "../../components/Header.astro";
 import BreadCrumbs from "../../features/blog/article/breadCrumbs.astro";
+import headerEffects from "../../helpers/headerEffects";
 const { slug } = Astro.params;
 
 let Post;
-
 try {
   Post = await import(`../../content/posts/${slug}.md`);
-  console.log(Post);
+  console.log("post : ", Post.frontmatter.title);
 } catch (error) {
   console.error("Failed to import post:", error);
   Post = null; // Or handle the error appropriately
@@ -18,9 +18,12 @@ try {
 <PostLayout title={Post ? Post.title : "Post Not Found"}>
   <Header animate={false} />
   <div class="pt-[20vh] px-[5vw]">
-    <BreadCrumbs />
+    <BreadCrumbs title={Post ? Post.frontmatter.title : "Post Not Found"} />
     {Post ? <Post.Content /> : <p>Post not found.</p>}
   </div>
 </PostLayout>
 
-<style></style>
+<script type="module">
+  import headerEffects from "../../helpers/headerEffects.js";
+  headerEffects();
+</script>

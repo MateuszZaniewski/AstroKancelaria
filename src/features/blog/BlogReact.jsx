@@ -29,7 +29,7 @@ export const BlogReact = () => {
         <h2 className="font-cinzel text-3xl lg:text-5xl">BLOG</h2>
         <a
           aria-label="link to all posts"
-          href=""
+          href="/blog"
           className="text-normal relative w-fit cursor-pointer border-b-[2px] border-black after:absolute after:block after:h-[2px] after:w-full after:origin-left after:scale-x-0 after:bg-[#B58C67] after:transition after:duration-300 after:content-[''] after:hover:scale-x-100"
         >
           WSZYSTKIE WPISY

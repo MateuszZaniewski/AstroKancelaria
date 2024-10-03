@@ -88,7 +88,7 @@ export default function headerEffects() {
       const scrollPosition = window.scrollY;
       const navbarHeight = navbar?.getBoundingClientRect().height;
 
-      if (window.location.pathname === "/blog") {
+      if (window.location.pathname.includes("blog")) {
         // Logika dla strony bloga
         if (scrollPosition > 5) {
           navbar.classList.remove("menu-transparent");
