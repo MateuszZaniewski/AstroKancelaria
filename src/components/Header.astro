@@ -4,9 +4,10 @@ import Menu from "./Menu.astro";
 
 interface Props {
   animate: boolean;
+  mainPage: boolean;
 }
 
-const { animate } = Astro.props;
+const { animate, mainPage = false } = Astro.props;
 ---
 
 <nav
@@ -28,23 +29,23 @@ const { animate } = Astro.props;
         class="hidden lg:flex gap-12 2xl:gap-16 font-normal font-sans items-center"
       >
         <a
-          href="#services"
-          class="h-fit whitespace-nowrap font-semibold cursor-pointer nav-link hover:text-[#B58C67] active:text-[#333333] focus:border-[#533630] menu-services"
+          href={`${mainPage ? "#services" : "/#services"}`}
+          class=`h-fit whitespace-nowrap font-semibold cursor-pointer {${mainPage && "nav-link"} hover:text-[#B58C67] active:text-[#333333] focus:border-[#533630] menu-services`
           aria-label="link to services section">USŁUGI PRAWNE</a
         >
         <a
-          href="#about"
-          class="h-fit whitespace-nowrap font-semibold cursor-pointer nav-link hover:text-[#B58C67] active:text-[#333333] focus:border-[#533630] menu-about"
+          href={`${mainPage ? "#about" : "/#about"}`}
+          class=`h-fit whitespace-nowrap font-semibold cursor-pointer {${mainPage && "nav-link"} hover:text-[#B58C67] active:text-[#333333] focus:border-[#533630] menu-about`
           aria-label="link to about section">O MNIE</a
         >
         <a
-          href="#blog"
-          class="h-fit whitespace-nowrap font-semibold cursor-pointer nav-link hover:text-[#B58C67] active:text-[#333333] focus:border-[#533630] menu-blog"
+          href={`${mainPage ? "#blog" : "/blog"}`}
+          class=`h-fit whitespace-nowrap font-semibold cursor-pointer {${mainPage && "nav-link"} hover:text-[#B58C67] active:text-[#333333] focus:border-[#533630] menu-blog`
           aria-label="link to blog section">BLOG</a
         >
         <a
-          href="#contact"
-          class="nav-link menu-contact"
+          href={`${mainPage ? "#contact" : "/#contact"}`}
+          class=`{${mainPage && "nav-link"} menu-contact`
           aria-label="link to contact"
         >
           <CtaButton text="KONTAKT" variant="contain" />
@@ -84,7 +85,7 @@ const { animate } = Astro.props;
     class="hidden mobile-menu absolute top-0 left-0 w-full h-screen z-40 animation-menu-slide-out"
   >
     <div class="min-h-screen bg-[#EEE5DA] px-5 py-[1vh] pb-12">
-      <Menu />
+      <Menu mainPage={mainPage} />
     </div>
   </div>
 </nav>

@@ -12,6 +12,7 @@ export const BlogPreview = () => {
         currentTabIndex={currentTabIndex}
         setCurrentTabIndex={setCurrentTabIndex}
         client:load
+        blog={false}
       />
     </section>
   );

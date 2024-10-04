@@ -114,4 +114,6 @@ nakazującego zapewnienie powrotu dziecka rozpoznaje Sąd Apelacyjny w Warszawie
 </div>
 
 <p class="py-4">Autor: Paulina Komenda</p>
+
+<div class="mt-1 w-full h-[2px] bg-[#B58C67]"></div>
 </section>

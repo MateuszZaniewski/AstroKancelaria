@@ -64,7 +64,7 @@ const { title } = Astro.props;
   </head>
   <body>
     <section class="relative">
-      <Header animate={false} />
+      <Header animate={false} mainPage={true} />
       <slot />
       <Footer />
     </section>
@@ -79,3 +79,10 @@ const { title } = Astro.props;
     <!-- End Google Tag Manager (noscript) -->
   </body>
 </html>
+
+<script>
+  import headerEffects from "../helpers/headerEffects";
+  document.addEventListener("astro:page-load", () => {
+    headerEffects();
+  });
+</script>

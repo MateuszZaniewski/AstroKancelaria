@@ -1,5 +1,4 @@
 export const Post = ({ post, blog = false }) => {
-  console.log(post);
   return (
     <a href={`/blog/${post.slug}`}>
       <div

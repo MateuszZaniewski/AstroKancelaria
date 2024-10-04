@@ -1,5 +1,5 @@
 export default function headerEffects() {
-  document.addEventListener("DOMContentLoaded", () => {
+  document.addEventListener("astro:page-load", () => {
     let scrollPosition = 0;
 
     // Select elements

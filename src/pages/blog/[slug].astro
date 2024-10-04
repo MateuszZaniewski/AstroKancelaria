@@ -2,7 +2,8 @@
 import PostLayout from "../../layouts/PostLayout.astro";
 import Header from "../../components/Header.astro";
 import BreadCrumbs from "../../features/blog/article/breadCrumbs.astro";
-import headerEffects from "../../helpers/headerEffects";
+import { ArticlesPagination } from "../../features/blog/article/ArticlesPagination";
+
 const { slug } = Astro.params;
 
 let Post;
@@ -11,7 +12,7 @@ try {
   console.log("post : ", Post.frontmatter.title);
 } catch (error) {
   console.error("Failed to import post:", error);
-  Post = null; // Or handle the error appropriately
+  Post = null;
 }
 ---
 
@@ -21,9 +22,10 @@ try {
     <BreadCrumbs title={Post ? Post.frontmatter.title : "Post Not Found"} />
     {Post ? <Post.Content /> : <p>Post not found.</p>}
   </div>
+  <ArticlesPagination
+    currentTabIndex={0}
+    setCurrentTabIndex={null}
+    client:load
+    blog={true}
+  />
 </PostLayout>
-
-<script type="module">
-  import headerEffects from "../../helpers/headerEffects.js";
-  headerEffects();
-</script>

@@ -1,7 +1,11 @@
 import { MobilePosts } from "../pagination/MobilePosts";
 import { TabletPosts } from "../pagination/TabletPosts";
 
-export const ArticlesPagination = ({ currentTabIndex, setCurrentTabIndex }) => {
+export const ArticlesPagination = ({
+  currentTabIndex,
+  setCurrentTabIndex,
+  blog,
+}) => {
   return (
     <div className="pb-20 lg:w-[60vw] lg:pb-0">
       <div className="sm:hidden">
@@ -9,6 +13,7 @@ export const ArticlesPagination = ({ currentTabIndex, setCurrentTabIndex }) => {
           currentTabIndex={currentTabIndex}
           setCurrentTabIndex={setCurrentTabIndex}
           client="load"
+          blog={blog}
         />
       </div>
       <div className="hidden sm:block">
@@ -16,6 +21,7 @@ export const ArticlesPagination = ({ currentTabIndex, setCurrentTabIndex }) => {
           client="load"
           currentTabIndex={currentTabIndex}
           setCurrentTabIndex={setCurrentTabIndex}
+          blog={blog}
         />
       </div>
     </div>
