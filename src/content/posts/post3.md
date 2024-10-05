@@ -7,7 +7,7 @@ date: "15/10/2024"
 category: "Prawo rodzinne"
 ---
 
-<div class="relative bg-[url(/post3.jpg)] bg-cover bg-center bg-no-repeat h-[344px] w-[87vw] max-w-[1440px] object-cover hidden lg:block">
+<div class="relative bg-[url(/post3.jpg)] bg-cover bg-center bg-no-repeat h-[344px] w-[87vw] max-w-[1440px] object-cover hidden lg:block xl:mx-auto">
   <!-- Overlay div for the darker background -->
   <div class="absolute inset-0 bg-black opacity-30"></div>
 
