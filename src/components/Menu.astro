@@ -47,30 +47,30 @@ const { mainPage } = Astro.props;
   <a
     aria-label="link to services section"
     href={`${mainPage ? "#services" : "/#services"}`}
-    class=`{${mainPage && "nav-link"} menu-services`
+    class={`${mainPage && "nav-link"} menu-services`}
     >ZAKRES USŁUG <br class="sm:hidden" /> PRAWNYCH</a
   >
   <a
     aria-label="link to about section"
     href={`${mainPage ? "#about" : "/#about"}`}
-    class=`{${mainPage && "nav-link"} menu-about`>O MNIE</a
+    class={`${mainPage && "nav-link"} menu-about`}>O MNIE</a
   >
   <a
     aria-label="link to opinions section"
     href={`${mainPage ? "#opinions" : "/#opinions"}`}
-    class=`{${mainPage && "nav-link"} menu-opinions`>OPINIE</a
+    class={`${mainPage && "nav-link"} menu-opinions`}>OPINIE</a
   >
   <a
     aria-label="link to blog section"
     href={`${mainPage ? "#blog" : "/blog"}`}
-    class=`{${mainPage && "nav-link"} menu-blog`>BLOG</a
+    class={`${mainPage && "nav-link"} menu-blog`}>BLOG</a
   >
 </div>
 <div class="pt-[6.6vh] text-black">
   <a
     aria-label="link to contact section"
     href={`${mainPage ? "#contact" : "/#contact"}`}
-    class=`{${mainPage && "nav-link"} menu-contact`
+    class={`${mainPage && "nav-link"} menu-contact`}
   >
     <h3 class="text-3xl text-center font-cinzel sm:text-4xl sm:gap-[3.5vh]">
       KONTAKT
