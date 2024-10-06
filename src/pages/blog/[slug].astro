@@ -17,7 +17,7 @@ try {
 
 <PostLayout title={Post.frontmatter.title}>
   <Header animate={false} mainPage={false} />
-  <div class="pt-[10vh] px-[5vw]">
+  <div class="pt-[15vh] px-[5vw]">
     <BreadCrumbs title={Post ? Post.frontmatter.title : "Post Not Found"} />
     {Post ? <Post.Content /> : <p>Post not found.</p>}
   </div>

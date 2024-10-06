@@ -73,7 +73,7 @@ category: "Prawo rodzinne"
 <p?>Nadmienić również należy, że w praktyce może dojść do oddalenia powództwa o rozwód w przypadku powołania się jednego z małżonków na kwestie religijne. Sąd Najwyższy w wyroku z dnia 10 września 1997 r., sygn. II CKN 292\97 stwierdził, że <span class="italic">"Nie można podzielić stanowiska, że motywy moralne i religijne odmowy zgody na rozwód są sprzeczne z zasadami współżycia społecznego. Argument, że osoba wierząca i rozwiedziona bez swej winy, nie jest dyskryminowana w wykonywaniu praktyk religijnych nie uzasadnia uznania odmowy zgody na rozwód za sprzeczną z zasadami współżycia społecznego.”</span></p>
 </div>
 
-<p class="py-4">Autor: Paulina Komenda</p>
+<p class="py-4">Autor: Adwokat Paulina Komenda</p>
 
 <div class="mt-1 w-full h-[2px] bg-[#B58C67]"></div>
 </section>

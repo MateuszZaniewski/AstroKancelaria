@@ -85,7 +85,7 @@ Z ugruntowanego orzecznictwa Sądu Najwyższego wynika, że przez usprawiedliwio
 <p>Często zdarza się, że wraz z zakończeniem przez pełnoletnie już dziecko edukacji, rodzic zobowiązany do alimentacji przestaje łożyć alimenty. Należy jednak pamiętać o tym, że obowiązek alimentacyjny nie wygasa automatycznie. W celu uchronienia się przed możliwą egzekucją zaległych świadczeń należy wystąpić do sądu z pozwem o ustalenie ustania obowiązku alimentacyjnego.</p>
 </div>
 
-<p class="py-4">Autor: Paulina Komenda</p>
+<p class="py-4">Autor: Adwokat Paulina Komenda</p>
 
 <div class="mt-1 w-full h-[2px] bg-[#B58C67]"></div>
 </section>
