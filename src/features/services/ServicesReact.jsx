@@ -19,10 +19,13 @@ export const ServicesReact = () => {
     if (window.innerWidth < 1024) {
       setTimeout(() => {
         const targetRef = descriptionRefs.current[index];
+        const navbar = document.querySelector("#navbar");
+        const navbarHeight = navbar.getBoundingClientRect().height;
+
         if (targetRef) {
           const elementPosition =
-            targetRef.getBoundingClientRect().top + window.pageYOffset;
-          const offsetPosition = elementPosition - 20;
+            targetRef.getBoundingClientRect().top + window.scrollY;
+          const offsetPosition = elementPosition - navbarHeight;
           window.scrollTo({ top: offsetPosition, behavior: "smooth" });
         }
       }, 50);
