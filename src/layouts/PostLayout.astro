@@ -11,6 +11,31 @@ const { title } = Astro.props;
 <!doctype html>
 <html lang="pl">
   <head>
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "LegalService",
+        "name": "Kancelaria Adwokacka Adwokat Paulina Komenda",
+        "description": "Kancelaria Adwokacka Adwokat Paulina Komenda Białystok - świadczymy usługi prawne z zakresu prawa cywilnego, karnego, rodzinnego i spadkowego.",
+        "url": "https://www.adwokatkomenda.pl/",
+        "telephone": "+48508726150",
+        "address": {
+          "@type": "PostalAddress",
+          "streetAddress": "ul. Henryka Sienkiewicza 55A/90",
+          "addressLocality": "Białystok",
+          "postalCode": "15-002",
+          "addressCountry": "PL",
+          "telephone": "+48508726150"
+        },
+        "contactPoint": {
+          "@type": "ContactPoint",
+          "telephone": "+48508726150",
+          "contactType": "Customer Service",
+          "areaServed": "PL",
+          "availableLanguage": ["Polish", "English"]
+        }
+      }
+    </script>
     <meta charset="UTF-8" />
     <meta name="description" content="Astro description" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
