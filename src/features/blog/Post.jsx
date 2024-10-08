@@ -1,6 +1,6 @@
 export const Post = ({ post, blog = false }) => {
   return (
-    <a href={`/blog/${post.slug}`}>
+    <a href={`/blog/${post.slug}`} className="blogpost">
       <div
         className={`lg:flex-grow-1 flex h-auto max-w-[365px] cursor-pointer md:w-[40vw] lg:w-[27vw]`}
       >
