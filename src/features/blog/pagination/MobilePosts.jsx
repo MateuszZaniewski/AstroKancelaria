@@ -1,7 +1,12 @@
 import { PaginationPost } from "./PaginationPost";
 import posts from "../../../data/posts.json"; // Importing posts data
 
-export const MobilePosts = ({ currentTabIndex, setCurrentTabIndex, blog }) => {
+export const MobilePosts = ({
+  currentTabIndex,
+  setCurrentTabIndex,
+  blog,
+  slugC,
+}) => {
   return (
     <div className="pt-7">
       {blog && (
@@ -10,7 +15,15 @@ export const MobilePosts = ({ currentTabIndex, setCurrentTabIndex, blog }) => {
         </div>
       )}
       <div className="flex justify-center lg:justify-start">
-        {posts.length > 0 ? (
+        {posts.length > 0 && blog && slugC ? (
+          <div className="flex flex-col gap-[5vw]">
+            {posts
+              .filter((post) => post.slug !== slugC)
+              .map((post, index) => (
+                <PaginationPost key={index} post={post} />
+              ))}
+          </div>
+        ) : posts.length > 0 && !blog ? (
           <div className="flex flex-col gap-[5vw]">
             {posts.slice(1).map((post, index) => (
               <PaginationPost key={index} post={post} />

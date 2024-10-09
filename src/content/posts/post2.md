@@ -1,5 +1,5 @@
 ---
-title: "Rozwód krok po kroku"
+title: "Rozwód - krok po kroku"
 slug: "post2"
 source: "/blog2.webp"
 bigsource: "blog2big.svg"

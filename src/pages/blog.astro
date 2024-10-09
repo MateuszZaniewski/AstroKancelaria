@@ -4,11 +4,9 @@ import BlogLayout from "../layouts/BlogLayout.astro";
 import { BlogPreview } from "../features/blog/BlogPreview";
 ---
 
-<div>
-  <BlogLayout title="Artykuły prawne - Paulina Komenda">
-    <BlogHeader />
-    <div class="flex flex-col gap-10 mt-10">
-      <BlogPreview client:load />
-    </div>
-  </BlogLayout>
-</div>
+<BlogLayout title="Artykuły prawne - Paulina Komenda">
+  <BlogHeader />
+  <div class="flex flex-col gap-10 mt-10">
+    <BlogPreview client:load />
+  </div>
+</BlogLayout>

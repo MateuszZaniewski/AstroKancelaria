@@ -6,6 +6,13 @@ import { ArticlesPagination } from "../../features/blog/article/ArticlesPaginati
 
 const { slug } = Astro.params;
 
+export async function getStaticPaths() {
+  const posts = await import(`../../content/posts/${slug}.md`);
+  return posts.map((post) => ({
+    params: { slug: post.slug },
+  }));
+}
+
 let Post;
 try {
   Post = await import(`../../content/posts/${slug}.md`);
@@ -22,6 +29,7 @@ try {
     {Post ? <Post.Content /> : <p>Post not found.</p>}
   </div>
   <ArticlesPagination
+    slugC={Post.frontmatter.slug}
     currentTabIndex={0}
     setCurrentTabIndex={null}
     client:load
