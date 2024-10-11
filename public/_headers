@@ -1,0 +1,12 @@
+# Przykład nagłówków dla wszystkich stron
+
+/* 
+  Link: <https://www.adwokatkomenda.pl/>; rel="canonical"
+
+# Możesz też dodać nagłówki dla poszczególnych stron, np.:
+
+/blog 
+  Link: <https://www.adwokatkomenda.pl/blog>; rel="canonical"
+
+/rodo 
+  Link: <https://www.adwokatkomenda.pl/rodo>; rel="canonical"
