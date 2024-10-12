@@ -4,4 +4,4 @@ Allow: /
 Disallow: /login/
 Disallow: /admin/
 
-Sitemap: https://adwokatkomenda.pl/sitemap-index.xml
+//Sitemap: https://adwokatkomenda.pl/sitemap-index.xml
