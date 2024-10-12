@@ -1,7 +1,2 @@
 User-agent: *
-Disallow: /private/
-Allow: /
-Disallow: /login/
-Disallow: /admin/
-
-//Sitemap: https://adwokatkomenda.pl/sitemap-index.xml
+Disallow: /
