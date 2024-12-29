@@ -1,24 +1,4 @@
 backend:
-  name: git-gateway
-  branch: main # Nazwa gałęzi, na której pracujesz (np. main)
-
-media_folder: "public/images" # Folder, gdzie będą przechowywane pliki multimedialne
-public_folder: "/images"
-
-collections:
-  - name: "posts"
-    label: "Posts"
-    folder: "src/pages/blog" # Folder z plikami bloga
-    create: true
-    slug: "{{slug}}"
-    fields:
-      - { label: "Title", name: "title", widget: "string" }
-      - { label: "Date", name: "date", widget: "datetime" }
-      - { label: "Body", name: "body", widget: "markdown" }
-
-
-
-backend:
   name: github
   repo: MateuszZaniewski/AstroKancelaria #replace with your githu repo
   branch: main
