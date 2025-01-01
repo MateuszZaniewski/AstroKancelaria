@@ -18,15 +18,10 @@ collections:
     format: frontmatter
     preview_path: /blog/{{slug}}
     fields:
-      - { name: title, label: Title }
-      - { name: koszta, label: Wydatki }
-      - { name: description, label: Description }
-      - { name: publishedAt, label: Date, widget: date }
-      - {
-          label: "Publish",
-          name: "isPublish",
-          widget: "boolean",
-          default: true,
-        }
-      - { label: "Draft", name: "isDraft", widget: "boolean", default: false }
-      - { name: body, label: Body, widget: markdown }
+      - { name: title, label: Title, widget: string }
+      - { name: slug, label: Slug, widget: string }
+      - { name: source, label: Image Source, widget: string }
+      - { name: bigsource, label: Big Image Source, widget: string }
+      - { name: date, label: Date, widget: date }
+      - { name: category, label: Category, widget: string }
+      - { name: body, label: Content, widget: markdown }
