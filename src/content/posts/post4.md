@@ -1,5 +1,5 @@
 ---
-title: Nowy post
+title: post4
 slug: post4
 source: /post4.jpg
 bigsource: /post4.jpg
